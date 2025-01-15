@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:35:57 GMT</pubDate>
+    <title>Dribs by ibrahim_kuray</title>
+    <link>https://challenges.openlegallab.ch/user/ibrahim_kuray</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/ibrahim_kuray' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Vollmacht und Delegation im Kontext des E-ID Ökosystem</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 30 Apr 2023 11:35:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/ibrahim_kuray/586</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/119/KOF6ZMJUHH064PBPHK84G1VZ/Screenshot_20230430_at_13.33.18.png" alt=""> <a href="https://giris.turkiye.gov.tr/Giris/">https://giris.turkiye.gov.tr/Giris/</a>
+Turkey e-id management system for inspiration.</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

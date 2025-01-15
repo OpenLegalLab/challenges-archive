@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:31 GMT</pubDate>
+    <title>Dribs by eswissolar</title>
+    <link>https://challenges.openlegallab.ch/user/eswissolar</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/eswissolar' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Solar DAO</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 20:33:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/eswissolar/295</guid>
+    
+      <content:encoded><![CDATA[<p>We decided about the final legal form for our DAO and defined the additional structure needed for facilitating investments in PV-systems for private institutions and energy cooperatives.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Solar DAO</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:37:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/eswissolar/282</guid>
+    
+      <content:encoded><![CDATA[<p>We created an overview of the properties of the main relevant legal forms (e.g Association, Cooperative, Foundation). We also defined the main criteria for deciding about the most appropriate legal form for the DAO.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Solar DAO</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 13:48:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/eswissolar/233</guid>
+    
+      <content:encoded><![CDATA[<p>We created a miro board mapping the main shareholder and define the main relationships   </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Solar DAO</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 12:42:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/eswissolar/230</guid>
+    
+      <content:encoded><![CDATA[<p>We created a miro board mapping the main stakeholder and actors and define the main relationships</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

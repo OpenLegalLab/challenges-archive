@@ -1,0 +1,99 @@
+"id","ident","url","name","score","phase","team","team_count","is_challenge","is_webembed","progress","summary","hashtag","image_url","source_url","webpage_url","autotext_url","download_url","contact_url","logo_color","logo_icon","excerpt","created_at","updated_at","maintainer","event_url","event_name","category_id","category_name","stats-total","stats-updates","stats-commits","stats-during","stats-people","stats-sizepitch","stats-sizetotal"
+"106","","https://challenges.openlegallab.ch/project/106","LM Studio","54","Prototype","","0","False","True","30","Discover, download, and run local LLMs","","https://avatars.githubusercontent.com/u/133744619?v=4","https://github.com/lmstudio-ai/model-catalog","https://lmstudio.ai/static/media/demo2.9df5a0e5a9f1d72715e0.gif","https://github.com/lmstudio-ai/model-catalog.git","https://lmstudio.ai/","https://github.com/lmstudio-ai/model-catalog/issues","","","With LM Studio, you can ...
+
+* 🤖 - Run LLMs on your laptop, entirely offline
+* 👾 - Use models through the in-app Chat UI or an OpenAI compatible local server
+* 📂 - Download any compatible model files from HuggingFace 🤗 repositories
+* 🔭 - Discover new & noteworthy LLMs in the app's home page
+
+LM Studio supports any ggml Llama, MPT, and StarCoder model on Hugging Face (Llama 2, Orca, Vicuna, Nous Hermes, WizardCoder, MPT, etc.). Made possible thanks to the [llama.cpp project](https://github...","2024-03-24T15:18","2024-03-24T15:21","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","3","2","0","0","0","1559","3161"
+"7","","https://challenges.openlegallab.ch/project/7","OLDP","49","Sketching","Waldemar, oleg","2","False","False","20","Open Legal Data Platform, maintained by Open Knowledge Deutschland","","https://avatars.githubusercontent.com/u/38217808?v=4","https://github.com/openlegaldata/oldp","https://openlegaldata.io","https://github.com/openlegaldata/oldp","https://github.com/openlegaldata/oldp/releases","https://openlegallab.slack.com/archives/C0398C0PNJC","","","At OLL 2022 we proposed the challenge to investigate, evaluate, discuss, and contribute to **efforts to improve interoperability** between platforms that collect and publish open legal data. Currently OLDP application only has data available from German courts. Documentation is available on [adding processing steps](https://oldp.readthedocs.io/en/latest/development.html) for additional data sources. Further details of the application below. The project can be reached here: [@openlegaldata](https...","2022-02-08T09:57","2024-03-24T23:13","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","7","4","0","0","2","1483","9350"
+"74","","https://challenges.openlegallab.ch/project/74","awesome-legal-data","44","Prototype","","0","False","False","30","Collection of Datasets for Legal Text Processing","","https://avatars.githubusercontent.com/u/38217808?v=4","https://github.com/openlegaldata/awesome-legal-data","https://openlegaldata.io","https://github.com/openlegaldata/awesome-legal-data","https://github.com/openlegaldata/awesome-legal-data/releases","https://github.com/openlegaldata/awesome-legal-data/issues","","","# awesome-legal-data
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+
+A curated list of resources dedicated to legal data. 
+The collection contains data sets, tools and other links related to the legal domain. 
+Most resources are openly available.
+
+## United States
+
+- [Caselaw Access Project by Harvard Law School](https://case.law/)
+- [CourtListner](https://courtlistener.com) - Search mi...","2023-04-13T16:26","2023-04-24T19:47","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","0","4034"
+"73","","https://challenges.openlegallab.ch/project/73","awesome-legal-nlp","43","Prototype","","0","False","False","30","📖  A curated list of LegalNLP resources from all around the web.","","https://avatars.githubusercontent.com/u/52452174?v=4","https://github.com/maastrichtlawtech/awesome-legal-nlp","","https://github.com/maastrichtlawtech/awesome-legal-nlp","https://github.com/maastrichtlawtech/awesome-legal-nlp/releases","https://github.com/maastrichtlawtech/awesome-legal-nlp/issues","","","[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+![License](https://img.shields.io/github/license/antoiloui/awesome-legal-nlp)
+
+# Legal Natural Language Processing
+
+## 🗂 Datasets
+
+#### <ins>Legal Judgement Prediction</ins> (LJP)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| FSCS (Niklaus et al., 2021) | [📄](https://arxiv.org/abs/2110.00806) [🤗](https://huggingface.co/datasets/swiss_judgment_prediction) [💻](https://github.com/JoelNiklaus/SwissJudgemen...","2023-04-13T16:25","2023-04-24T13:27","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","0","13664"
+"85","","https://challenges.openlegallab.ch/project/85","legal-ml-datasets","43","Prototype","","0","False","False","30","A collection of datasets and tasks for legal machine learning ","","https://avatars.githubusercontent.com/u/2036121?v=4","https://github.com/neelguha/legal-ml-datasets","","https://github.com/neelguha/legal-ml-datasets","https://github.com/neelguha/legal-ml-datasets/releases","https://github.com/neelguha/legal-ml-datasets/issues","","","# Datasets for Machine Learning in Law
+This is a collection of pointers to datasets/tasks/benchmarks pertaining to the intersection of machine learning and law. 
+
+This page is continually being updated. If there's a dataset/resource you think should be included here, please make a pull request adding it, or contact me at nguha@stanford.edu and I'll add it! 
+
+Neel Guha
+
+
+## Task agnostic datasets 
+These datasets can be used for pretraining larger models. Alternatively, you cause them to construct...","2023-04-24T19:46","2023-04-24T19:48","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","0","8300"
+"54","","https://challenges.openlegallab.ch/project/54","entscheidsuche","37","Research","oleg","0","False","True","10","Eine Suche in allen publizierten Gerichtsurteilen von Schweizer Gerichten aller Instanzen.","","https://avatars.githubusercontent.com/u/46230066?v=4","https://github.com/entscheidsuche","https://entscheidsuche.ch/search?query=datenpublikation","https://github.com/entscheidsuche/NeueScraper","https://github.com/entscheidsuche/NeueScraper/releases","https://github.com/entscheidsuche/NeueScraper/issues","","","In this repository, you can find out how to write a scraper and contribute to improving the quality and reach of the project. To search the database and for more information, please visit https://entscheidsuche.ch/
+
+## Beta Feature
+
+Beliebige Entscheiden können herunterladen werden via https://beta.entscheidsuche.ch/ mit einem Download-Feature. Ein ZIP-Archive wird erstellt mit Daten und eine Übersichtsliste als CSV oder HTML. Mit Fragen bitte wendet euch an Jörn.
+
+![ Title ](https://bucke...","2022-03-23T06:42","2023-04-30T07:56","oleg","https://challenges.openlegallab.ch/event/2","Ressourcen","","","5","4","0","0","0","809","1470"
+"48","","https://challenges.openlegallab.ch/project/48","Datenauskunft","36","Sketching","","0","False","False","20","Ein neues online Tool durch die Digitale Gesellschaft zur Verfügung gestellt.","","https://avatars.githubusercontent.com/u/29210660?v=4","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren","https://www.digitale-gesellschaft.ch/auskunftsbegehren","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren/releases","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren/issues","","","
+---
+
+# Datenauskunftsbegehren Generator
+![Generiere dein Datenauskunftsbegehren](https://www.digitale-gesellschaft.ch/auskunftsbegehren/datenauskunftsbegehren-og.png)
+
+This is the code behind: https://www.digitale-gesellschaft.ch/auskunftsbegehren
+
+## Contribute
+Please open issues here for anything you find not working correctly with the Application. If you miss any organisation or company in the data, feel free to open Pull Requests at the [Data Repository](https://github.com/Digitale...","2022-02-25T19:57","2023-04-24T13:28","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","3","2","0","0","0","0","1831"
+"90","","https://challenges.openlegallab.ch/project/90","Catala","35","Sketching","","0","False","False","20","Catala is a domain-specific programming language designed for deriving correct-by-construction implementations from legislative texts","Martin Gajdos","https://avatars.githubusercontent.com/u/63865220?v=4","https://github.com/CatalaLang/catala","https://catala-lang.org","https://github.com/CatalaLang/catala","https://catala-lang.org/en/examples/tutorial","https://zulip.catala-lang.org/","","","We hope you will join the **ius calc** challenge at Open Legal Lab 2025!","2024-02-21T16:09","2024-03-25T09:42","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","72","10170"
+"87","","https://challenges.openlegallab.ch/project/87","Legal Entity Recognition","33","Sketching","","0","False","False","20","A Dataset of German Legal Documents for Named Entity Recognition","","https://avatars.githubusercontent.com/u/47367624?v=4","https://github.com/elenanereiss/Legal-Entity-Recognition","","https://github.com/elenanereiss/Legal-Entity-Recognition","https://github.com/elenanereiss/Legal-Entity-Recognition/releases","https://github.com/elenanereiss/Legal-Entity-Recognition/issues","","","# Legal-Entity-Recognition
+
+## German LER Dataset on :hugs: Hugging Face (Update 2022-10-19)
+Now available on Huggingface [https://huggingface.co/datasets/elenanereiss/german-ler](https://huggingface.co/datasets/elenanereiss/german-ler)
+
+## Fine-grained Named Entity Recognition in Legal Documents
+
+This work has been partially funded by the project Lynx, which has received funding from the EU's Horizon 2020 research and innovation programme under grant agreement no. 780602, see [http://www...","2023-04-29T21:46","2023-04-29T21:46","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","0","7352"
+"58","","https://challenges.openlegallab.ch/project/58","Empirical law","31","Sketching","","0","False","False","20","","","","","","","","","","area-chart","https://twitter.com/HanjoHamann/status/1506175342100287489
+
+Resources:
+
+- [Legal Data for Empirical Legal Studies](https://libguides.princeton.edu/c.php?g=916665&p=6607543) (Princeton)
+- [Empirical Methods Workshop](https://lawecon.ethz.ch/teaching/empirical-methods-workshop.html) (ETHZ & Oxford)
+- [Empirical Methods for the Law](https://homepage.coll.mpg.de/pdf_dat/2017_07online.pdf), Engel 2017 (PDF)
+- [Empirical Legal Studies](https://liblawuw.libguides.com/c.php?g=1239278&p=9069364) (...","2022-03-24T00:07","2023-04-25T07:55","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","1","0","0","0","627","627"
+"109","","https://challenges.openlegallab.ch/project/109","Prompt engineering","21","Research","","0","False","False","10","Add any useful resources here for people using prompt engineering in the legal profession","","","","","","","","","scissors","* [Leitfaden zum Prompt-Engineering](https://www.promptingguide.ai/de) (promptingguide.ai)
+* [Awesome Prompt Engineering](https://natnew.github.io/Awesome-Prompt-Engineering/)
+* [Legal Prompt Engineering - Examples and Tips](https://law.mit.edu/pub/ideaflow15/release/4) (law.mit.edu)
+* [Prompts for Legal Research and more](https://www.learnprompt.org/chat-gpt-prompts-for-lawyers/) (learnprompt.org)
+* [Techniques for writing effective legal AI prompts](https://casetext.com/blog/writing-effect...","2024-03-25T13:02","2024-03-25T13:10","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","0","0","0","0","0","537","626"
+"83","","https://challenges.openlegallab.ch/project/83","Swiss Federal Supreme Court Dataset","20","Research","","0","False","False","10","","","","https://zenodo.org/record/7793044","https://zenodo.org/record/7793044","","https://zenodo.org/record/7793044","","#b1dd8c","balance-scale","Seit Freitag ist das Swiss Federal Supreme Court Dataset online. Ihr findet es auf Zenodo (https://zenodo.org/record/7793044).","2023-04-24T08:25","2023-04-24T13:26","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","2","2","0","0","0","126","126"
+"60","","https://challenges.openlegallab.ch/project/60","Data Tools","19","Project","","0","False","False","5","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/s/ZNSWMFKvG#","","https://md.coredump.ch/s/ZNSWMFKvG#","","","","","Get your instruments of data wrangling and broadcasting here.","2022-03-26T10:25","2023-04-24T13:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","2","2","0","0","0","61","1655"
+"84","","https://challenges.openlegallab.ch/project/84","Kursen","18","Project","","0","False","False","5","","","","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/100/6K5HAC8MZUWUU0BPRKM8F1JH/Ressourcen_OLL.pdf","","","","","save","## Introduction to Legal Data Science
+
+Die Universität Zürich bietet ab dem Herbstsemester 2023 einen Onlinekurs «Introduction to Legal Data Science» an.
+Von Ende März bis Anfang Mai steht der Kurs für die Teilnehmer des Open Legal Labs als Beta-Version zum Testen zur Verfügung. Bei Interesse könnt
+ihr euch bei [Caroline Ruggli](mailto:caroline.ruggli@rwi.uzh.ch) für einen Testzugang anmelden.
+
+## Online Courses
+
+[Kaggle](https://www.kaggle.com/learn)
+
+- [Introduction to Programming](h...","2023-04-24T08:28","2024-03-28T09:04","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","2","2","0","0","0","1229","1229"
+"105","","https://challenges.openlegallab.ch/project/105","Hackathon Handbook","7","Project","","0","False","True","5","","","","","https://opendata.ch/handbook/","","","","","","","2024-03-24T14:29","2024-03-24T15:24","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","1","0","0","0","0","0","0"
+"59","","https://challenges.openlegallab.ch/project/59","Design Tools","0","Challenge","","0","True","False","0","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/gCIQVh1tTYiE-4m1dLx2GQ#","","https://md.coredump.ch/s/TMHm5xBbD#","","","","","Add links to any awesome tools that you plan to use at the Open Legal Lab, or wish to recommend to others.","2022-03-26T10:23","2023-04-30T12:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","3","3","0","0","0","106","1464"

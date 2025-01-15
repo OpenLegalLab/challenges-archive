@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:26 GMT</pubDate>
+    <title>Dribs by AmitMY</title>
+    <link>https://challenges.openlegallab.ch/user/AmitMY</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/AmitMY' rel='self' type='application/rss+xml' />
+	  
+  </channel>
+</rss>

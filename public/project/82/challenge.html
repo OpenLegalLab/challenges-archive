@@ -1,0 +1,519 @@
+<!doctype html>
+<!--
+          M A Y   T H E   S O U R C E   B E   W I T H   Y O U   E X C E L L E N T   B E I N G !
+         .#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&##%@@@@@@@@@@@@@@@@@@@@@@@#   @@@@@@@@@@@@@@@@@@@@@@@@@@@@(
+    .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%######@@@@@@@@@@@@@@@@@@@/      *@@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+    #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#######@@@@@@@@@@@@@@@@@@@        (@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########%@@@@@@@@@@@@@@@@@@@#         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+  &@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#########@@@@@@@@@@@@@@@@@@@@@.         .@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+,@@@@@@@@@@@@@@@@@@@@@@@@@@@####################%@@@#                     @@@@@@@@@@@@@@@@@@@@@@@@@@%
+&@@@@@@@@@@@@#########%@@#########################@*                        &@@/        #@@@@@@@@@@@@
+@@@@@@@@@@@@@#########%@&#########################@*                         @@/        #@@@@@@@@@@@@,
+@@@@@@@@@@@@@#########&@%########################&@&                         @@/        #@@@@@@@@@@@@.
+(@@@@@@@@@@@@#########&@%########################@@@.                        @@/        #@@@@@@@@@@@&
+  @@@@@@@@@@@@#########&@%#######################%@@@%                        @@/        #@@@@@@@@@@@*
+  .@@@@@@@@@@@###&@&###&@%#######################@@@@@.                       @@/   @@%  #@@@@@@@@@@#
+  .@@@@@@@@@@%########@@%######################%@@@@@@                       @@/        #@@@@@@@@@(
+    &@@@@@@@@@&&&&&&@@@@@@%###################%@@@@@@@@                   .,#@@#********%@@@@@@@@.
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%%#####%%@@@@@@@@@@@@@*.    .,,(%@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+        &@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+          THIS EVENT WAS PRODUCED USING DRIBDAT.CC
+ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="generator" content="dribdat"/>
+
+  <title>Federal Supreme Court Data Viewer - Open Legal Lab 2023</title>
+  
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://challenges.openlegallab.ch/project/82"/>
+  <meta property="og:title" content="Federal Supreme Court Data Viewer"/>
+  <meta property="og:image" content=""/>
+  <meta property="og:description" content="Let&#39;s build a Shiny app for anyone to analyse data on Swiss Federal Supreme Court judgments! 📊"/>
+  <meta name="twitter:site" content="@opendatach"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  <meta name="description" content="Let&#39;s build a Shiny app for anyone to analyse data on Swiss Federal Supreme Court judgments! 📊"/>
+  <meta name="author" content="flo"/>
+  <meta name="dribdat:project:id" content="82"/>
+
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/simplex/bootstrap.min.css" alt-href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/darkly/bootstrap.min.css" id="css-bootswatch"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"/>
+  
+
+  
+    <link rel="stylesheet" href="/static/css/common.css?fd74b454"/>
+  
+  
+  <link rel="shortcut icon" href="/static/img/favicon.ico"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS: Latest dribs" href="/feeds/dribs.xml">
+
+</head>
+<body class="project-home" data-barba="wrapper">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-faded" role="navigation">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/" title="GO HOME">
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-main-collapse">
+    <ul class="navbar-nav navbar-left mr-auto nav-fill">
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link " 
+           title="Latest posts from the teams"
+           href="/dribs.html">
+          <i class="fa fa-comment bg-warning text-white" aria-hidden="true"></i>
+          Dribs
+        </a>
+      </li>
+
+      
+        <li class="nav-item">
+          <a class="nav-link nav-login" 
+             title="Sign in with your account"
+             href="/login/">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+          </a>
+        </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link" id="navSearchButton" 
+           title="Search this dribdat site"
+           href="/about/">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<!-- Popup global alerts -->
+<div id="global-notifications-alert" class="hidden">
+  <div class="alert alert-info">
+    <a class="close" title="Close" href="#">&times;</a>
+    <i class="fa fa-info-circle float-left" aria-hidden="true"></i>
+    <span id="notifications-status-text"></span>
+  </div>
+</div>
+
+<!-- Popup search results -->
+<div class="hidden container nav-search" id="navSearch" 
+     tabindex="-1" role="dialog" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="profile-projects container-fluid mb-3">
+    <div data-action="/api/project/search.json" id="search">
+      <div class="content input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" class="form-control" name="q" aria-label="Search projects" placeholder="Start typing ..."  style="width:20em">
+      </div>
+    </div>
+    <div class="row flex-row flex-nowrap pb-2" id="search-results"></div>
+    <div class="text-center mb-2" id="search-matches"></div>
+  </div>
+</div>
+
+
+  <div class="container event-header">
+  <div class="section section-centered section-header">
+    
+      <div class="section-header-logo">
+        <a href="/event/4">
+          <img id="event-logo" src="https://opendata.ch/wordpress/files/2022/12/LegalLab_2023_Web_021.jpg" alt="Logo" title="eJustice.CH Opendata.ch">
+        </a>
+      </div>
+    
+    <div class="section-header-content">
+      <a href="/event/4">
+        <h3 class="event-name">Open Legal Lab 2023</h3>
+      </a>
+      
+        <div class="event-hostname">
+          <i class="fa fa-bank"></i>
+          eJustice.CH Opendata.ch</div>
+      
+      
+        <div class="event-date">
+          <i class="fa fa-calendar"></i>
+          April 30 - May 1, 2023</div>
+      
+      
+        <div class="event-location">
+          <i class="fa fa-map"></i>
+          
+            Magglingen
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+  
+    <style id="custom_css" type="text/css">.honeycomb .hexagon.challenge { opacity: 1; }
+.honeycomb .hexagon.challenge.stage--1,
+.honeycomb .hexagon.challenge.stage--100 { opacity: 0.5; }
+
+.event-description.bg-body img { max-width: 100%; }</style>
+  
+
+
+
+<div class="container with-event">
+
+  <div role="main">
+    
+    
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div class="alert alert-info">
+          <a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
+         This Challenge was posted 1 year ago
+        </div><!-- end .alert -->
+        
+      </div><!-- end col-md -->
+    </div><!-- end row -->
+    
+    
+
+    <main data-barba="container" data-barba-namespace="home">
+      
+
+
+
+<div class="btn-group project-edit-buttons" role="group" aria-label="Project tools">
+
+  
+
+  
+  
+
+  
+
+</div><br clear="all">
+
+
+  <div class="project-image-container"
+    style="background-image:url('https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/101/X6ILQWV3FZ10G840FSN3SX1G/bgerinside2_copy.jpg'); background-color:#8ec4e6; opacity:1.0"
+    data-href="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/101/X6ILQWV3FZ10G840FSN3SX1G/bgerinside2_copy.jpg">
+  </div>
+  
+
+
+<!-- Main project content container -->
+<div class="jumbotron project-page phase-Challenge"  style="border-color:#8ec4e6">
+
+  
+
+  
+    <div class="project-score">
+      <div class="preview-challenge">
+        Challenge
+        <i class="fa fa-map" aria-hidden="true"></i> 
+        <a title="Go back to the current version of this Project" 
+           href="/project/82">
+           Project</a>
+      </div>
+    </div>
+  
+
+  
+
+  <div class="project-headline">
+  
+    <h2 class="project-name">Federal Supreme Court Data Viewer</h2>
+
+  
+    <p class="project-summary">
+      Let&#39;s build a Shiny app for anyone to analyse data on Swiss Federal Supreme Court judgments! 📊
+    </p>
+  
+
+  
+    <p class="project-hashtag">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        4
+      </a>
+    </p>
+  
+
+  </div><!-- /.project-name -->
+
+  
+    <div class="badges text-right">
+      
+      
+      
+      
+        <a class="btn" id="readme-tab-md" href="#readme-md"
+           title="Readme content">
+          <i class="fa fa-book m-2" aria-hidden="true"></i>
+          Readme</a>
+      
+      
+    </div>
+  
+
+<div class="tab-content clear-both" id="project-content">
+
+  
+
+  
+    <a href="https://github.com/fgeeri/scd-viewer/releases" target="_blank" rel="noopener noreferrer" 
+       class="btn btn-lg btn-light ml-2 font-bold" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+  
+
+  
+
+
+  
+
+  
+    <div id="readme-md" aria-labelledby="readme-tab-md">
+      <div class="project-autotext scroll-after-500"><div class="cover"></div>
+        <h1>scd-viewer</h1>
+
+<p>The <a href="https://zenodo.org/record/7793044">Swiss Federal Supreme Court Dataset (SCD)</a> is the largest open-access dataset on Swiss judgments, with 30 variables documenting all 113&#39;367 Federal Supreme Court judgments since 2007.</p>
+
+<p>With this challenge, we want to enable anyone to make their own quantitative analysis of this rich data, even if they have zero prior programming knowledge: We will build a <a href="https://shiny.rstudio.com/">Shiny app</a> that lets users interact with the data on Swiss Federal Supreme Court judgments and run simple analyses themselves.</p>
+
+<h2>💡 Idea behind the challenge</h2>
+
+<p>The freshly released Swiss Federal Supreme Court Dataset includes all Swiss Federal Supreme Court judgments since 2007. It documents them with 30 variables, which contain case information, the area of law, information about the appealed judgment, the parties, the case outcome, or about citations and publication status.</p>
+
+<p>The SCD enables high-quality quantitative insights into the jurisprudence of the highest Swiss court (see, for example, <a href="https://www.sjz.ch/de/artikel/2504-0650-2021-0169/computergestutzte-ermittlung-der-geschlechterverteilung-im">Merane 2021</a> or <a href="https://doi.org/10.38023/3cebc384-e303-4e19-b5bb-a8497f448ad1">Geering 2021</a>). However, using and analysing the dataset generally requires some knowledge of data science methods. The lack of quantitative methods in the current curricula of most Swiss law schools means that many lawyers, judges and jurists, as well as interested laypersons, currently can&#39;t use this data themselves.</p>
+
+<p>Shiny apps such as the gorgeous <a href="https://shiny.rstudio.com/gallery/cran-explorer.html">CRAN Explorer</a>, the highly functional <a href="https://shiny.rstudio.com/gallery/explore-panel-data.html">ExPanD</a> data explorer, or the highly intuitive <a href="https://rosemarysu.shinyapps.io/bolivia_unpaid_labor/">Bolivia Life of Labor</a> app inspire us. At the <a href="https://opendata.ch/de/events/open-legal-lab-2023/">Open Legal Lab 2023</a>, we want to create a Shiny app that enables anyone to create their own simple analysis of the Federal Supreme Court dataset, without needing programming knowledge or Excel tricks.</p>
+
+<h2>🎯 Goal of the challenge</h2>
+
+<blockquote>
+<p><em>Create and release a Shiny app that enables simple quantitative analyses of the Federal Supreme Court jurisprudence documented in the SCD without any programming knowledge.</em></p>
+</blockquote>
+
+<h2>🚀 Roadmap</h2>
+
+<p>This will have to be discussed at the hackathon.</p>
+
+<ul>
+<li>  [x] Collect data</li>
+<li>  [ ] Define main analysis types as use cases</li>
+<li>  [ ] Create Shiny app</li>
+<li>  [ ] Prepare presentation</li>
+<li>  [ ] Deploy Shiny app</li>
+<li>  [ ] ✨ Extra: Automatically integrate most recent judgments through SCD updates</li>
+<li>  [ ] ✨ Extra: Translate user interface to German, French, Italian, Rumantsch</li>
+</ul>
+
+      </div>
+
+      
+        <div class="alert alert-light text-center mb-1">
+          This content is a preview from an
+          <a href="https://github.com/fgeeri/scd-viewer" target="_blank" rel="noopener noreferrer" title="Source link">
+            external site</a>.
+        </div>
+      
+
+      
+
+      <a href="#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+  
+
+  <div class="project-buttons mb-5" role="group" aria-label="Project links">
+    
+      
+        <a href="https://github.com/fgeeri/scd-viewer/issues" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Contact the team"><span>&#x1f44b;</span> Contact</a>
+      
+    
+    
+    
+      <a href="https://github.com/fgeeri/scd-viewer/releases" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+    
+    
+      <a href="https://github.com/fgeeri/scd-viewer" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Source code"><span>&#x1f4bb;</span> Source</a>
+    
+  </div>
+
+
+  </div><!-- /project-content -->
+
+  
+
+
+  
+    <div class="widget started-at">
+      Contributed
+      <span title="2023-04-21 20:48:23.985403">1 year ago</span>
+      by
+      <a href="/user/%3CUser(&#39;flo&#39;)%3E">
+        <b>flo</b>
+      </a>
+      for
+      <a href="/event/4">
+        <b>Open Legal Lab 2023</b>
+      </a>
+    </div>
+  
+
+</div><!-- /.jumbotron .project-page -->
+
+<center class="project-footer-controls">
+
+<div role="group" aria-label="Project controls" class="btn-group project-controls">
+  
+  
+  
+</div><!-- / .project-controls -->
+
+
+
+
+
+</center><!-- /.project-footer-controls -->
+
+<div class="panel panel-default community-embed mt-5">
+  <div class="panel-body">
+    <div class="codeofconduct">Alle Teilnehmer*innen, Sponsor, Partner, Freiwilligen und Mitarbeiter*innen unseres Hackathons sind verpflichtet, dem <a href="https://hackcodeofconduct.org/" target="_blank">Hack Code of Conduct</a> zuzustimmen. Die Organisatoren werden diesen Kodex während der gesamten Veranstaltung durchsetzen. Wir erwarten die Zusammenarbeit aller Teilnehmer*innen, um eine sichere Umgebung für alle zu gewährleisten. Weitere Einzelheiten zum Ablauf der Veranstaltung finden Sie unter <a href="https://opendata.ch/guidelines/" target="_blank">Richtlinien</a> auf unsere Webseite.</div>
+
+<br><p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img align="left" style="margin-right:1em" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>Die Inhalte dieser Website stehen, sofern nicht anders angegeben, unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a>.</p>
+
+<!-- translator widget -->
+<div class="translate" style="position: absolute; top: 8px; right: 9px; background: url(https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Translate_logo.svg) no-repeat 0% 50%; background-size: contain; padding-left: 30px;"><script>event_url = document.querySelector('meta[property=\'og:url\']').content; document.write('<a target="_top" href="https://translate.google.com/translate?sl=en&tl=de&u=' + event_url + '">Deutsch</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=fr&u=' + event_url + '">Français</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=it&u=' + event_url + '">Italiano</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=en&u=' + event_url + '">English</a>')</script></div>
+  </div>
+</div>
+
+
+
+<center class="mt-5 nav-project-helper">
+
+  <a class="nav-projects btn btn-light" href="/project/80/challenge" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Citation Analysis</a>
+
+  <a class="nav-projects-abs-prev btn btn-secondary border-primary" href="/project/80/challenge" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+
+  <a class="btn btn-dark" href="/event/4"
+     title="Return to the event page">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    Open Legal Lab 2023</a>
+
+
+  <a class="nav-projects btn btn-light" href="/project/81/challenge" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    FEDLEXplorer</a>
+
+  <a class="nav-projects-abs-next btn btn-secondary border-primary" href="/project/81/challenge" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</center>
+
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+</div><!-- end container -->
+
+<footer id="footer">
+  <a class="dribdat-logo" href="/about/">
+    <img src="/static/img/logo12.png">
+  </a>
+  <a href="/" title="GO HOME" class="ml-3">
+    <i class="fa fa-home" aria-hidden="true"></i>
+    Home
+  </a>
+  <a href="#top" id="notification-button" class="hidden ml-3">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    Alerts
+  </a>
+  <ul class="footer-nav">
+    
+      <li>
+        <a href="/login/">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login
+        </a>
+      </li>
+    
+    
+    <li>
+      <a href="https://app.usefathom.com/share/icbbcyor/challenges.openlegallab.ch">&#128200;&nbsp;Analytics</a>
+    </li>
+    
+
+    <li>
+      <a href="/about/">&#128214;&nbsp;About</a>
+    </li>
+
+    <li>
+      <a class="darkmode" href="#">&#127763;&nbsp;<span>Dark</span></a>
+    </li>
+  </ul>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-resizable-dom@0/dist/jquery-resizable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script type="text/javascript" src="/static/js/common.js?cb978ccf"></script>
+
+
+<script type="text/javascript" src="/static/css/rainbow/rainbow-custom.min.js"></script>
+
+
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" site="ICBBCYOR" async defer></script>
+
+
+
+
+
+
+
+<link href="/static/css/rainbow/zenburnesque.css" rel="stylesheet" type="text/css">
+
+  <a name="EOF"></a>
+</body>
+</html>

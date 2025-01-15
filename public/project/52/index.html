@@ -1,0 +1,1541 @@
+<!doctype html>
+<!--
+          M A Y   T H E   S O U R C E   B E   W I T H   Y O U   E X C E L L E N T   B E I N G !
+         .#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&##%@@@@@@@@@@@@@@@@@@@@@@@#   @@@@@@@@@@@@@@@@@@@@@@@@@@@@(
+    .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%######@@@@@@@@@@@@@@@@@@@/      *@@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+    #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#######@@@@@@@@@@@@@@@@@@@        (@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########%@@@@@@@@@@@@@@@@@@@#         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+  &@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#########@@@@@@@@@@@@@@@@@@@@@.         .@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+,@@@@@@@@@@@@@@@@@@@@@@@@@@@####################%@@@#                     @@@@@@@@@@@@@@@@@@@@@@@@@@%
+&@@@@@@@@@@@@#########%@@#########################@*                        &@@/        #@@@@@@@@@@@@
+@@@@@@@@@@@@@#########%@&#########################@*                         @@/        #@@@@@@@@@@@@,
+@@@@@@@@@@@@@#########&@%########################&@&                         @@/        #@@@@@@@@@@@@.
+(@@@@@@@@@@@@#########&@%########################@@@.                        @@/        #@@@@@@@@@@@&
+  @@@@@@@@@@@@#########&@%#######################%@@@%                        @@/        #@@@@@@@@@@@*
+  .@@@@@@@@@@@###&@&###&@%#######################@@@@@.                       @@/   @@%  #@@@@@@@@@@#
+  .@@@@@@@@@@%########@@%######################%@@@@@@                       @@/        #@@@@@@@@@(
+    &@@@@@@@@@&&&&&&@@@@@@%###################%@@@@@@@@                   .,#@@#********%@@@@@@@@.
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%%#####%%@@@@@@@@@@@@@*.    .,,(%@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+        &@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+          THIS EVENT WAS PRODUCED USING DRIBDAT.CC
+ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="generator" content="dribdat"/>
+
+  <title>Casemates - Open Legal Lab 2022</title>
+  
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://challenges.openlegallab.ch/project/52"/>
+  <meta property="og:title" content="Casemates"/>
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/13186156?v=4"/>
+  <meta property="og:description" content="Vereinfachung und Verbesserung des Zugriffs auf den SPARQL-Endpoint «Casemates», um die Daten des Bundesrechts beziehen zu können"/>
+  <meta name="twitter:site" content="@opendatach"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  <meta name="description" content="Vereinfachung und Verbesserung des Zugriffs auf den SPARQL-Endpoint «Casemates», um die Daten des Bundesrechts beziehen zu können"/>
+  <meta name="author" content="andrea"/>
+  <meta name="dribdat:project:id" content="52"/>
+
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/simplex/bootstrap.min.css" alt-href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/darkly/bootstrap.min.css" id="css-bootswatch"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"/>
+  
+
+  
+    <link rel="stylesheet" href="../static/css/common.css%3Ffd74b454.css"/>
+  
+  
+  <link rel="shortcut icon" href="../static/img/favicon.ico"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS: Latest dribs" href="../feeds/dribs.xml">
+
+</head>
+<body class="project-home" data-barba="wrapper">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-faded" role="navigation">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="../index.html" title="GO HOME">
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-main-collapse">
+    <ul class="navbar-nav navbar-left mr-auto nav-fill">
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link " 
+           title="Latest posts from the teams"
+           href="../dribs.html">
+          <i class="fa fa-comment bg-warning text-white" aria-hidden="true"></i>
+          Dribs
+        </a>
+      </li>
+
+      
+        <li class="nav-item">
+          <a class="nav-link nav-login" 
+             title="Sign in with your account"
+             href="../login/index.html">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+          </a>
+        </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link" id="navSearchButton" 
+           title="Search this dribdat site"
+           href="../about.html">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<!-- Popup global alerts -->
+<div id="global-notifications-alert" class="hidden">
+  <div class="alert alert-info">
+    <a class="close" title="Close" href="52.html#">&times;</a>
+    <i class="fa fa-info-circle float-left" aria-hidden="true"></i>
+    <span id="notifications-status-text"></span>
+  </div>
+</div>
+
+<!-- Popup search results -->
+<div class="hidden container nav-search" id="navSearch" 
+     tabindex="-1" role="dialog" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="profile-projects container-fluid mb-3">
+    <div data-action="/api/project/search.json" id="search">
+      <div class="content input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" class="form-control" name="q" aria-label="Search projects" placeholder="Start typing ..."  style="width:20em">
+      </div>
+    </div>
+    <div class="row flex-row flex-nowrap pb-2" id="search-results"></div>
+    <div class="text-center mb-2" id="search-matches"></div>
+  </div>
+</div>
+
+
+  <div class="container event-header">
+  <div class="section section-centered section-header">
+    
+      <div class="section-header-logo">
+        <a href="../event/1.html">
+          <img id="event-logo" src="https://opendata.ch/wordpress/files/2022/01/Open-Legal-lab-2022-2048x1444.jpg" alt="Logo" title="Opendata.ch und eJustice">
+        </a>
+      </div>
+    
+    <div class="section-header-content">
+      <a href="../event/1.html">
+        <h3 class="event-name">Open Legal Lab 2022</h3>
+      </a>
+      
+        <div class="event-hostname">
+          <i class="fa fa-bank"></i>
+          Opendata.ch und eJustice</div>
+      
+      
+        <div class="event-date">
+          <i class="fa fa-calendar"></i>
+          March 27 - 28, 2022</div>
+      
+      
+        <div class="event-location">
+          <i class="fa fa-map"></i>
+          
+            Magglingen
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+  
+    <style id="custom_css" type="text/css">.dashboard-page .container-fluid { background: url() no-repeat; background-size: cover; }
+
+.translate { position: absolute; top: 5px; right: 5px; }</style>
+  
+
+
+
+<div class="container with-event">
+
+  <div role="main">
+    
+    
+    
+
+    <main data-barba="container" data-barba-namespace="home">
+      
+
+
+
+<div class="btn-group project-edit-buttons" role="group" aria-label="Project tools">
+
+  
+
+  
+  
+
+  
+
+</div><br clear="all">
+
+
+  <div class="project-image-container"
+    style="background-image:url('https://avatars.githubusercontent.com/u/13186156?v=4'); "
+    data-href="https://avatars.githubusercontent.com/u/13186156?v=4">
+  </div>
+  
+
+
+<!-- Main project content container -->
+<div class="jumbotron project-page phase-Launch" >
+
+  
+
+  
+    <div class="project-score">
+      <a href="../event/1/stages.html#Launch">
+        <div class="progress" 
+          title="(80) Launch"
+          alt="A score based on profile completeness and voting results">
+          <div class="progress-bar" role="progressbar" 
+               aria-valuenow="80" aria-valuemin="0" aria-valuemax="70" 
+               style="width:80%">
+          </div>
+        </div>
+      </a>
+      <div class="preview-challenge mt-2">
+        <a title="Click to show the Challenge from which this project started" 
+           href="52/challenge.html">
+             Challenge</a>
+        <i class="fa fa-trophy" aria-hidden="true"></i> 
+        Project
+      </div>
+    </div>
+  
+
+  
+
+  <div class="project-headline">
+  
+    <h2 class="project-name">Casemates</h2>
+
+  
+    <p class="project-summary">
+      Vereinfachung und Verbesserung des Zugriffs auf den SPARQL-Endpoint «Casemates», um die Daten des Bundesrechts beziehen zu können
+    </p>
+  
+
+  
+
+  </div><!-- /.project-name -->
+
+  
+    <div class="badges text-right">
+      
+      
+          <a class="btn" id="project-tab-md" href="52.html#project-md"
+             title="Challenge pitch">
+            <i class="fa fa-book m-2" aria-hidden="true"></i>
+            Pitch</a>
+      
+      
+        <a class="btn" id="team-tab-md" href="52.html#team-md"
+          title="Show team members">
+          <i class="fa fa-user m-2" aria-hidden="true"></i>
+          Team</a>
+      
+      
+        <a class="btn" id="readme-tab-md" href="52.html#readme-md"
+           title="Readme content">
+          <i class="fa fa-book m-2" aria-hidden="true"></i>
+          Readme</a>
+      
+      
+        <a class="btn" id="dribs-tab-md" href="52.html#log"
+           title="Play by play progress review">
+          <span class="drib-count mr-2">20</span>
+          Log</a>
+      
+    </div>
+  
+
+<div class="tab-content clear-both" id="project-content">
+
+  
+    <div class="project-webembed hidden resizable">
+      <iframe src="https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html"></iframe>
+      <div class="win-size-grip"></div>
+    </div>
+    <a href="52.html#top" class="btn btn-small btn-default" 
+       data-toggle="modal" data-target="#webembedModal" 
+       aria-label="Full screen view" title="Press Esc to close">
+       &#x26F6;&nbsp;&nbsp;Fullscreen</a>
+    <a href="https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html" class="btn btn-small btn-default" 
+       target="_blank" rel="noopener noreferrer" title="Open source file">
+       &#x2193;&nbsp;&nbsp;Download</a>
+  
+
+  
+    <a href="https://github.com/ribeaud/Sparnatural/releases" target="_blank" rel="noopener noreferrer" 
+       class="btn btn-lg btn-light ml-2 font-bold" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+  
+
+  
+    <div id="project-md" aria-labelledby="project-tab-md">
+      
+
+      <div class="project-longtext">
+        <p>Mit diesem Projekt soll der Zugang zu den Daten des Bundesrechts für Firmen und Interessierte über die Abfragesprache SPARQL vereinfacht und das Verständnis sowie die Möglichkeiten zum Zugriff auf Casemates und die Daten des Bundesrechts verbessert werden. Verschiedene Firmen arbeiten bereits mit dem SPARQL-Endpoint des Bundesrechts und beziehen von dort Daten, um diese in eigene Anwendungen zu übernehmen. Die Möglichkeiten, die der Endpoint bietet, werden derzeit jedoch noch nicht in dem Masse genutzt, wie dies möglich wäre. Das Potential ist entsprechend gross.</p>
+
+<p>Wir haben mit SPARnatural <a href="https://github.com/sparna-git/Sparnatural/">https://github.com/sparna-git/Sparnatural/</a> einen Query Builder erarbeitet, der zur Zeit mit Luxemburgischen Daten funktionert (Fedlex basiert auf der Luxemburger Anwendung):
+<a href="https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html">https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html</a></p>
+
+<p>Wir deckten Teile der &quot;Geheimwissenschaften&quot; des SPARQLn auf:
+Die semantische Strukturen der Daten können statisch, wie auch dynamisch abstrahiert werden.</p>
+
+<p>Ein schöner Querybuilder ist z.B.: <a href="https://query.wikidata.org/">https://query.wikidata.org/</a> Leider sind der Querybuilder und der Queryservice zu sehr mit der Wikiwelt verbunden. </p>
+
+<p>Ausblick:
+Die Bundeskanzlei ergänzt nun ihre Datenstruktur am Casemates-SPARQL-Endpoint soweit auf, dass Querybuilder damit umgehen können.
+Auch werden die Daten ab Sommer im XML AKN Format <a href="https://en.wikipedia.org/wiki/Akoma_Ntoso">https://en.wikipedia.org/wiki/Akoma_Ntoso</a> zur Verfügung gestellt (gilt für Publikationen ab Sommer 2022).</p>
+
+<p>Bei SPARQL handelt es sich um eine graphenbasierte Abfragesprache. Das Akronym SPARQL steht dabei für &quot;SPARQL Protocol And RDF Query Language&quot;.</p>
+
+<p>SPARQL wird im Rechtsumfeld mehr und mehr genutzt und kommt zum Beispiel auch bei dem Linked Data Service (<a href="https://lindas.admin.ch/">https://lindas.admin.ch/</a>) des Bundesarchivs zum Einsatz. Auch Geodaten von swisstopo werden per SPARQL angeboten.</p>
+
+<p>SPARQL wird jedoch noch nicht in gleichem Masse wie andere Abfragesprachen gelehrt. Das Erstellen von SPARQL-Abfragen und damit der Zugriff auf Daten fällt daher häufig vergleichsweise schwer. Viele SPARQL/Semantic Web Lernresourcen sind auf <a href="https://www.poolparty.biz/resource-library">https://www.poolparty.biz/resource-library</a> einsichtbar.</p>
+
+      </div>
+    </div><!-- /project-md -->
+  
+
+
+  
+    <div id="team-md" aria-labelledby="team-tab-md">
+      <div class="widget widget-team m-4">
+      
+        
+          <i class="fa fa-star project-owner" 
+              title="Started this project" aria-hidden="true"></i>
+        
+        
+    <a href="../user/andrea.html"
+        class="team-gravatar" data-id="5">
+        
+        <span>andrea</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="../user/Speakeasy.html"
+        class="team-gravatar" data-id="51">
+        
+        <span>Speakeasy</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="../user/cedricjoseph.html"
+        class="team-gravatar" data-id="67">
+        
+            <img src="https://www.gravatar.com/avatar/549faaebbd2a23462b88a1756e4d69e9?s=80"/>
+        
+        <span>cedricjoseph</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="../user/HP.html"
+        class="team-gravatar" data-id="68">
+        
+        <span>HP</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="../user/daniel_harzenmoser.html"
+        class="team-gravatar" data-id="74">
+        
+        <span>daniel_harzenmoser</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="../user/michael_kammerbauer.html"
+        class="team-gravatar" data-id="75">
+        
+        <span>michael_kammerbauer</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+      
+      </div>
+
+      
+    </div>
+  
+
+  
+    <div id="readme-md" aria-labelledby="readme-tab-md">
+      <div class="project-autotext scroll-after-500"><div class="cover"></div>
+        <h1>Sparnatural - A natural way of building SPARQL queries</h1>
+
+<p>Sparnatural is a <strong>visual SPARQL query builder written in javascript</strong>.</p>
+
+<p>It supports the creation of basic graph patterns with the selection of values with autocomplete search or dropdown lists. It can be configured through a JSON-LD or OWL configuration file (that can be edited in Protégé) that defines the classes and properties to be presented in the component.</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/screencast-sparnatural-dbpedia-v3-en.gif" alt=""></p>
+
+<p>You can play with <strong>online demos at <a href="http://sparnatural.eu#demos">http://sparnatural.eu#demos</a></strong>.</p>
+
+<h1>Getting Started</h1>
+
+<p>To get started :</p>
+
+<ol>
+<li>Read the following documentation;</li>
+<li>Read <a href="https://github.com/sparna-git/Sparnatural/wiki">the Wiki</a></li>
+<li>Look at how things work in file <code>sparnatural-demo-dbpedia/index.html</code>; </li>
+<li>In particular look at how the specifications are written by looking at <a href="https://github.com/sparna-git/Sparnatural/blob/master/sparnatural-demo-dbpedia/index.html#L100">the source of <code>sparnatural-demo-dbpedia/index.html</code></a></li>
+<li>Adapt <code>sparnatural-demo-dbpedia/index.html</code> by changing the configuration and adapting the SPARQL endpoint URL;</li>
+</ol>
+
+<p>To get started with docker :</p>
+
+<ol>
+<li>Clone the git repository</li>
+<li>Run <code>docker-compose build</code></li>
+<li>Run <code>docker-compose up</code></li>
+<li>Open your browser: <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></li>
+</ol>
+
+<h1>Features</h1>
+
+<h2>Query Structure</h2>
+
+<h3>Basic query pattern</h3>
+
+<p>Select the type of entity to search...</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/1-screenshot-class-selection.png" alt=""></p>
+
+<p>... then select the type of the related entity.</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/2-screenshot-object-type-selection.png" alt=""></p>
+
+<p>In this case there is only one possible type of relation that can connect the 2 entities, so it gets selected automatically. Then select a value for the related entity, in this case in a dropdown list :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/3-screenshot-value-selection.png" alt=""></p>
+
+<p>Congratulations, your first SPARQL query criteria is complete !</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/4-screenshot-criteria.png" alt=""></p>
+
+<p>Now you can fetch the generated SPARQL query :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/5-screenshot-sparql.png" alt=""></p>
+
+<h3>&quot;WHERE&quot;</h3>
+
+<p>This enables to navigate the graph :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/6-where.png" alt=""></p>
+
+<h3>&quot;AND&quot;</h3>
+
+<p>Combine criterias :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/7-and.png" alt=""></p>
+
+<h3>&quot;OR&quot;</h3>
+
+<p>Select multiple values for a criteria :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/8-or.png" alt=""></p>
+
+<h2>Values selection</h2>
+
+<p>Sparnatural offers currently 6 ways of selecting a value for a criteria : autocomplete field, dropdown list, simple string value, date range (year or date precision), date range with a search in a period name (e.g. &quot;bronze age&quot;), or no selection at all.</p>
+
+<h3>Autocomplete field</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/9-autocomplete.png" alt=""></p>
+
+<h3>Dropdown list</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/10-list.png" alt=""></p>
+
+<h3>String value (text search)</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/11-search.png" alt=""></p>
+
+<h3>Date range (year or date precision)</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/12-time-date.png" alt=""></p>
+
+<h3>Date range with search in period name (chronocultural periods)</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/14-chronocultural-period.png" alt=""></p>
+
+<p>(this requires data from <a href="https://perio.do">Perio.do</a>, a gazeeter of periods for linking and visualizing data)</p>
+
+<h3>Boolean selection</h3>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/15-boolean.png" alt=""></p>
+
+<h3>No value selection</h3>
+
+<p>This is useful when a type a of entity is used only to navigate the graph, but without the ability to select an instance of these entities.</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/13-no-value.png" alt=""></p>
+
+<h2>Multilingual</h2>
+
+<p>Sparnatural is multilingual and supports displaying labels of classes and properties in multiple languages.</p>
+
+<h2>Support for OPTIONAL and FILTER NOT EXISTS</h2>
+
+<p>Sparnatural supports the <code>OPTIONAL</code> and <code>FILTER NOT EXISTS {}</code> keywords applied to a whole &quot;branch&quot; of the query.
+See here how to search for French Museums and the name of Italian painters they display, <em>if any</em> :</p>
+
+<p><img src="https://raw.githubusercontent.com/ribeaud/Sparnatural/master/documentation/16-optional.gif" alt=""></p>
+
+<h2>Limitations</h2>
+
+<h3>No UNION or BIND, etc.</h3>
+
+<p>Sparnatural does not support the creation of UNION, SERVICE, BIND, etc...</p>
+
+<h3>SPARQL endpoint needs to be CORS-enabled</h3>
+
+<p>To send SPARQL queries to a service that is not hosted on the same domain name as the web page in which Sparnatural is included, the SPARQL endpoint needs to allow <a href="https://enable-cors.org/">Cross-Origin Resource Sharing (CORS)</a>. But we have SPARQL proxies for those who are not, don&#39;t worry ;-)</p>
+
+<h1>Integration</h1>
+
+<h2>Specification of classes and properties</h2>
+
+<p>The component is configurable using a an <a href="https://github.com/sparna-git/Sparnatural/wiki/OWL-based-configuration">OWL configuration file</a> editable in Protégé.. Look at the specification files of <a href="https://github.com/sparna-git/sparnatural.eu/tree/main/demos">the demos</a> to get an idea. </p>
+
+<p>Alternatively one can also use a <a href="https://github.com/sparna-git/Sparnatural/wiki/JSON-based-configuration">JSON(-LD) ontology file</a>. A JSON(-LD) configuration file contains :</p>
+
+<h3>Class definition</h3>
+
+<pre><code class="language-json">    {
+      &quot;@id&quot; : &quot;http://dbpedia.org/ontology/Museum&quot;,
+      &quot;@type&quot; : &quot;Class&quot;,
+      &quot;label&quot;: [
+        {&quot;@value&quot; : &quot;Museum&quot;, &quot;@language&quot; : &quot;en&quot;},
+        {&quot;@value&quot; : &quot;Musée&quot;,&quot;@language&quot; : &quot;fr&quot;}
+      ],
+      &quot;faIcon&quot;:  &quot;fas fa-university&quot;
+    },
+</code></pre>
+
+<h3>Property definitions with domains and ranges</h3>
+
+<pre><code class="language-json">    {
+      &quot;@id&quot; : &quot;http://dbpedia.org/ontology/museum&quot;,
+      &quot;@type&quot; : &quot;ObjectProperty&quot;,
+      &quot;subPropertyOf&quot; : &quot;sparnatural:AutocompleteProperty&quot;,
+      &quot;label&quot;: [
+        {&quot;@value&quot; : &quot;displayed at&quot;,&quot;@language&quot; : &quot;en&quot;},
+        {&quot;@value&quot; : &quot;exposée à&quot;,&quot;@language&quot; : &quot;fr&quot;}
+      ],
+      &quot;domain&quot;: &quot;http://dbpedia.org/ontology/Artwork&quot;,
+      &quot;range&quot;: &quot;http://dbpedia.org/ontology/Museum&quot;,
+      &quot;datasource&quot; : &quot;datasources:search_rdfslabel_bifcontains&quot;
+    },
+</code></pre>
+
+<h3>Using font-awesome icons</h3>
+
+<p>It is possible to directly use font-awesome icons in place of icons embedded in your application :</p>
+
+<pre><code class="language-json">&quot;faIcon&quot;:  &quot;fas fa-user&quot;,
+</code></pre>
+
+<h2>How to integrate Sparnatural in a webpage</h2>
+
+<p>Look at <a href="https://github.com/sparna-git/Sparnatural/wiki/Javascript-integration">this page in the wiki documentation</a>.</p>
+
+<h2>Map the query structure to a different graph structure</h2>
+
+<p>Map classes or properties in the config to a corresponding SPARQL property path or a corresponding class URI, using the <code>sparqlString</code> JSON key, e.g. :</p>
+
+<pre><code>    {
+      &quot;@id&quot; : &quot;http://labs.sparna.fr/sparnatural-demo-dbpedia/onto#bornIn&quot;,
+      &quot;@type&quot; : &quot;ObjectProperty&quot;,
+      ...
+      &quot;sparqlString&quot;: &quot;&lt;http://dbpedia.org/ontology/birthPlace&gt;/&lt;http://dbpedia.org/ontology/country&gt;&quot;,
+    },
+</code></pre>
+
+<p>Then call <code>expandSparql</code> on the <code>sparnatural</code> instance by passing the original SPARQL query, to replace all mentions of original classes and properties URI with the corresponding SPARQL string :</p>
+
+<pre><code>queryString = sparnatural.expandSparql(queryString);
+</code></pre>
+
+      </div>
+
+      
+        <div class="alert alert-light text-center mb-1">
+          This content is a preview from an
+          <a href="https://github.com/ribeaud/Sparnatural/" target="_blank" rel="noopener noreferrer" title="Source link">
+            external site</a>.
+        </div>
+      
+
+      
+
+      <a href="52.html#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+  
+
+  <div class="project-buttons mb-5" role="group" aria-label="Project links">
+    
+      
+        <a href="https://openlegallab.slack.com/archives/C038JJT5CQ3" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Contact the team"><span>&#x1f44b;</span> Contact</a>
+      
+    
+    
+      <a href="https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Project web link"><span>&#x1f310;</span> Open</a>
+    
+    
+      <a href="https://github.com/ribeaud/Sparnatural/releases" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+    
+    
+      <a href="https://github.com/ribeaud/Sparnatural" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Source code"><span>&#x1f4bb;</span> Source</a>
+    
+  </div>
+
+
+  </div><!-- /project-content -->
+
+  
+  <a name="log"></a>
+  <div id="dribs-md" aria-labelledby="dribs-tab-md">
+
+    <section class="timeline">
+      
+      <div class="timeline-item timeline-finish timeline-bullhorn">
+        <div class="timeline-img" title="28.03.2022 15:30 (finish)">
+          
+            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Event finished</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="28.03.2022 12:07 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/320.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 28)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                28.03.2022 12:07
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/michael_kammerbauer.html">
+                    michael_kammerbauer</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="28.03.2022 12:07 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Research</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="28.03.2022 12:05 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/319.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 26)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                28.03.2022 12:05
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/michael_kammerbauer.html">
+                    michael_kammerbauer</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="28.03.2022 12:04 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/318.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 24)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                28.03.2022 12:04
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/michael_kammerbauer.html">
+                    michael_kammerbauer</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="28.03.2022 11:52 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/317.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 22)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                28.03.2022 11:52
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/daniel_harzenmoser.html">
+                    daniel_harzenmoser</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="28.03.2022 10:34 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/314.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 20)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                28.03.2022 10:34
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/daniel_harzenmoser.html">
+                    daniel_harzenmoser</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-review timeline-comment">
+        <div class="timeline-img" title="27.03.2022 22:31 (review)">
+          
+            <i class="fa fa-comment" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>The team is putting a tool together that makes it easier to access resources based on a SPARQL editor inspired by the <a href="https://www.wikidata.org/wiki/Wikidata:Query_Builder">Wikidata query builder</a>.</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                27.03.2022 22:31
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/oleg.html">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="27.03.2022 18:03 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>use <code>https</code> (@ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/Sparnatural/commit/cca4d8550dcc6e49f2a602250d8461ee7adeadf1">
+            
+                27.03.2022 18:03
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="27.03.2022 15:27 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Mit SPARnatural kann man grafisch, visuell seine Abfragen definieren und erhält den SPARQL Syntax zurück, welcher ev. noch händisch angepasst werden kann.</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                27.03.2022 15:27
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/daniel_harzenmoser.html">
+                    daniel_harzenmoser</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="27.03.2022 15:27 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Research</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="27.03.2022 14:25 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Wir wollen <a href="https://github.com/sparna-git/Sparnatural/">https://github.com/sparna-git/Sparnatural/</a> für den von der Bundeskanzei zur Verfügung gestellten SPARQL Endpoint <a href="https://fedlex.data.admin.ch/sparqlendpoint">https://fedlex.data.admin.ch/sparqlendpoint</a> adaptieren.</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                27.03.2022 14:25
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/daniel_harzenmoser.html">
+                    daniel_harzenmoser</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="27.03.2022 14:22 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Wir arbeiten an einem Tool, um einfach SPARQL-Abfragen machen zu können.</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                27.03.2022 14:22
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/michael_kammerbauer.html">
+                    michael_kammerbauer</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="27.03.2022 14:22 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Project</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-star timeline-thumbs-up">
+        <div class="timeline-img" title="27.03.2022 14:21 (star)">
+          
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Joined the team</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                27.03.2022 14:21
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/michael_kammerbauer.html">
+                    michael_kammerbauer</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-start timeline-calendar">
+        <div class="timeline-img" title="27.03.2022 08:00 (start)">
+          
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Event started</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="21.03.2022 06:34 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/140.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 5)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                21.03.2022 06:34
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/andrea.html">
+                    andrea</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="21.03.2022 06:24 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="52/preview/139.html">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 3)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                21.03.2022 06:24
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/andrea.html">
+                    andrea</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-create timeline-flag-checkered">
+        <div class="timeline-img" title="21.03.2022 06:24 (create)">
+          
+            <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>First post <a class='btn btn-light float-right' href='52/challenge.html'>View challenge</a></p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                21.03.2022 06:24
+                
+                  ~
+                  <a class="userlink"
+                    href="../user/andrea.html">
+                    andrea</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="21.03.2022 06:24 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Challenge</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+
+    </section>
+
+    <a href="52.html#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+  </div><!-- /dribs-md -->
+  
+
+
+  
+    <div class="widget started-at">
+      Contributed
+      <span title="2022-03-21 06:24:32.795991">2 years ago</span>
+      by
+      <a href="https://challenges.openlegallab.ch/user/%3CUser('andrea')%3E">
+        <b>andrea</b>
+      </a>
+      for
+      <a href="../event/1.html">
+        <b>Open Legal Lab 2022</b>
+      </a>
+    </div>
+  
+
+</div><!-- /.jumbotron .project-page -->
+
+<center class="project-footer-controls">
+
+<div role="group" aria-label="Project controls" class="btn-group project-controls">
+  
+  
+  
+</div><!-- / .project-controls -->
+
+
+
+
+
+</center><!-- /.project-footer-controls -->
+
+<div class="panel panel-default community-embed mt-5">
+  <div class="panel-body">
+    <div class="translate"><script>document.write('<a href="https://translate.google.com/translate?sl=de&tl=fr&u=' + location.href + '">Français</a>' + ' | <a href="https://translate.google.com/translate?sl=de&tl=it&u=' + location.href + '">Italiano</a> | <a href="https://translate.google.com/translate?sl=de&tl=en&u=' + location.href + '">English</a>')</script></div>
+
+<div class="codeofconduct">Alle Teilnehmer*innen, Sponsor, Partner, Freiwilligen und Mitarbeiter*innen unseres Hackathons sind verpflichtet, dem <a href="https://hackcodeofconduct.org/" target="_blank">Hack Code of Conduct</a> zuzustimmen. Die Organisatoren werden diesen Kodex während der gesamten Veranstaltung durchsetzen. Wir erwarten die Zusammenarbeit aller Teilnehmer*innen, um eine sichere Umgebung für alle zu gewährleisten. Weitere Einzelheiten zum Ablauf der Veranstaltung finden Sie unter <a href="http://make.opendata.ch/wiki/information:rules" target="_blank">Richtlinien</a> in unserem Wiki.</div>
+
+<br><p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img align="left" style="margin-right:1em" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>Die Inhalte dieser Website stehen, sofern nicht anders angegeben, unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</p>
+
+  </div>
+</div>
+
+
+  
+<div class="social-media">
+
+<!-- Sharingbutton Mastodon -->
+<a class="resp-sharing-button__link" href="https://toot.kytta.dev/?text=Casemates%20%23dribdat%20https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52" target="_blank" rel="noopener" title="Toot">
+  <div class="resp-sharing-button resp-sharing-button--mastodon resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg viewBox="0 0 216.4144 232.00976" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M 107.8656,0 C 82.198854,0.69263562 55.463658,1.2782634 31.628051,11.822839 8.0238648,25.571275 -1.218105,54.598019 0.05883653,80.596679 0.2797621,116.75695 -1.72277,154.48279 12.38514,188.57229 c 8.076308,20.16652 26.710389,35.22898 48.176899,38.74021 29.118858,6.60575 61.016791,7.40903 88.765961,-4.9181 -0.2893,-6.36352 -0.57862,-12.72705 -0.86792,-19.09057 -22.00073,6.07867 -45.98127,7.61901 -68.061144,1.2531 -13.147423,-4.0199 -19.403971,-18.29301 -18.718028,-31.19267 29.841842,6.85916 60.851062,8.13529 91.142992,3.64074 21.8324,-2.65634 45.09313,-12.1773 56.7889,-31.73953 5.03358,-13.46669 4.92864,-28.27295 6.14689,-42.47504 1.21967,-24.611633 2.69135,-51.596394 -12.0077,-72.884501 C 195.60739,16.860023 181.87566,8.2479333 166.81407,5.6651532 147.50382,1.3153541 127.60707,0.19680027 107.8656,0 Z M 74.296874,39.325561 c 13.216216,-0.79713 25.326825,7.400208 30.822196,19.151849 2.00501,5.132015 4.01002,5.781211 6.01502,0.27296 5.27895,-11.030328 16.07971,-19.470061 28.70398,-19.368765 17.08193,-1.870333 33.47845,10.919859 36.3332,27.76317 2.42342,15.586525 0.91842,31.467746 1.33849,47.198585 0,8.89177 0,17.78354 0,26.67531 -8.0481,0 -16.09619,0 -24.14429,0 -0.15027,-21.17672 0.30904,-42.37539 -0.24536,-63.537592 0.16909,-12.482336 -14.94825,-18.13985 -24.67529,-12.216799 -10.74071,7.3086 -7.76512,21.615 -8.23608,32.849136 0,6.561885 0,13.123775 0,19.685655 -8.00049,0 -16.00098,0 -24.001469,0 C 95.934083,104.48619 96.832696,91.106569 95.593874,77.847289 94.997971,65.102017 79.131025,58.945483 69.197387,65.731202 c -8.801638,7.417912 -5.48038,19.958548 -6.148682,30.097244 0,15.063414 0,30.126814 0,45.190224 -8.048095,0 -16.096191,0 -24.144286,0 0.188858,-22.55685 -0.398935,-45.139355 0.33448,-67.678319 0.770518,-16.763192 13.726972,-32.984028 31.150504,-33.839008 l 1.929436,-0.131745 z" /></svg>
+
+  </div></div>
+</a>
+
+<!-- Sharingbutton Hacker News -->
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52&amp;t=Casemates%20%23dribdat" target="_blank" rel="noopener" title="Share on Hacker News">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><path fill-rule="evenodd" d="M60.94 82.314L17 0h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L103.49 0h18.69L77.84 83.308v53.087h-16.9v-54.08z"></path></svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton Twitter/X -->
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/post/?text=Casemates%20%23dribdat&amp;url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52" target="_blank" rel="noopener" title="Post to X">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton LinkedIn -->
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52" target="_blank" rel="noopener" title="Post to LinkedIn">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z"></path></svg>
+  </div></div>
+</a>
+
+<!-- Sharingbutton Telegram -->
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Casemates%20%23dribdat&amp;url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52" target="_blank" rel="noopener" title="Post on Telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"/></svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton Reddit -->
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F52&amp;resubmit=true&amp;title=Casemates%20%23dribdat" target="_blank" rel="noopener" title="Share on Reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg>
+  </div></div>
+</a>
+
+<!-- Sharingbutton E-Mail -->
+<a class="resp-sharing-button__link" href="../cdn-cgi/l/email-protection.html#dfe0acaabdb5babcabe29cb7babcb4ffb0aaabffabb7b6acffafadb0b5babcabf9beb2afe4bdb0bba6e2b7ababafacfaec9efaed99faed99bcb7beb3b3bab1b8baacf1b0afbab1b3bab8beb3b3bebdf1bcb7faed99afadb0b5babcabfaed99eaedff9cbeacbab2beabbaacfaedeffaedecbbadb6bdbbbeab" target="_self" rel="noopener" title="Share by E-Mail">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
+  </div></div>
+</a>
+
+</div><!-- /.social-media -->
+
+
+
+<center class="mt-5 nav-project-helper">
+
+  <a class="nav-projects btn btn-light" href="53.html" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Aditum - Digitaler Zugang zum Gericht</a>
+
+  <a class="nav-projects-abs-prev btn btn-secondary border-primary" href="53.html" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+
+  <a class="btn btn-dark" href="../event/1.html"
+     title="Return to the event page">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    Open Legal Lab 2022</a>
+
+
+  <a class="nav-projects btn btn-light" href="6.html" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    🧿 Collective law-making</a>
+
+  <a class="nav-projects-abs-next btn btn-secondary border-primary" href="6.html" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</center>
+
+
+
+
+  <div class="modal fade modal-fullscreen" id="webembedModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header collapse">
+          <h5 class="modal-title">Casemates - Open Legal Lab 2022</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="width:100%;height:100%">
+          <iframe src="https://ribeaud.github.io/Sparnatural/demos/sparnatural-demo-legilux/index.html"></iframe>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+
+
+
+
+    </main>
+  </div>
+
+</div><!-- end container -->
+
+<footer id="footer">
+  <a class="dribdat-logo" href="../about.html">
+    <img src="../static/img/logo12.png">
+  </a>
+  <a href="../index.html" title="GO HOME" class="ml-3">
+    <i class="fa fa-home" aria-hidden="true"></i>
+    Home
+  </a>
+  <a href="52.html#top" id="notification-button" class="hidden ml-3">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    Alerts
+  </a>
+  <ul class="footer-nav">
+    
+      <li>
+        <a href="../login/index.html">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login
+        </a>
+      </li>
+    
+    
+    <li>
+      <a href="https://app.usefathom.com/share/icbbcyor/challenges.openlegallab.ch">&#128200;&nbsp;Analytics</a>
+    </li>
+    
+
+    <li>
+      <a href="../about.html">&#128214;&nbsp;About</a>
+    </li>
+
+    <li>
+      <a class="darkmode" href="52.html#">&#127763;&nbsp;<span>Dark</span></a>
+    </li>
+  </ul>
+</footer>
+
+
+  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-resizable-dom@0/dist/jquery-resizable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script type="text/javascript" src="../static/js/common.js%3Fcb978ccf"></script>
+
+
+<script type="text/javascript" src="../static/css/rainbow/rainbow-custom.min.js"></script>
+
+
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" site="ICBBCYOR" async defer></script>
+
+
+
+
+
+
+
+<link href="../static/css/rainbow/zenburnesque.css" rel="stylesheet" type="text/css">
+
+  <a name="EOF"></a>
+</body>
+</html>

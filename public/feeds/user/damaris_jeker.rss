@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:27:41 GMT</pubDate>
+    <title>Dribs by damaris_jeker</title>
+    <link>https://challenges.openlegallab.ch/user/damaris_jeker</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/damaris_jeker' rel='self' type='application/rss+xml' />
+	  
+  </channel>
+</rss>

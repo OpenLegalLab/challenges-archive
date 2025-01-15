@@ -1,0 +1,2738 @@
+<!doctype html>
+<!--
+          M A Y   T H E   S O U R C E   B E   W I T H   Y O U   E X C E L L E N T   B E I N G !
+         .#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&##%@@@@@@@@@@@@@@@@@@@@@@@#   @@@@@@@@@@@@@@@@@@@@@@@@@@@@(
+    .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%######@@@@@@@@@@@@@@@@@@@/      *@@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+    #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#######@@@@@@@@@@@@@@@@@@@        (@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########%@@@@@@@@@@@@@@@@@@@#         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+  &@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#########@@@@@@@@@@@@@@@@@@@@@.         .@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+,@@@@@@@@@@@@@@@@@@@@@@@@@@@####################%@@@#                     @@@@@@@@@@@@@@@@@@@@@@@@@@%
+&@@@@@@@@@@@@#########%@@#########################@*                        &@@/        #@@@@@@@@@@@@
+@@@@@@@@@@@@@#########%@&#########################@*                         @@/        #@@@@@@@@@@@@,
+@@@@@@@@@@@@@#########&@%########################&@&                         @@/        #@@@@@@@@@@@@.
+(@@@@@@@@@@@@#########&@%########################@@@.                        @@/        #@@@@@@@@@@@&
+  @@@@@@@@@@@@#########&@%#######################%@@@%                        @@/        #@@@@@@@@@@@*
+  .@@@@@@@@@@@###&@&###&@%#######################@@@@@.                       @@/   @@%  #@@@@@@@@@@#
+  .@@@@@@@@@@%########@@%######################%@@@@@@                       @@/        #@@@@@@@@@(
+    &@@@@@@@@@&&&&&&@@@@@@%###################%@@@@@@@@                   .,#@@#********%@@@@@@@@.
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%%#####%%@@@@@@@@@@@@@*.    .,,(%@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+        &@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+          THIS EVENT WAS PRODUCED USING DRIBDAT.CC
+ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="generator" content="dribdat"/>
+
+  <title>FEDLEXplorer - Open Legal Lab 2023</title>
+  
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://challenges.openlegallab.ch/project/81"/>
+  <meta property="og:title" content="FEDLEXplorer"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/ribeaud/fedlexplorer/main/logo.png"/>
+  <meta property="og:description" content="The purpose of this challenge is to demonstrate how federal legislation data can be used in third-party products through the SPARQL endpoint"/>
+  <meta name="twitter:site" content="@opendatach"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  <meta name="description" content="The purpose of this challenge is to demonstrate how federal legislation data can be used in third-party products through the SPARQL endpoint"/>
+  <meta name="author" content="jeanlouis_morard"/>
+  <meta name="dribdat:project:id" content="81"/>
+
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/simplex/bootstrap.min.css" alt-href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/darkly/bootstrap.min.css" id="css-bootswatch"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"/>
+  
+
+  
+    <link rel="stylesheet" href="/static/css/common.css?fd74b454"/>
+  
+  
+  <link rel="shortcut icon" href="/static/img/favicon.ico"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS: Latest dribs" href="/feeds/dribs.xml">
+
+</head>
+<body class="project-home" data-barba="wrapper">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-faded" role="navigation">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/" title="GO HOME">
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-main-collapse">
+    <ul class="navbar-nav navbar-left mr-auto nav-fill">
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link " 
+           title="Latest posts from the teams"
+           href="/dribs.html">
+          <i class="fa fa-comment bg-warning text-white" aria-hidden="true"></i>
+          Dribs
+        </a>
+      </li>
+
+      
+        <li class="nav-item">
+          <a class="nav-link nav-login" 
+             title="Sign in with your account"
+             href="/login/">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+          </a>
+        </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link" id="navSearchButton" 
+           title="Search this dribdat site"
+           href="/about/">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<!-- Popup global alerts -->
+<div id="global-notifications-alert" class="hidden">
+  <div class="alert alert-info">
+    <a class="close" title="Close" href="#">&times;</a>
+    <i class="fa fa-info-circle float-left" aria-hidden="true"></i>
+    <span id="notifications-status-text"></span>
+  </div>
+</div>
+
+<!-- Popup search results -->
+<div class="hidden container nav-search" id="navSearch" 
+     tabindex="-1" role="dialog" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="profile-projects container-fluid mb-3">
+    <div data-action="/api/project/search.json" id="search">
+      <div class="content input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" class="form-control" name="q" aria-label="Search projects" placeholder="Start typing ..."  style="width:20em">
+      </div>
+    </div>
+    <div class="row flex-row flex-nowrap pb-2" id="search-results"></div>
+    <div class="text-center mb-2" id="search-matches"></div>
+  </div>
+</div>
+
+
+  <div class="container event-header">
+  <div class="section section-centered section-header">
+    
+      <div class="section-header-logo">
+        <a href="/event/4">
+          <img id="event-logo" src="https://opendata.ch/wordpress/files/2022/12/LegalLab_2023_Web_021.jpg" alt="Logo" title="eJustice.CH Opendata.ch">
+        </a>
+      </div>
+    
+    <div class="section-header-content">
+      <a href="/event/4">
+        <h3 class="event-name">Open Legal Lab 2023</h3>
+      </a>
+      
+        <div class="event-hostname">
+          <i class="fa fa-bank"></i>
+          eJustice.CH Opendata.ch</div>
+      
+      
+        <div class="event-date">
+          <i class="fa fa-calendar"></i>
+          April 30 - May 1, 2023</div>
+      
+      
+        <div class="event-location">
+          <i class="fa fa-map"></i>
+          
+            Magglingen
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+  
+    <style id="custom_css" type="text/css">.honeycomb .hexagon.challenge { opacity: 1; }
+.honeycomb .hexagon.challenge.stage--1,
+.honeycomb .hexagon.challenge.stage--100 { opacity: 0.5; }
+
+.event-description.bg-body img { max-width: 100%; }</style>
+  
+
+
+
+<div class="container with-event">
+
+  <div role="main">
+    
+    
+    
+
+    <main data-barba="container" data-barba-namespace="home">
+      
+
+
+
+<div class="btn-group project-edit-buttons" role="group" aria-label="Project tools">
+
+  
+
+  
+  
+
+  
+
+</div><br clear="all">
+
+
+  <div class="project-image-container"
+    style="background-image:url('https://raw.githubusercontent.com/ribeaud/fedlexplorer/main/logo.png'); "
+    data-href="https://raw.githubusercontent.com/ribeaud/fedlexplorer/main/logo.png">
+  </div>
+  
+
+
+<!-- Main project content container -->
+<div class="jumbotron project-page phase-Sketching" >
+
+  
+
+  
+    <div class="project-score">
+      <a href="/event/4/stages#Sketching">
+        <div class="progress" 
+          title="(101) Sketching"
+          alt="A score based on profile completeness and voting results">
+          <div class="progress-bar" role="progressbar" 
+               aria-valuenow="101" aria-valuemin="0" aria-valuemax="70" 
+               style="width:101%">
+          </div>
+        </div>
+      </a>
+      <div class="preview-challenge mt-2">
+        <a title="Click to show the Challenge from which this project started" 
+           href="/project/81/challenge">
+             Challenge</a>
+        <i class="fa fa-trophy" aria-hidden="true"></i> 
+        Project
+      </div>
+    </div>
+  
+
+  
+
+  <div class="project-headline">
+  
+    <h2 class="project-name">FEDLEXplorer</h2>
+
+  
+    <p class="project-summary">
+      The purpose of this challenge is to demonstrate how federal legislation data can be used in third-party products through the SPARQL endpoint
+    </p>
+  
+
+  
+    <p class="project-hashtag">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        14
+      </a>
+    </p>
+  
+
+  </div><!-- /.project-name -->
+
+  
+    <div class="badges text-right">
+      
+      
+          <a class="btn" id="project-tab-md" href="#project-md"
+             title="Challenge pitch">
+            <i class="fa fa-book m-2" aria-hidden="true"></i>
+            Pitch</a>
+      
+      
+        <a class="btn" id="team-tab-md" href="#team-md"
+          title="Show team members">
+          <i class="fa fa-user m-2" aria-hidden="true"></i>
+          Team</a>
+      
+      
+        <a class="btn" id="readme-tab-md" href="#readme-md"
+           title="Readme content">
+          <i class="fa fa-book m-2" aria-hidden="true"></i>
+          Readme</a>
+      
+      
+        <a class="btn" id="dribs-tab-md" href="#log"
+           title="Play by play progress review">
+          <span class="drib-count mr-2">58</span>
+          Log</a>
+      
+    </div>
+  
+
+<div class="tab-content clear-both" id="project-content">
+
+  
+    <div class="project-webembed hidden resizable">
+      <iframe class="hidden" src="/project/[0-9]+/render"></iframe>
+      <div class="win-size-grip"></div>
+    </div>
+    <a href="#top" class="btn btn-small btn-default" 
+       data-toggle="modal" data-target="#webembedModal" 
+       aria-label="Full screen view" title="Press Esc to close">
+       &#x26F6;&nbsp;&nbsp;Fullscreen</a>
+    <a href="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/104/CVIDIFSFN8JEPMTUKAAY8NBW/PräsentationOLL2023_Ergebnis.pdf" class="btn btn-small btn-default" 
+       target="_blank" rel="noopener noreferrer" title="Open source file">
+       &#x2193;&nbsp;&nbsp;Download</a>
+  
+
+  
+    <a href="https://github.com/ribeaud/fedlexplorer/releases" target="_blank" rel="noopener noreferrer" 
+       class="btn btn-lg btn-light ml-2 font-bold" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+  
+
+  
+    <div id="project-md" aria-labelledby="project-tab-md">
+      
+
+      <div class="project-longtext">
+        <p>We have combined forces with <a href="https://challenges.openlegallab.ch/project/71">Living Topics #11</a>  to develop an app that combines data from multiple APIs and SPARQL queries. It is a Proof of Concept for a brand new FEDLEX experience! </p>
+
+<p>Details of the implementation:</p>
+
+<ul>
+<li><a href="https://github.com/ribeaud/fedlexplorer/tree/main#api-doc">API Docs</a></li>
+<li><a href="https://github.com/ribeaud/fedlexplorer/tree/main/frontend">Frontend Readme</a></li>
+<li><a href="https://github.com/ribeaud/fedlexplorer/tree/main/backend">Backend Readme</a></li>
+<li><strong><a href="https://github.com/ribeaud/fedlexplorer/releases/tag/0.0.2">Demo Android app</a></strong></li>
+</ul>
+
+<h3>Screenshots</h3>
+
+<p><img src="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/7TBVZV5RV8AFJ8ZTKMEUAC4K/1.jpg" alt=" 1 "> <img src="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/6U1H5MZGEEAYM5DFD8LWBR6B/2.jpg" alt=" 2 "> <img src="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/8UF2FUI0NGSA9H3C8DC8PR3O/4.jpg" alt=" 3 "></p>
+
+<h1>CHALLENGE</h1>
+
+<p>Ziel dieser Challenge ist es zu demonstrieren, wie die Daten des Bundesrechts über den SPARQL-Endpunkt der Bundesrechtsplattform in Produkten Dritter verwendet werden können. Die BK veröffentlicht auf <a href="https://www.fedlex.admin.ch/de/cc/in-force">Fedlex </a>die Liste der Rechtstexte, die an einem bestimmten Monat/Datum in Kraft treten. Über diese Website können die Nutzer sich informieren, wann was in Kraft tritt. Dies ist jedoch nicht ganz optimal, da sie die Fedlex-Website regelmäßig konsultieren müssen und keinen Filter setzen können. Die Liste der in Kraft tretenden Rechtstexte kann stattdessen über den SPARQL-Endpunkt der Bundesrechtsplattform abgerufen werden.</p>
+
+<hr>
+
+<h2>Triple store, sparql endpoint and mobile app: explore new trends for fedlex!</h2>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>The purpose of this
+Challenge is to demonstrate how federal legislation data can be used in
+third-party products through the SPARQL endpoint of the federal legislation platform.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Use case: the BK
+publishes on Fedlex the list of legal texts that come into force on a certain
+month / date:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><a
+href="https://www.fedlex.admin.ch/de/cc/in-force"><span lang=EN-US>https://www.fedlex.admin.ch/de/cc/in-force</span></a></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Through this website,
+users of the platform can be informed when what comes into effect. However,
+this is not quite optimal, as they have to consult the Fedlex website regularly
+and cannot set a filter.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>The list of legal texts
+coming into force can be obtained from the SPARQL endpoint of the federal legislation
+platform: </span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><a
+href="https://fedlex.data.admin.ch/de-CH/sparql"><span lang=EN-US>https://fedlex.data.admin.ch/de-CH/sparql</span></a></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 1: develop a
+mobile app that lists which legal texts come into effect on a given date / over
+a given period. Notice that support for building the SPARQL request is
+available! See also this tutorial: <a
+href="https://bequrios.github.io/fedlex/lab?path=Tutorial.ipynb" target="_blank">https://bequrios.github.io/fedlex/lab?path=Tutorial.ipynb</a></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 2: subscribe to
+specific topics of the classified compilation of federal legislation. In this
+case, only the legal texts belonging to these topics are listed. The topics can
+be obtained from the predefined SPARQL query &quot;Topics of the CC&quot; </span><a
+href="https://fedlex.data.admin.ch/de-CH/sparql"><span lang=EN-US>(</span></a><span
+lang=EN-US style='color:black'><a
+href="https://fedlex.data.admin.ch/en-CH/sparql">https://fedlex.data.admin.ch/en-CH/sparql</a>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 3: Search results
+can be presented by date/topic or by topic/date.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 4: The app
+notifies as soon as a legal text in the selected topics enters into force.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>A prototype should be
+developed that implements this functionality as far as possible. If no
+framework for the development of mobile apps is available, a web application
+can also be developed using the &quot;mobile first&quot; model.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><b>Have fun! We are looking forward to your
+participation!</b></span></p>
+
+<p>Contact: jean-louis.morard at bk.admin.ch</p>
+
+      </div>
+    </div><!-- /project-md -->
+  
+
+
+  
+    <div id="team-md" aria-labelledby="team-tab-md">
+      <div class="widget widget-team m-4">
+      
+        
+          <i class="fa fa-star project-owner" 
+              title="Started this project" aria-hidden="true"></i>
+        
+        
+    <a href="/user/jeanlouis_morard"
+        class="team-gravatar" data-id="104">
+        
+            <img src="https://www.gravatar.com/avatar/f478cadda891d0b27cc14e8ddba40292?s=80"/>
+        
+        <span>jeanlouis_morard</span>
+        <div class="team-roles">
+        
+          
+            <em title="🎗️ Coach">🎗️</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/holger_keibel"
+        class="team-gravatar" data-id="108">
+        
+            <img src="https://www.gravatar.com/avatar/f2cefd6d9bb7081438a7278b66410654?s=80"/>
+        
+        <span>holger_keibel</span>
+        <div class="team-roles">
+        
+          
+            <em title="💡 Ideator">💡 </em>
+          
+        
+          
+            <em title=" ⚙️ Developer"> ⚙</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/cedricjoseph"
+        class="team-gravatar" data-id="67">
+        
+            <img src="https://www.gravatar.com/avatar/549faaebbd2a23462b88a1756e4d69e9?s=80"/>
+        
+        <span>cedricjoseph</span>
+        <div class="team-roles">
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/ribose"
+        class="team-gravatar" data-id="80">
+        
+            <img src="https://www.gravatar.com/avatar/b0286a1e1d52d646406d5cec0e821541?s=80"/>
+        
+        <span>ribose</span>
+        <div class="team-roles">
+        
+          
+            <em title=" ⚙️ Developer"> ⚙</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/Raphael_Jeannerat_BK"
+        class="team-gravatar" data-id="95">
+        
+            <img src="https://www.gravatar.com/avatar/d239482a6afd64d40220e39954e1c1c0?s=80"/>
+        
+        <span>Raphael_Jeannerat_BK</span>
+        <div class="team-roles">
+        
+          
+            <em title="⚖️ Legal expert">⚖️</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/oleg"
+        class="team-gravatar" data-id="1">
+        
+            <img src="https://github.com/loleg.png?size=80"/>
+        
+        <span>oleg</span>
+        <div class="team-roles">
+        
+          
+            <em title=" ⚙️ Developer"> ⚙</em>
+          
+        
+          
+            <em title="🎗️ Coach">🎗️</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+        
+        
+    <a href="/user/loc_pittet"
+        class="team-gravatar" data-id="94">
+        
+            <img src="https://www.gravatar.com/avatar/1e17fbf15ab65700b0f950db6e2ddd8d?s=80"/>
+        
+        <span>loc_pittet</span>
+        <div class="team-roles">
+        
+          
+            <em title="⚖️ Legal expert">⚖️</em>
+          
+        
+        </div>
+    </a>
+
+        
+      
+      
+      </div>
+
+      
+    </div>
+  
+
+  
+    <div id="readme-md" aria-labelledby="readme-tab-md">
+      <div class="project-autotext scroll-after-500"><div class="cover"></div>
+        <h1>FEDLEXplorer</h1>
+
+<p>The purpose of this project is to demonstrate how Swiss federal legislation data can be used in third-party products through a SPARQL endpoint.</p>
+
+<p>We are developing the frontend and backend in the respective subfolders.
+In the <code>data</code> folder you can find a SPARQL query and some sample outputs.</p>
+
+<p>For more information see <a href="https://challenges.openlegallab.ch/project/81">https://challenges.openlegallab.ch/project/81</a></p>
+
+      </div>
+
+      
+        <div class="alert alert-light text-center mb-1">
+          This content is a preview from an
+          <a href="https://github.com/ribeaud/fedlexplorer" target="_blank" rel="noopener noreferrer" title="Source link">
+            external site</a>.
+        </div>
+      
+
+      
+
+      <a href="#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+  
+
+  <div class="project-buttons mb-5" role="group" aria-label="Project links">
+    
+      
+        <a href="https://openlegallab.slack.com/archives/C055LEE3TA7" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Contact the team"><span>&#x1f44b;</span> Contact</a>
+      
+    
+    
+      <a href="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/104/CVIDIFSFN8JEPMTUKAAY8NBW/PräsentationOLL2023_Ergebnis.pdf" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Project web link"><span>&#x1f310;</span> Open</a>
+    
+    
+      <a href="https://github.com/ribeaud/fedlexplorer/releases" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+    
+    
+      <a href="https://github.com/ribeaud/fedlexplorer" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Source code"><span>&#x1f4bb;</span> Source</a>
+    
+  </div>
+
+
+  </div><!-- /project-content -->
+
+  
+  <a name="log"></a>
+  <div id="dribs-md" aria-labelledby="dribs-tab-md">
+
+    <section class="timeline">
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="02.05.2023 20:53 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="/project/81/preview/694">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 79)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                02.05.2023 20:53
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/ribose">
+                    ribose</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="02.05.2023 20:53 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Sketching</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-star timeline-thumbs-up">
+        <div class="timeline-img" title="01.05.2023 21:00 (star)">
+          
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Joined the team</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 21:00
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/loc_pittet">
+                    loc_pittet</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="01.05.2023 20:59 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Our initial <a href="https://github.com/ribeaud/fedlexplorer/releases/tag/0.0.1">Demo app</a> for Android can be downloaded as a pre-release on GitHub. Thanks everyone for a great OpenLegalLab&#39;23! 🤗</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 20:59
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-finish timeline-bullhorn">
+        <div class="timeline-img" title="01.05.2023 16:00 (finish)">
+          
+            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Event finished</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="01.05.2023 13:01 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="/project/81/preview/679">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 71)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 13:01
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/jeanlouis_morard">
+                    jeanlouis_morard</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="01.05.2023 13:01 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Prototype</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="01.05.2023 12:17 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="/project/81/preview/656">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 69)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 12:17
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/jeanlouis_morard">
+                    jeanlouis_morard</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="01.05.2023 09:20 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="/project/81/preview/651">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 63)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 09:20
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="01.05.2023 09:18 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p><img src="https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/CLYK9I4D2O00OWJLW09KGFFO/Screenshot_from_20230501_111700.png" alt=""> 
+Achievement unlocked 😅</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                01.05.2023 09:18
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 09:00 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>dropdown works (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/42f0848de89b87904c356739aa6aa40d3ba08a1d">
+            
+                01.05.2023 09:00
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 08:15 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge remote-tracking branch &#39;origin/main&#39; (@hkeibel)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/cba1b7aee8805653caec588828fe701c9e4af71b">
+            
+                01.05.2023 08:15
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 08:14 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>SPARQL query for legal topics: output each concept with its hierarchical level and parent (@hkeibel)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/2881ace52405a671871677cc0266d41fac542f6f">
+            
+                01.05.2023 08:14
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 08:07 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>prepare topics displaying (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/20c5ca62c684584d11ea7cfbf477dc6099edec27">
+            
+                01.05.2023 08:07
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 08:01 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge branch &#39;main&#39; of github.com:ribeaud/fedlexplorer (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/a2670cc05621a39c57d8ffe710cb30bbf3392f9e">
+            
+                01.05.2023 08:01
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 08:01 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Topics key, default dates (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/31c461289880117b34f4b0ee83134bcfa05ab634">
+            
+                01.05.2023 08:01
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 07:50 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>adapt title (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/a8731cc0a3245c1a634e72d14935535ee58fb474">
+            
+                01.05.2023 07:50
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 07:40 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>from is no longer required (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/a9616f510cf2ca8c20cd798044167b18f17e2d99">
+            
+                01.05.2023 07:40
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 06:30 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add dropdown menu (dummy) and form labels (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/ac35389a165c4ed9e101144f8ea15ba4d37fee5c">
+            
+                01.05.2023 06:30
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="01.05.2023 05:18 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>customize app icon and label (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/9c672cda153af273d3a029646666468ee750198b">
+            
+                01.05.2023 05:18
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-pencil">
+        <div class="timeline-img" title="30.04.2023 22:41 (update)">
+          
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Provided three APIs: topics, terms, and laws. We will show you a nice front-end here tomorrow. Gute Nacht! 🌃</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                30.04.2023 22:41
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="30.04.2023 22:41 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Sketching</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 22:31 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>TERMDAT service (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/effe411f54b17168899a6db11d994564be7a1ab0">
+            
+                30.04.2023 22:31
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 20:49 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add short title (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/e260ecd6f25b73136fb04b976561cefc95999b81">
+            
+                30.04.2023 20:49
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-paperclip">
+        <div class="timeline-img" title="30.04.2023 20:12 (update)">
+          
+            <i class="fa fa-paperclip" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+            <a class="close revert" title="Show previous version" href="/project/81/preview/614">&#9100;</a>
+          
+
+          
+            <div class="content">
+              <p>Edited (version 55)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                30.04.2023 20:12
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/holger_keibel">
+                    holger_keibel</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="30.04.2023 20:12 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Research</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 20:05 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add to field (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/afc14d988eaeea1c705ea76d17f92c8d5ad66bbb">
+            
+                30.04.2023 20:05
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 20:00 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Revised legalTopics (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/85899cd8c29522027f1bce55b11ce52da9feaea5">
+            
+                30.04.2023 20:00
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:50 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge branch &#39;main&#39; of github.com:ribeaud/fedlexplorer (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/dfca590fec17c26eeaaeb5d3cd705810ab1c7fe5">
+            
+                30.04.2023 19:50
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:50 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Query service (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/453ac9827ce475aaa10b4d50506aa6ec7a03228f">
+            
+                30.04.2023 19:50
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:23 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add label to input field (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/ad5e34c64e44685127ab07cda3b8c7e5bc61a60c">
+            
+                30.04.2023 19:23
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:23 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Display everything from <code>Item</code> (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/46b48a1384a386e763fbb7af4fa9085d331bbbf8">
+            
+                30.04.2023 19:23
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:23 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>beautify the app and use right utf-8 encoding (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/975ce20254cf29bcd07bb4513015263c3950601f">
+            
+                30.04.2023 19:23
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:14 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge branch &#39;main&#39; of github.com:ribeaud/fedlexplorer (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/cf2a9bfa63abfe252355214331106c5b04ec31d9">
+            
+                30.04.2023 19:14
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 19:14 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Added legalTopics (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/2ecf8004e2fb61366a51744630066c66fe68dd00">
+            
+                30.04.2023 19:14
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 18:08 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>map results from server (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/27e24e5855e02b351fc45526cb892488b9188681">
+            
+                30.04.2023 18:08
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:37 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>README (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/f47ad8deba81807c54f07d24cff4cac47a7ffe19">
+            
+                30.04.2023 16:37
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-code">
+        <div class="timeline-img" title="30.04.2023 16:35 (update)">
+          
+            <i class="fa fa-code" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Repository updated</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                30.04.2023 16:35
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="30.04.2023 16:35 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Research</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:34 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge branch &#39;main&#39; of github.com:ribeaud/fedlexplorer (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/800d22efb77f25106d941967baa1f022335ac220">
+            
+                30.04.2023 16:34
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:34 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Initial logo (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/5480269c8282113f59e4e090c150700795a59cdf">
+            
+                30.04.2023 16:34
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:33 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>SPARQL query added (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/67ec99052817ed0bfed3daf83f359ebd6523c1e0">
+            
+                30.04.2023 16:33
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:22 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>use fedlex color (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/1c508c25b0ea5d836067f6e6fc02c1fa1178a9c7">
+            
+                30.04.2023 16:22
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 16:16 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Simple data structure (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/3c5e6e08a5b66ac0b8011b4569284e026c30537a">
+            
+                30.04.2023 16:16
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 15:48 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add expansion panel (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/8ca9f09b32d82889c2be2c1662f21c351f3e797a">
+            
+                30.04.2023 15:48
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 14:19 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Configure port (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/5f1e17392ea6b6203a42a6c03068aa310d522043">
+            
+                30.04.2023 14:19
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 14:03 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Merge branch &#39;main&#39; of github.com:ribeaud/fedlexplorer (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/f768332f532cb09d8c45c98599b8078b79a79401">
+            
+                30.04.2023 14:03
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 14:03 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Sample JSON pusher (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/5845737156f1767951bca3894e13080ee388462b">
+            
+                30.04.2023 14:03
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 13:58 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>add form (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/775aae709fce5f76815b075daa21b44745cc8a6b">
+            
+                30.04.2023 13:58
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 12:48 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>trigger a http request (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/d58d7a436af585d0c5ff4b770a1847d2d6a2b0a2">
+            
+                30.04.2023 12:48
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 12:31 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Initial Falcon backend (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/fecd8457a19a39131d5a19d52b6d802541c86ed5">
+            
+                30.04.2023 12:31
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 12:20 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Backend README.md (@loleg)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/8ff7f6d07fb8add4c6b4d1fa9cdae4d39ff68940">
+            
+                30.04.2023 12:20
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 12:15 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Initial commit (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/b6c78dc4fb9d79ab5c80a39115c9a9118b73442b">
+            
+                30.04.2023 12:15
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-star timeline-thumbs-up">
+        <div class="timeline-img" title="30.04.2023 12:15 (star)">
+          
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Joined the team</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                30.04.2023 12:15
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/oleg">
+                    oleg</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-update timeline-random">
+        <div class="timeline-img" title="30.04.2023 12:14 (update)">
+          
+            <i class="fa fa-random" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>first commit (@Christian Ribeaud)</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+              <a href="https://github.com/ribeaud/fedlexplorer/commit/b00a4336de1b6ceda583e700a71ca2cd48be3d3a">
+            
+                30.04.2023 12:14
+                
+            
+              </a>
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-star timeline-thumbs-up">
+        <div class="timeline-img" title="30.04.2023 09:50 (star)">
+          
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+
+          
+          
+
+          
+            <div class="content">
+              <p>Joined the team</p>
+
+            </div>
+          
+
+          
+            <div class="date">
+            
+                30.04.2023 09:50
+                
+                  ~
+                  <a class="userlink"
+                    href="/user/Raphael_Jeannerat_BK">
+                    Raphael_Jeannerat_BK</a>
+                
+            
+            </div>
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-progress timeline-arrow-up">
+        <div class="timeline-img" title="30.04.2023 09:50 (progress)">
+          
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Challenge</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+      <div class="timeline-item timeline-start timeline-calendar">
+        <div class="timeline-img" title="30.04.2023 09:00 (start)">
+          
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          
+        </div>
+        <div class="timeline-content timeline-card js--fadeInBottom">
+          
+          <div class="timeline-img-header">
+            <h2>Event started</h2>
+          </div>
+          
+
+          
+          
+
+          
+
+          
+        </div><!-- /content -->
+      </div>
+      
+
+    </section>
+
+    <a href="#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+  </div><!-- /dribs-md -->
+  
+
+
+  
+    <div class="widget started-at">
+      Contributed
+      <span title="2023-04-20 10:24:58.868882">1 year ago</span>
+      by
+      <a href="/user/%3CUser(&#39;jeanlouis_morard&#39;)%3E">
+        <b>jeanlouis_morard</b>
+      </a>
+      for
+      <a href="/event/4">
+        <b>Open Legal Lab 2023</b>
+      </a>
+    </div>
+  
+
+</div><!-- /.jumbotron .project-page -->
+
+<center class="project-footer-controls">
+
+<div role="group" aria-label="Project controls" class="btn-group project-controls">
+  
+  
+  
+</div><!-- / .project-controls -->
+
+
+
+
+
+</center><!-- /.project-footer-controls -->
+
+<div class="panel panel-default community-embed mt-5">
+  <div class="panel-body">
+    <div class="codeofconduct">Alle Teilnehmer*innen, Sponsor, Partner, Freiwilligen und Mitarbeiter*innen unseres Hackathons sind verpflichtet, dem <a href="https://hackcodeofconduct.org/" target="_blank">Hack Code of Conduct</a> zuzustimmen. Die Organisatoren werden diesen Kodex während der gesamten Veranstaltung durchsetzen. Wir erwarten die Zusammenarbeit aller Teilnehmer*innen, um eine sichere Umgebung für alle zu gewährleisten. Weitere Einzelheiten zum Ablauf der Veranstaltung finden Sie unter <a href="https://opendata.ch/guidelines/" target="_blank">Richtlinien</a> auf unsere Webseite.</div>
+
+<br><p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img align="left" style="margin-right:1em" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>Die Inhalte dieser Website stehen, sofern nicht anders angegeben, unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a>.</p>
+
+<!-- translator widget -->
+<div class="translate" style="position: absolute; top: 8px; right: 9px; background: url(https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Translate_logo.svg) no-repeat 0% 50%; background-size: contain; padding-left: 30px;"><script>event_url = document.querySelector('meta[property=\'og:url\']').content; document.write('<a target="_top" href="https://translate.google.com/translate?sl=en&tl=de&u=' + event_url + '">Deutsch</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=fr&u=' + event_url + '">Français</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=it&u=' + event_url + '">Italiano</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=en&u=' + event_url + '">English</a>')</script></div>
+  </div>
+</div>
+
+
+  
+<div class="social-media">
+
+<!-- Sharingbutton Mastodon -->
+<a class="resp-sharing-button__link" href="https://toot.kytta.dev/?text=14%20%23OpenLegalLab%20https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81" target="_blank" rel="noopener" title="Toot">
+  <div class="resp-sharing-button resp-sharing-button--mastodon resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg viewBox="0 0 216.4144 232.00976" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M 107.8656,0 C 82.198854,0.69263562 55.463658,1.2782634 31.628051,11.822839 8.0238648,25.571275 -1.218105,54.598019 0.05883653,80.596679 0.2797621,116.75695 -1.72277,154.48279 12.38514,188.57229 c 8.076308,20.16652 26.710389,35.22898 48.176899,38.74021 29.118858,6.60575 61.016791,7.40903 88.765961,-4.9181 -0.2893,-6.36352 -0.57862,-12.72705 -0.86792,-19.09057 -22.00073,6.07867 -45.98127,7.61901 -68.061144,1.2531 -13.147423,-4.0199 -19.403971,-18.29301 -18.718028,-31.19267 29.841842,6.85916 60.851062,8.13529 91.142992,3.64074 21.8324,-2.65634 45.09313,-12.1773 56.7889,-31.73953 5.03358,-13.46669 4.92864,-28.27295 6.14689,-42.47504 1.21967,-24.611633 2.69135,-51.596394 -12.0077,-72.884501 C 195.60739,16.860023 181.87566,8.2479333 166.81407,5.6651532 147.50382,1.3153541 127.60707,0.19680027 107.8656,0 Z M 74.296874,39.325561 c 13.216216,-0.79713 25.326825,7.400208 30.822196,19.151849 2.00501,5.132015 4.01002,5.781211 6.01502,0.27296 5.27895,-11.030328 16.07971,-19.470061 28.70398,-19.368765 17.08193,-1.870333 33.47845,10.919859 36.3332,27.76317 2.42342,15.586525 0.91842,31.467746 1.33849,47.198585 0,8.89177 0,17.78354 0,26.67531 -8.0481,0 -16.09619,0 -24.14429,0 -0.15027,-21.17672 0.30904,-42.37539 -0.24536,-63.537592 0.16909,-12.482336 -14.94825,-18.13985 -24.67529,-12.216799 -10.74071,7.3086 -7.76512,21.615 -8.23608,32.849136 0,6.561885 0,13.123775 0,19.685655 -8.00049,0 -16.00098,0 -24.001469,0 C 95.934083,104.48619 96.832696,91.106569 95.593874,77.847289 94.997971,65.102017 79.131025,58.945483 69.197387,65.731202 c -8.801638,7.417912 -5.48038,19.958548 -6.148682,30.097244 0,15.063414 0,30.126814 0,45.190224 -8.048095,0 -16.096191,0 -24.144286,0 0.188858,-22.55685 -0.398935,-45.139355 0.33448,-67.678319 0.770518,-16.763192 13.726972,-32.984028 31.150504,-33.839008 l 1.929436,-0.131745 z" /></svg>
+
+  </div></div>
+</a>
+
+<!-- Sharingbutton Hacker News -->
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81&amp;t=14%20%23OpenLegalLab" target="_blank" rel="noopener" title="Share on Hacker News">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140"><path fill-rule="evenodd" d="M60.94 82.314L17 0h20.08l25.85 52.093c.397.927.86 1.888 1.39 2.883.53.994.995 2.02 1.393 3.08.265.4.463.764.596 1.095.13.334.262.63.395.898.662 1.325 1.26 2.618 1.79 3.877.53 1.26.993 2.42 1.39 3.48 1.06-2.254 2.22-4.673 3.48-7.258 1.26-2.585 2.552-5.27 3.877-8.052L103.49 0h18.69L77.84 83.308v53.087h-16.9v-54.08z"></path></svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton Twitter/X -->
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/post/?text=14%20%23OpenLegalLab&amp;url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81" target="_blank" rel="noopener" title="Post to X">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton LinkedIn -->
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81" target="_blank" rel="noopener" title="Post to LinkedIn">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M28.778 1.004h-25.56c-0.008-0-0.017-0-0.027-0-1.199 0-2.172 0.964-2.186 2.159v25.672c0.014 1.196 0.987 2.161 2.186 2.161 0.010 0 0.019-0 0.029-0h25.555c0.008 0 0.018 0 0.028 0 1.2 0 2.175-0.963 2.194-2.159l0-0.002v-25.67c-0.019-1.197-0.994-2.161-2.195-2.161-0.010 0-0.019 0-0.029 0h0.001zM9.9 26.562h-4.454v-14.311h4.454zM7.674 10.293c-1.425 0-2.579-1.155-2.579-2.579s1.155-2.579 2.579-2.579c1.424 0 2.579 1.154 2.579 2.578v0c0 0.001 0 0.002 0 0.004 0 1.423-1.154 2.577-2.577 2.577-0.001 0-0.002 0-0.003 0h0zM26.556 26.562h-4.441v-6.959c0-1.66-0.034-3.795-2.314-3.795-2.316 0-2.669 1.806-2.669 3.673v7.082h-4.441v-14.311h4.266v1.951h0.058c0.828-1.395 2.326-2.315 4.039-2.315 0.061 0 0.121 0.001 0.181 0.003l-0.009-0c4.5 0 5.332 2.962 5.332 6.817v7.855z"></path></svg>
+  </div></div>
+</a>
+
+<!-- Sharingbutton Telegram -->
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=14%20%23OpenLegalLab&amp;url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81" target="_blank" rel="noopener" title="Post on Telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.707 8.475C.275 8.64 0 9.508 0 9.508s.284.867.718 1.03l5.09 1.897 1.986 6.38a1.102 1.102 0 0 0 1.75.527l2.96-2.41a.405.405 0 0 1 .494-.013l5.34 3.87a1.1 1.1 0 0 0 1.046.135 1.1 1.1 0 0 0 .682-.803l3.91-18.795A1.102 1.102 0 0 0 22.5.075L.706 8.475z"/></svg>
+	</div></div>
+</a>
+
+<!-- Sharingbutton Reddit -->
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3A%2F%2Fchallenges.openlegallab.ch%2Fproject%2F81&amp;resubmit=true&amp;title=14%20%23OpenLegalLab" target="_blank" rel="noopener" title="Share on Reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z"/></svg>
+  </div></div>
+</a>
+
+<!-- Sharingbutton E-Mail -->
+<a class="resp-sharing-button__link" href="/cdn-cgi/l/email-protection#d9e6aaacbbb3bcbaade49ab1bcbab2f9b6acadf9adb1b0aaf9a9abb6b3bcbaadffb8b4a9e2bbb6bda0e4b1adada9aafcea98fceb9ffceb9fbab1b8b5b5bcb7bebcaaf7b6a9bcb7b5bcbeb8b5b5b8bbf7bab1fceb9fa9abb6b3bcbaadfceb9fe1e8f9e8edfcebe9fcebea96a9bcb795bcbeb8b595b8bb" target="_self" rel="noopener" title="Share by E-Mail">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
+  </div></div>
+</a>
+
+</div><!-- /.social-media -->
+
+
+
+<center class="mt-5 nav-project-helper">
+
+  <a class="nav-projects btn btn-light" href="/project/82" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Federal Supreme Court Data Viewer</a>
+
+  <a class="nav-projects-abs-prev btn btn-secondary border-primary" href="/project/82" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+
+  <a class="btn btn-dark" href="/event/4"
+     title="Return to the event page">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    Open Legal Lab 2023</a>
+
+
+  <a class="nav-projects btn btn-light" href="/project/76" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    Futuristic Contract For Love Relationships</a>
+
+  <a class="nav-projects-abs-next btn btn-secondary border-primary" href="/project/76" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</center>
+
+
+
+
+  <div class="modal fade modal-fullscreen" id="webembedModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header collapse">
+          <h5 class="modal-title">FEDLEXplorer - Open Legal Lab 2023</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="width:100%;height:100%">
+          <iframe class="hidden" src="/project/[0-9]+/render"></iframe>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+
+
+
+
+    </main>
+  </div>
+
+</div><!-- end container -->
+
+<footer id="footer">
+  <a class="dribdat-logo" href="/about/">
+    <img src="/static/img/logo12.png">
+  </a>
+  <a href="/" title="GO HOME" class="ml-3">
+    <i class="fa fa-home" aria-hidden="true"></i>
+    Home
+  </a>
+  <a href="#top" id="notification-button" class="hidden ml-3">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    Alerts
+  </a>
+  <ul class="footer-nav">
+    
+      <li>
+        <a href="/login/">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login
+        </a>
+      </li>
+    
+    
+    <li>
+      <a href="https://app.usefathom.com/share/icbbcyor/challenges.openlegallab.ch">&#128200;&nbsp;Analytics</a>
+    </li>
+    
+
+    <li>
+      <a href="/about/">&#128214;&nbsp;About</a>
+    </li>
+
+    <li>
+      <a class="darkmode" href="#">&#127763;&nbsp;<span>Dark</span></a>
+    </li>
+  </ul>
+</footer>
+
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-resizable-dom@0/dist/jquery-resizable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script type="text/javascript" src="/static/js/common.js?cb978ccf"></script>
+
+
+<script type="text/javascript" src="/static/css/rainbow/rainbow-custom.min.js"></script>
+
+
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" site="ICBBCYOR" async defer></script>
+
+
+
+
+
+
+
+<link href="/static/css/rainbow/zenburnesque.css" rel="stylesheet" type="text/css">
+
+  <a name="EOF"></a>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:27 GMT</pubDate>
+    <title>Dribs by colin_carter</title>
+    <link>https://challenges.openlegallab.ch/user/colin_carter</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/colin_carter' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Twitterbot </title>
+    
+      <description>update</description>
+      <pubDate>Mon, 28 Mar 2022 11:09:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/colin_carter/315</guid>
+    
+      <content:encoded><![CDATA[<p>From R to NodeJS to C#. Twitterbot is being rewritten and improved on. </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Twitterbot </title>
+    
+      <description>update</description>
+      <pubDate>Mon, 28 Mar 2022 09:01:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/colin_carter/308</guid>
+    
+      <content:encoded><![CDATA[<p>Twitterbot is up and running (<a href="https://twitter.com/BGE_ATF">https://twitter.com/BGE_ATF</a>).
+Now working on adding experimental summarization for demonstration purposes.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Twitterbot </title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:28:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/colin_carter/249</guid>
+    
+      <content:encoded><![CDATA[<p>Evaluating Summarization Models. </p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

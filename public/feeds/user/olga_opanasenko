@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:36:29 GMT</pubDate>
+    <title>Dribs by olga_opanasenko</title>
+    <link>https://challenges.openlegallab.ch/user/olga_opanasenko</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/olga_opanasenko' rel='self' type='application/rss+xml' />
+	  
+  </channel>
+</rss>

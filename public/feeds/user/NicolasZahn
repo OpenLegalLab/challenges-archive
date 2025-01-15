@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:35:51 GMT</pubDate>
+    <title>Dribs by NicolasZahn</title>
+    <link>https://challenges.openlegallab.ch/user/NicolasZahn</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/NicolasZahn' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>LegalTech im Gesetzgebungs-prozess </title>
+    
+      <description>update</description>
+      <pubDate>Sun, 30 Apr 2023 13:04:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/NicolasZahn/591</guid>
+    
+      <content:encoded><![CDATA[<p>Example Prompt: Please compare the two following texts:
+Text 1: <a href="https://www.belex.sites.be.ch/app/de/texts_of_law/152.04/versions/7">https://www.belex.sites.be.ch/app/de/texts_of_law/152.04/versions/7</a>
+Text 2: <a href="http://www2.zhlex.zh.ch/appl/zhlex_r.nsf/WebView/E8DBD53582C9856EC125856E0024020B/$File/170.4_12.2.07_109.pdf">http://www2.zhlex.zh.ch/appl/zhlex_r.nsf/WebView/E8DBD53582C9856EC125856E0024020B/$File/170.4_12.2.07_109.pdf</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

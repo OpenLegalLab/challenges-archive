@@ -1,0 +1,106 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:18 GMT</pubDate>
+    <title>Dribs by evsuter</title>
+    <link>https://challenges.openlegallab.ch/user/evsuter</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/evsuter' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 11:05:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/939</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/144/4BFJEQ47WB4SFSNFBNLO84D2/IMG_4365.jpeg" alt="  "> </p>
+
+<p>First results from testing prototypes</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 08:10:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/908</guid>
+    
+      <content:encoded><![CDATA[<p>Morning Checkin:
+2 prototypes almost ready for testing for proof of concept:
+A) local running program, Python-based, tagword-based vs.
+B) OpenAI/LLM-based program</p>
+
+<p>TO DO:
+A) test run 2 prototypes to compare
+B) Check license agreements for Infinity
+C) Prepare Presentation </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/896</guid>
+    
+      <content:encoded><![CDATA[<ul>
+<li>getting introduction to LLM</li>
+<li>working on 2 alternative solution approaches (vector based, tag based)</li>
+</ul>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/895</guid>
+    
+      <content:encoded><![CDATA[<ul>
+<li>getting introduction to LLM</li>
+<li>working on 2 alternative solution approaches (vector based, tag based)</li>
+</ul>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/881</guid>
+    
+      <content:encoded><![CDATA[<ul>
+<li>getting introduction to LLM</li>
+<li>working on 2 alternative solution approaches (vector based, tag based)</li>
+</ul>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 15:57:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/evsuter/858</guid>
+    
+      <content:encoded><![CDATA[<p>We are working on a small testing landscape: 
+One part of the team creates a test database with knowhow documents that can be used for searches.
+The second part of the team is creating questions/queries and the desired output when using the Management System</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

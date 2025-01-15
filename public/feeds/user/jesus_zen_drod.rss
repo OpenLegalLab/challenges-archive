@@ -1,0 +1,89 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:31 GMT</pubDate>
+    <title>Dribs by jesus_zen_drod</title>
+    <link>https://challenges.openlegallab.ch/user/jesus_zen_drod</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Textbausteine</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 19:56:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/294</guid>
+    
+      <content:encoded><![CDATA[<ul>
+<li>consider implementing a consistent syntax to be used for all future BGEs (structured, ie. XML- or JSON-based)</li>
+</ul>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Textbausteine</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 19:56:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/293</guid>
+    
+      <content:encoded><![CDATA[<p>Conclusions relative to HTML parser:
+- works reasonably well so far, there may be some occasional data loss
+- too many inconsistencies in the text data to reliably re-structure the data ; human post-processing of the script output is a must.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Textbausteine</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 19:55:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/292</guid>
+    
+      <content:encoded><![CDATA[<p>splitting references to extract their Art./Abs./lit. components.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Textbausteine</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 15:07:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/283</guid>
+    
+      <content:encoded><![CDATA[<p>data pulled from bger.li is unstructured ; parser tries to address this issue</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Textbausteine</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:23:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/242</guid>
+    
+      <content:encoded><![CDATA[<p>dedicated HTML parser for bger.li</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Deep Learning für Urteilen</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:19:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/jesus_zen_drod/237</guid>
+    
+      <content:encoded><![CDATA[<p>dedicated HTML parser for bger.li</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

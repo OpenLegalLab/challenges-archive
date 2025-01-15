@@ -1,0 +1,1243 @@
+"id","url","name","score","phase","team","team_count","is_challenge","is_webembed","progress","summary","hashtag","image_url","source_url","webpage_url","autotext_url","download_url","contact_url","logo_color","logo_icon","excerpt","created_at","updated_at","maintainer","event_url","event_name","category_id","category_name","stats","autotext","longtext"
+"7","https://challenges.openlegallab.ch/project/7","OLDP","49","Verify","Waldemar, oleg","2","False","False","20","Open Legal Data Platform, maintained by Open Knowledge Deutschland","","https://avatars.githubusercontent.com/u/38217808?v=4","https://github.com/openlegaldata/oldp","https://openlegaldata.io","https://github.com/openlegaldata/oldp","https://github.com/openlegaldata/oldp/releases","https://openlegallab.slack.com/archives/C0398C0PNJC","","","At OLL 2022 we proposed the challenge to investigate, evaluate, discuss, and contribute to **efforts to improve interoperability** between platforms that collect and publish open legal data. Currently OLDP application only has data available from German courts. Documentation is available on [adding processing steps](https://oldp.readthedocs.io/en/latest/development.html) for additional data sources. Further details of the application below. The project can be reached here: [@openlegaldata](https...","2022-02-08T09:57","2023-04-13T16:27","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 7, ""updates"": 4, ""commits"": 0, ""during"": 0, ""people"": 2, ""sizepitch"": 1428, ""sizetotal"": 9466}","# OLDP: Open Legal Data Platform
+
+[![Build Status](https://travis-ci.org/openlegaldata/oldp.svg?branch=master)](https://travis-ci.org/openlegaldata/oldp)
+[![Coverage Status](https://coveralls.io/repos/github/openlegaldata/oldp/badge.svg?branch=master)](https://coveralls.io/github/openlegaldata/oldp?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/oldp/badge/?version=latest)](https://oldp.readthedocs.io/en/latest/?badge=latest)
+[![PyPI version](https://badge.fury.io/py/oldp.svg)](https://badge.fury.io/py/oldp)
+
+OLDP is a web application, written in Python 3.5 and based on the [Django web framework](https://www.djangoproject.com/),
+It is used for processing legal text and providing a REST-API and Elasticsearch-based search engine.
+OLDP is being develop by the non-profit initiative [Open Legal Data](https://openlegaldata.io/) with the goal
+of building an Open Data platform for legal documents (mainly court decisions and laws).
+The platform makes legal information freely accessible for the general public and especially third-party apps.
+
+Our documentation is available [here](https://oldp.readthedocs.io/).
+
+## Demo
+
+[![Live demo](https://github.com/openlegaldata/oldp/raw/master/docs/_static/screenshot.sm.png)](https://github.com/openlegaldata/oldp/raw/master/docs/_static/screenshot.png)
+
+A live demo is available [here](https://de.openlegaldata.io/) (in German).
+
+## Features
+
+- **Cases**: Court decisions with meta data and content in HTML.
+- **Laws**: Full-text laws and regulations and their corresponding case-law.
+- **Courts**: Browse courts organized by states, jurisdiction and level of appeal from your country.
+- **Search**: A document search engine based on Elasticsearch/Haystack supporting most common search syntax and faceting.
+- **API**: Adding, updating, retrieving and deleting data through CRUD REST API based on [DRF](https://www.django-rest-framework.org/) including
+    auto-generated API clients from Swagger.
+- **Themes**: Easily adjust the look and feel depending on your countries needs (see [German theme](https://github.com/openlegaldata/oldp-de)).
+
+## Installation guide
+
+Before you can use OLDP, you’ll need to get it installed.
+For a more detailed guide on how to get started with OLDP have a look at:
+[Getting started](https://oldp.readthedocs.io/en/latest/getting-started.html)
+
+### Docker
+
+To skip the whole installation procedure you can simply run OLDP as Docker container.
+Just `git clone` the repository first and then start everything with a `docker-compose up` from within the repository directory.
+A small tutorial on how to use OLDP with Docker can be found [here](https://oldp.readthedocs.io/en/latest/docker.html).
+
+### Dependencies
+
+Before anything else you will need to install the application dependencies.
+
+- **Python 3.5** with pip (virtualenv or conda recommended)
+- **Node JS 8.12.x** with npm for building JS dependencies
+- **Database (MySQL, SQLite, ...):** All database engines that support
+  [Django's DB API](https://docs.djangoproject.com/en/2.1/ref/databases/) should work. MySQL is recommended.
+- **Elasticsearch 5.4.x**: Our search engine backend. Other systems supported by [haystack](http://haystacksearch.org/)
+  should also work.
+- **Redis 4.x**: Caching engine (optional)
+- **gcc** Required to compile some Python libs
+- **python-mysqldb, libmysqlclient-dev** if you choose MySQL as database
+- **gettext** for Django locales with msguniq
+- **pandoc** convert docbook to HTML (import GG)
+- **GDAL**: Geospatial libraries used by the haystack search module (see
+  [here](https://docs.djangoproject.com/en/2.1/ref/contrib/gis/install/geolibs/)).
+
+```
+# Create virtualenv
+virtualenv -p python3 env
+source env/bin/activate
+
+# Clone repository to current directory
+git clone https://github.com/openlegaldata/oldp.git .
+
+# Install dependencies
+apt-get install -y $(cat apt_requirements.txt)
+pip install -r requirements.txt
+npm install
+```
+
+The first time you run OLDP, you will need to initialize the database with its default blank values. If you want
+to run OLDP in production mode, you also need to prepare static files and localization.
+
+```
+# Prepare assets (JS, CSS, images, fonts, ...)
+npm run-script build
+
+# Prepare database
+./manage.py migrate
+
+# Localization (German and English, needed for production)
+./manage.py compilemessages --l de --l en
+
+# Prepare static files (needed for production)
+./manage.py collectstatic --no-input
+
+```
+
+## Run
+
+Run the following command to start the web app at [http://localhost:8000/](http://localhost:8000/).
+
+```
+./manage.py runserver 8000
+```
+
+### Settings
+
+The manage the app settings we rely on [django-configurations](https://django-configurations.readthedocs.io/en/stable/).
+Pre-configured settings can be used by setting the `DJANGO_CONFIGURATION` environment variable to either `Prod`, `Dev` or `Test`.
+You can as well override specific settings from `oldp/settings.py` with environment variables:
+
+| Variable name | Default value | Comment |
+| ------------- | ------------- | ------- |
+| `DJANGO_SETTINGS_MODULE` | `oldp.settings` | Tell  Django which settings file you want to use (in Python path syntax). |
+| `DJANGO_CONFIGURATION` | `Prod` | Choice a predefined class of settings: `Dev`, `Prod` or `Test` |
+| `DATABASE_URL` | `mysql://oldp:oldp@127.0.0.1/oldp` | Path to database (usually mysql or sqlite) |
+| `DJANGO_SECRET_KEY` | `None` | Set this to a secret value in production mode |
+| `DJANGO_ELASTICSEARCH_URL` | `http://localhost:9200/` | Elasticsearch settings (scheme, host, port) |
+| `DJANGO_ELASTICSEARCH_INDEX` | `oldp` | Elasticsearch index name |
+| `DJANGO_DEBUG` | `True` | Enable to show debugging messages and errors |
+| `DJANGO_ADMINS` | `Admin,admin@openlegaldata.io` | Format: `Foo,foo@site.com;Bar,bar@site.com` |
+| `DJANGO_ALLOWED_HOSTS` | `None` | Format: `foo.com,bar.net` |
+| `DJANGO_LANGUAGES_DOMAINS` | | Format: `{'de.foo.com':'de','fr.foo.com':'fr'}` |
+| `DJANGO_DEFAULT_FROM_EMAIL` | `no-reply@openlegaldata.io` | Emails are sent from this address |
+| `DJANGO_EMAIL_HOST` | `localhost` | SMTP server |
+| `DJANGO_EMAIL_HOST_USER` | | SMTP user |
+| `DJANGO_EMAIL_HOST_PASSWORD` | | SMTP password |
+| `DJANGO_EMAIL_USE_TLS` | `False` | enable TLS |
+| `DJANGO_EMAIL_PORT` | `25` | SMTP port |
+| `DJANGO_FEEDBACK_EMAIL` | `feedback@openlegaldata.io` | Messages from feedback widget are sent to this address. |
+| `DJANGO_TIME_ZONE` | `UTC` | Time zone |
+| `DJANGO_TEST_WITH_ES` | `False` | Run tests that require Elasticsearch |
+| `DJANGO_TEST_WITH_WEB` | `False` | Run tests that require web access |
+| `DJANGO_LOG_FILE` | `oldp.log` | Name of log file (in logs directory) |
+| `DJANGO_CACHE_DISABLE` | `False` | Set to `True` to disable cache (Redis) |
+
+
+
+## Issues
+
+Please use our [GitHub issues](https://github.com/openlegaldata/oldp/issues) to report bugs, request feature or simply
+leave some feedback.
+
+## Contact
+
+To contact Open Legal Data Platform, see here:
+
+https://de.openlegaldata.io/contact/
+
+## Citation
+
+Please cite the following [research paper](https://arxiv.org/abs/2005.13342), if you use our code or data:
+
+```bibtex
+@inproceedings{10.1145/3383583.3398616,
+author = {Ostendorff, Malte and Blume, Till and Ostendorff, Saskia},
+title = {Towards an Open Platform for Legal Information},
+year = {2020},
+isbn = {9781450375856},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3383583.3398616},
+doi = {10.1145/3383583.3398616},
+booktitle = {Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020},
+pages = {385–388},
+numpages = {4},
+keywords = {open data, open source, legal information system, legal data},
+location = {Virtual Event, China},
+series = {JCDL '20}
+}
+```
+
+## License
+
+OLDP is licensed under the MIT License.
+","At OLL 2022 we proposed the challenge to investigate, evaluate, discuss, and contribute to **efforts to improve interoperability** between platforms that collect and publish open legal data. Currently OLDP application only has data available from German courts. Documentation is available on [adding processing steps](https://oldp.readthedocs.io/en/latest/development.html) for additional data sources. Further details of the application below. The project can be reached here: [@openlegaldata](https://twitter.com/openlegaldata)
+
+While we did not manage to upload the data we wanted to, we investigated the process, and collected ideas of how to facilitate the process over time and involve the community. Generally we think having common standards for case data and other topics is very important, and we are aware of several initiatives like OLDP which aim to federate across repositories. Several hackathon projects did the legwork required, e.g.:
+
+https://challenges.openlegallab.ch/project/41
+
+More impressions of our 'midnight data dives' at Open Legal Lab 2022 can be found in the Slack channel via the Contact link below.
+
+![Screenshot of data structure](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/9Y8TFE1MRDPS02RYYSH6ZE6R.jpg) ![Screenshot of OLDP code](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/BKLJLEMMVMUT2VFBLJQE50BL.jpg)"
+"74","https://challenges.openlegallab.ch/project/74","awesome-legal-data","44","Clean","","0","False","False","30","Collection of Datasets for Legal Text Processing","","https://avatars.githubusercontent.com/u/38217808?v=4","https://github.com/openlegaldata/awesome-legal-data","https://openlegaldata.io","https://github.com/openlegaldata/awesome-legal-data","https://github.com/openlegaldata/awesome-legal-data/releases","https://github.com/openlegaldata/awesome-legal-data/issues","","","# awesome-legal-data
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+
+A curated list of resources dedicated to legal data. 
+The collection contains data sets, tools and other links related to the legal domain. 
+Most resources are openly available.
+
+## United States
+
+- [Caselaw Access Project by Harvard Law School](https://case.law/)
+- [CourtListner](https://courtlistener.com) - Search mi...","2023-04-13T16:26","2023-04-24T19:47","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 3558}","# awesome-legal-data
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+
+A curated list of resources dedicated to legal data. 
+The collection contains data sets, tools and other links related to the legal domain. 
+Most resources are openly available.
+
+## United States
+
+- [Caselaw Access Project by Harvard Law School](https://case.law/)
+- [CourtListner](https://courtlistener.com) - Search millions of opinions by case name, topic, or citation. 403 Jurisdictions. Sponsored by the Non-Profit [Free Law Project](https://free.law).
+- [H2O Open Case Book](https://opencasebook.org/)
+
+## UK
+
+- [British and Irish Legal Information Institute](http://www.bailii.org/)
+
+## Canada
+
+- [Canadian Legal Information Institute](https://www.canlii.org/en/)
+
+## Australia
+
+- [Australasian Legal Information Institute](http://www.austlii.edu.au/)
+
+## Germany
+
+- [OpenJur](https://openjur.de/)
+- [Open Legal Data](https://openlegaldata.io/)
+- [A Dataset of German Legal Documents for Named Entity Recognition (Lynx Project)](https://github.com/elenanereiss/Legal-Entity-Recognition)
+- [GerDaLIR: A German Dataset for Legal Information Retrieval](https://github.com/lavis-nlp/GerDaLIR) [(Paper)](https://aclanthology.org/2021.nllp-1.13.pdf)
+
+## Switzerland
+
+- [entscheidsuche.ch](https://entscheidsuche.ch/)
+- [Swiss-Judgment-Prediction: A Multilingual Legal Judgment Prediction Benchmark](https://arxiv.org/abs/2110.00806)
+
+## Netherlands
+
+- [rechtspraak.nl](https://www.rechtspraak.nl/)
+
+## Norway
+
+- [rettspraksis.no](https://rettspraksis.no/wiki/Forside)
+
+## Poland
+
+- [mojeprawo.io](https://mojeprawo.io/)
+
+## Czech
+
+- [Czech Court Decisions Corpus](https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-3052) [(Paper)](https://arxiv.org/pdf/1910.09513.pdf)
+
+## Finland
+
+- [FinLex](https://www.finlex.fi/en/)
+
+## France
+
+- [Legifrance](https://www.legifrance.gouv.fr/Traductions/en-English)
+
+
+## EU
+
+- [EUR-Lex](https://eur-lex.europa.eu/)
+- [MultiEURLEX - A multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer](https://arxiv.org/abs/2109.00904)
+- [Mining Legal Arguments in Court Decisions - Data and software (European Court of Human Rights (ECHR))](https://github.com/trusthlt/mining-legal-arguments)
+
+## Japan
+
+- [Competition on Legal Information Extraction/Entailment (COLIEE 2020)](https://sites.ualberta.ca/~rabelo/COLIEE2020/)
+
+---
+
+## Other datasets
+
+- [LexGLUE: A Benchmark Dataset for Legal Language Understanding in English](https://github.com/coastalcph/lex-glue)
+- [PileOfLaw](https://github.com/Breakend/PileOfLaw)
+
+## Tools
+
+- [Blackstone - A spaCy pipeline and model for NLP on unstructured legal text.](https://github.com/ICLRandD/Blackstone)
+- [Pseudo-anonymization of French legal cases](https://github.com/ELS-RD/anonymisation)
+- [Scripts to crawl English legal corpora](https://github.com/iliaschalkidis/LegalCrawler)
+- [LEGAL-BERT: The Muppets straight out of Law School](https://arxiv.org/abs/2010.02559)
+- [Law-OMNI-BERT-Project](https://github.com/Lukas-Justen/Law-OMNI-BERT-Project)
+
+## Other links
+
+- [Liquid-Legal-Institute/Legal-Text-Analytics](https://github.com/Liquid-Legal-Institute/Legal-Text-Analytics)
+- [Natural Legal Language Processing Workshop](https://nllpw.org/)
+
+## License
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+",""
+"73","https://challenges.openlegallab.ch/project/73","awesome-legal-nlp","43","Clean","","0","False","False","30","📖  A curated list of LegalNLP resources from all around the web.","","https://avatars.githubusercontent.com/u/52452174?v=4","https://github.com/maastrichtlawtech/awesome-legal-nlp","","https://github.com/maastrichtlawtech/awesome-legal-nlp","https://github.com/maastrichtlawtech/awesome-legal-nlp/releases","https://github.com/maastrichtlawtech/awesome-legal-nlp/issues","","","[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+![License](https://img.shields.io/github/license/antoiloui/awesome-legal-nlp)
+
+# Legal Natural Language Processing
+
+## 🗂 Datasets
+
+#### <ins>Legal Judgement Prediction</ins> (LJP)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| FSCS (Niklaus et al., 2021) | [📄](https://arxiv.org/abs/2110.00806) [🤗](https://huggingface.co/datasets/swiss_judgment_prediction) [💻](https://github.com/JoelNiklaus/Sw...","2023-04-13T16:25","2023-04-24T13:27","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 13127}","[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
+![License](https://img.shields.io/github/license/antoiloui/awesome-legal-nlp)
+
+# Legal Natural Language Processing
+
+## 🗂 Datasets
+
+#### <ins>Legal Judgement Prediction</ins> (LJP)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| FSCS (Niklaus et al., 2021) | [📄](https://arxiv.org/abs/2110.00806) [🤗](https://huggingface.co/datasets/swiss_judgment_prediction) [💻](https://github.com/JoelNiklaus/SwissJudgementPrediction) | Swiss court judgments | 🇩🇪 🇫🇷 🇮🇹 | 85K cases w/ 2 outcomes |
+| ECtHR (Chalkidis et al., 2021) | [📄](https://arxiv.org/abs/2103.13084) [🤗](https://huggingface.co/datasets/ecthr_cases) | EU court judgments | 🇬🇧 | 11K cases w/ 11 outcomes |
+| ECHR (Aletras et al., 2019) | [📄](https://arxiv.org/abs/1906.02059) [💾](https://archive.org/details/ECHR-ACL2019) | EU court judgments | 🇬🇧 | 11.5K cases w/ 11 outcomes |
+| CAIL (Xiao et al., 2018) | [📄](https://arxiv.org/abs/1807.02478) [💻](https://github.com/china-ai-law-challenge/CAIL2018) | Chinese court judgements | 🇨🇳 | 2.6M cases w/ 6 outcomes |
+
+#### <ins>Legal Text Classification</ins> (LTC)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| GLC (Papaloukas et al., 2021) | [📄](https://arxiv.org/abs/2109.15298) [🤗](https://huggingface.co/datasets/greek_legal_code) [💻](https://github.com/christospi/glc-nllp-21) | Greek legislation | 🇬🇷  | 47.5K laws w/ 2.7K labels |
+| CUAD (Hendrycks et al., 2021) | [📄](https://arxiv.org/abs/2103.06268) [🤗](https://huggingface.co/datasets/cuad) [💻](https://github.com/TheAtticusProject/cuad)| Contracts | 🇬🇧  | 510 contracts w/ 41 classes |
+| MultiEURLEX (Chalkidis et al., 2021) | [📄](https://arxiv.org/abs/2109.00904) [🤗](https://huggingface.co/datasets/multi_eurlex) [💻](https://github.com/nlpaueb/multi-eurlex) | EU legislation | 🇬🇧 🇩🇪 🇫🇷 🇮🇹 🇪🇸 (18+) | 65K laws w/ 4.5K labels |
+| LEDGAR (Tuggener et al., 2020) |  [📄](https://aclanthology.org/2020.lrec-1.155) [💾](https://drive.switch.ch/index.php/s/j9S0GRMAbGZKa1A) | Contracts | 🇬🇧 | 60.5K contracts w/ 12.6K labels |
+| Contract Discovery (Borchmann et al., 2020) | [📄](https://arxiv.org/abs/1911.03911) [💻](https://github.com/applicaai/contract-discovery) | Contracts | 🇬🇧 | 2.6K clauses w/ 21 classes |
+| EURLEX-57K (Chalkidis et al., 2019) | [📄](https://arxiv.org/abs/1906.02192) [💾](http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html) | EU legislation | 🇬🇧  | 57K laws w/ 4.3K labels |
+| Unfair-ToS (Lippi et al., 2018) | [📄](https://arxiv.org/abs/1805.01217) [💾](http://155.185.228.137/claudette/ToS.zip) | Contracts | 🇬🇧 | 9.4K sentences w/ 9 classes |
+| Contract Elements (Chalkidis et al., 2017) | [📄](https://dl.acm.org/doi/10.1145/3086512.3086515) [💾](http://nlp.cs.aueb.gr/software_and_datasets/CONTRACTS_ICAIL2017/index.html) | Contracts | 🇬🇧 | 2.4K contracts w/ 10 classes |
+| OPP-115 (Wilson et al., 2016) | [📄](https://aclanthology.org/P16-1126) [💾](https://usableprivacy.org/data) | Privacy laws | 🇬🇧 | 115 policies w/ 23K labels |
+
+#### <ins>Legal Information Retrieval</ins> (LIR)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| BSARD (Louis et al., 2022) | [📄](https://arxiv.org/abs/2108.11792) [🤗](https://huggingface.co/datasets/antoiloui/bsard) [💻](https://github.com/maastrichtlawtech/bsard) | Belgian legislation | 🇫🇷  | 1.1K questions w/ 22.6K candidate statutory articles |
+| EU2UK (Chalkidis et al., 2021) | [📄](https://arxiv.org/abs/2101.10726) [💾](https://archive.org/details/eacl2021_regir_datasets) | EU & UK legislation |🇬🇧  | 2K query documents w/ 52.5K candidate documents |
+| UK2EU (Chalkidis et al., 2021) | [📄](https://arxiv.org/abs/2101.10726) [💾](https://archive.org/details/eacl2021_regir_datasets) | EU & UK legislation |🇬🇧  | 2.1K query documents w/ 3.9K candidate documents |
+| COLIEE-Case-Law-Retrieval (Rabelo et al., 2020) | [📄](https://sites.ualberta.ca/~rabelo/COLIEE2021/COLIEE_2020_summary.pdf) [💾](https://sites.ualberta.ca/~rabelo/COLIEE2020/) | Canadian precedents | 🇬🇧 |  650 query cases w/ 128K candidate cases |
+| COLIEE-Statute-Law-Retrieval (Rabelo et al., 2020) | [📄](https://sites.ualberta.ca/~rabelo/COLIEE2021/COLIEE_2020_summary.pdf) [💾](https://sites.ualberta.ca/~rabelo/COLIEE2020/) | Japanese legislation | 🇬🇧 🇯🇵 |  808 questions w/ 768 candidate statutory articles |
+| CAIL2019-SCM (Xiao et al., 2019) | [📄](https://arxiv.org/abs/1911.08962) [💻](https://github.com/china-ai-law-challenge/CAIL2019/tree/master/scm) | Chinese court judgements | 🇨🇳 | 8.9K triplets of cases |
+
+#### <ins>Legal Question Answering</ins> (LQA)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| CaseHOLD (Zheng et al., 2021) | [📄](https://arxiv.org/abs/2104.08671) [💻](https://github.com/reglab/casehold) | US case holdings | 🇬🇧 | 53.1K multiple-choice questions |
+| JEC-QA (Zhong et al., 2019) | [📄](https://arxiv.org/abs/1911.12011) [💾](https://jecqa.thunlp.org/) | Chinese law | 🇨🇳  | 26.3K multiple-choice questions |
+| CJRC (Duan et al., 2019) | [📄](https://arxiv.org/abs/1912.09156) [💻](https://github.com/china-ai-law-challenge/CAIL2019) | Chinese court judgements | 🇨🇳 | 50K question-answers from 10K documents |
+| PrivacyQA (Ravichander et al., 2019) | [📄](https://arxiv.org/abs/1911.00841) [💻](https://github.com/AbhilashaRavichander/PrivacyQA_EMNLP) | Privacy policies | 🇬🇧 | 1.7K question-answers from 35 documents |
+
+#### <ins>Legal Textual Entailment</ins> (LTE)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| COLIEE-Case-Law-Entailment (Rabelo et al., 2020) | [📄](https://sites.ualberta.ca/~rabelo/COLIEE2021/COLIEE_2020_summary.pdf) [💾](https://sites.ualberta.ca/~rabelo/COLIEE2020/) | Canadian precedents | 🇬🇧 |  425 cases w/ related case |
+| COLIEE-Statute-Law-Entailment (Rabelo et al., 2020) | [📄](https://sites.ualberta.ca/~rabelo/COLIEE2021/COLIEE_2020_summary.pdf) [💾](https://sites.ualberta.ca/~rabelo/COLIEE2020/) | Japanese legislation | 🇬🇧 🇯🇵 |  808 questions w/ related statutory article |
+
+#### <ins>Legal Text Summarization</ins> (LTS)
+
+| Dataset | Links | Domain | Language | Size |
+|---|---|---|---|---|
+| UK-Abs (Shukla et al., 2022) | [📄](https://arxiv.org/abs/2210.07544) [💻](https://github.com/Law-AI/summarization/tree/aacl/dataset#uk-abs) [💾](https://zenodo.org/record/7152317#.Yz6mJ9JByC0) | UK court cases | 🇬🇧 | 793 pairs of (case, abastractive summary) from the UK Supreme Court |
+| IN-Abs (Shukla et al., 2022) | [📄](https://arxiv.org/abs/2210.07544) [💻](hhttps://github.com/Law-AI/summarization/tree/aacl/dataset#in-abs) [💾](https://zenodo.org/record/7152317#.Yz6mJ9JByC0) | Indian court cases | 🇬🇧 | 7.1K pairs of (case, abastractive summary) from the Indian Supreme Court |
+| IN-Ext (Shukla et al., 2022) | [📄](https://arxiv.org/abs/2210.07544) [💻](https://github.com/Law-AI/summarization/tree/aacl/dataset#in-ext) [💾](https://zenodo.org/record/7152317#.Yz6mJ9JByC0) | Indian court cases | 🇬🇧 | 50 pairs of (case, extractive summary) from the Indian Supreme Court |
+| TOS;DR (Keymanesh et al., 2020) | [📄](https://ceur-ws.org/Vol-2645/paper3.pdf) [💻](https://github.com/senjed/Summarization-of-Privacy-Policies/commit/e6fabba8639593f45cde7d42639a5f354f5d9c3a) | Terms of service | 🇬🇧 | 1.6K pairs of (agreement text, summary) from data privacy policies |
+| BillSum (Kornilova et al., 2019) | [📄](https://aclanthology.org/D19-5406/) [💻](https://github.com/FiscalNote/BillSum) [💾](https://drive.google.com/file/d/1SkwK-PfcHzznKUHy2S3jfdITR4D5MD5u/view) | US Congressional bills | 🇬🇧 | 22.2K pairs of (bill, summary) |
+| TL;DRLegal (Manor et al., 2019) | [📄](https://aclanthology.org/W19-2201/) [💻](https://github.com/lauramanor/legal_summarization/blob/master/tldrlegal_v1.json) | Terms of service | 🇬🇧 | 84 pairs of (agreement text, summary) from software licenses |
+| TOS;DR (Manor et al., 2019) | [📄](https://aclanthology.org/W19-2201/) [💻](https://github.com/lauramanor/legal_summarization/blob/master/tosdr_annotated_v1.json) | Terms of service | 🇬🇧 | 421 pairs of (agreement text, summary) from data privacy policies |
+| BVA Cases (Zhong et al., 2019) | [📄](https://dl.acm.org/doi/10.1145/3322640.3326728) [💻](https://github.com/luimagroup/bva-summarization) | US court cases | 🇬🇧 | 92 pairs of (case, summary) from the US Board of Veterans' Appeal |
+| LCR (Galgani et al., 2012) | [📄](https://aclanthology.org/W12-0515/) [💾](https://archive.ics.uci.edu/ml/datasets/Legal+Case+Reports) | Australian court cases | 🇬🇧 | 3.9K pairs of (case, catchphrases) |
+
+#### <ins>Legal Language Modeling</ins> (LLM)
+
+| Dataset | Links | Language | Size |
+|---|---|---|---|
+| Pile of Law (Henderson et al., 2022) | [📄](https://arxiv.org/abs/2207.00220) [🤗](https://huggingface.co/datasets/pile-of-law/pile-of-law) [💻](https://github.com/Breakend/PileOfLaw) | 🇬🇧 | ~256GB of legal and administrative legal text |
+
+#### <ins>Benchmarks</ins>
+
+| Dataset | Task | Language | Tasks |
+|---|---|---|---|
+| FairLex (Chalkidis et al., 2022) | [📄](https://arxiv.org/abs/2203.07228) [🤗](https://huggingface.co/datasets/coastalcph/fairlex) [💻](https://github.com/coastalcph/fairlex) | 🇬🇧 🇩🇪 🇫🇷 🇮🇹 🇨🇳 | Clasification (x1), legal judgement prediction (x3) |
+| LexGLUE (Chalkidis et al., 2022) | [📄](https://arxiv.org/abs/2110.00976) [🤗](https://huggingface.co/datasets/lex_glue) [💻](https://github.com/coastalcph/lex-glue) | 🇬🇧  | Classsification (x6), multiple-choice QA (x1) |
+
+## 🔥 Models
+
+| Model | Links | Language | Size |
+|---|---|---|---|
+| Legal-HeBERT (Chriqui et al., 2022) | [📄](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4147127) [🤗](https://huggingface.co/avichr/Legal-heBERT) [💻](https://github.com/avichaychriqui/Legal-HeBERT) | 🇮🇱 | 110M |
+| PoL-BERT-Large (Henderson et al., 2022) | [📄](https://arxiv.org/abs/2207.00220) [🤗](https://huggingface.co/pile-of-law/legalbert-large-1.7M-1) [💻](https://github.com/Breakend/PileOfLaw) | 🇬🇧 | 336M |
+| Italian-LEGAL-BERT (Licari and Comande, 2022) | [📄](https://ceur-ws.org/Vol-3256/km4law3.pdf) [🤗](https://huggingface.co/dlicari/Italian-Legal-BERT)| 🇮🇹 | 110M |
+| JuriBERT (Douka et al., 2021) | [📄](https://arxiv.org/abs/2110.01485) [💾](http://master2-bigdata.polytechnique.fr/resources#juribert) | 🇫🇷  | {6M, 15M, 42M, 110M} |
+| Custom-LEGAL-BERT (Zheng et al., 2021) | [📄](https://arxiv.org/abs/2104.08671) [🤗](https://huggingface.co/zlucia/custom-legalbert) [💻](https://github.com/reglab/casehold) | 🇬🇧  | 110M |
+| LEGAL-BERT (Chalkidis et al., 2020) | [📄](https://arxiv.org/abs/2010.02559) [🤗](https://huggingface.co/nlpaueb/legal-bert-base-uncased) | 🇬🇧  | {35M, 110M} |
+| LEGAL-GPT-{1,2} (Borchmann et al., 2020) | [📄](https://arxiv.org/abs/1911.03911) [💻](https://github.com/applicaai/contract-discovery) | 🇬🇧  | {117M, 1.5B} |
+
+## 📚  Books
+
+- [`2017`] *Artificial Intelligence and Legal Analytics: New Tools for Law Practice in the Digital Age*, K. Ashley. [[link]](https://www.cambridge.org/core/books/artificial-intelligence-and-legal-analytics/E7D705EEF392501A1DB180645917E7E0)
+
+## 📄  Surveys
+
+- [`2020-05`] *How Does NLP Benefit Legal System: A Summary of Legal Artificial Intelligence*, H. Zhong et al. [[pdf]](https://arxiv.org/pdf/2004.12158)
+- [`2019-09`] *A Brief History of the Changing Roles of Case Prediction in AI and Law*, K. Ashley [[pdf]](https://journals.latrobe.edu.au/index.php/law-in-context/article/download/88/157)
+- [`2018-12`] *Deep learning in law: early adaptation and legal word embeddings trained on large corpora*, I. Chalkidis et al. [[pdf]](https://link.springer.com/content/pdf/10.1007/s10506-018-9238-9.pdf)
+
+## 🎙  Talks
+
+- [`2019-06`] *Law as Data: The Promise and Challenges of Natural Language Processing for Legal Research*, A. Dyevre. [[slides]](https://drive.google.com/open?id=14zWlp2Hkm866MTup_oMZJa5T80fxsWtR)
+- [`2019-04`] *Artificial Intelligence and Law – An Overview and History*, H. Surden. [[video]](https://www.youtube.com/watch?v=BG6YR0xGMRA)
+
+## 🗓  Conferences & Workshops
+
+- The Natural Legal Language Processing (NLLP) Workshop [[website]](https://nllpw.org/workshop/)
+- The International Conference on Artificial Intelligence and Law (ICAIL) [[website]](https://dl.acm.org/doi/proceedings/10.1145/3322640#issue-downloads)
+- The International Conference on Legal Knowledge and Information Systems (JURIX) [[website]](http://jurix.nl/)  
+- The EXplainable AI in Law (XAILA) Workshop [[website]](https://www.geist.re/xaila:start)
+- The International Workshop on Juris-informatics (JURISIN) [[website]](http://research.nii.ac.jp/~ksatoh/jurisin2020/)
+- The Competition on Legal Information Extraction/Entailment (COLIEE) [[website]](https://sites.ualberta.ca/~rabelo/COLIEE2020/)
+- The International Workshop on Legal Information Retrieval [[website]](https://tmr.liacs.nl/legalIR/)
+
+<!---
+Datasets to add:
+- https://github.com/neelguha/legal-ml-datasets
+- https://nllpw.org/resources/
+- https://github.com/Liquid-Legal-Institute/Legal-Text-Analytics#datasets-and-data
+-->
+",""
+"85","https://challenges.openlegallab.ch/project/85","legal-ml-datasets","43","Clean","","0","False","False","30","A collection of datasets and tasks for legal machine learning ","","https://avatars.githubusercontent.com/u/2036121?v=4","https://github.com/neelguha/legal-ml-datasets","","https://github.com/neelguha/legal-ml-datasets","https://github.com/neelguha/legal-ml-datasets/releases","https://github.com/neelguha/legal-ml-datasets/issues","","","# Datasets for Machine Learning in Law
+This is a collection of pointers to datasets/tasks/benchmarks pertaining to the intersection of machine learning and law. 
+
+This page is continually being updated. If I missed something, please contact me at nguha@stanford.edu and I'll add it! 
+
+Neel Guha
+
+
+## Task agnostic datasets 
+These datasets can be used for pretraining larger models. Alternatively, you cause them to construct artificial tasks. 
+
+- [Caselaw Access Project](https://case.law/...","2023-04-24T19:46","2023-04-24T19:48","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 7272}","# Datasets for Machine Learning in Law
+This is a collection of pointers to datasets/tasks/benchmarks pertaining to the intersection of machine learning and law. 
+
+This page is continually being updated. If I missed something, please contact me at nguha@stanford.edu and I'll add it! 
+
+Neel Guha
+
+
+## Task agnostic datasets 
+These datasets can be used for pretraining larger models. Alternatively, you cause them to construct artificial tasks. 
+
+- [Caselaw Access Project](https://case.law/): all official, book-published United States case law.
+- [Legifrance](https://www.legifrance.gouv.fr/): a French legal publisher providing access to law codes and legal decisions. Requires scraping ([Paper](http://ceur-ws.org/Vol-2645/paper2.pdf)). 
+- [US Supreme Court Database](http://scdb.wustl.edu/): information about every case decided by the US Supreme Court between 1791 and today.
+- [European Parliment Proceedings](https://www.statmt.org/europarl/): Parallel text of the proceedings of the European Parliment, collected in 11 languages. 
+- [US Code](https://uscode.house.gov/download/download.shtml): downloadable version of the US Code in XML format
+- [Patent Litigation Docket Reports](https://www.uspto.gov/learning-and-resources/electronic-data-products/patent-litigation-docket-reports-data): detailed patent litigation data on over 80k unique district court cases
+- [Pile of Law](https://huggingface.co/datasets/pile-of-law/pile-of-law): a 256GB dataset of legal, administrative, and contractual texts.
+
+## Benchmarks which combine multiple types of tasks
+- [LexGlue](https://huggingface.co/datasets/lex_glue): a GLUE inspired set of legal tasks 
+- [LegalBench](https://github.com/HazyResearch/legalbench): a large language model benchmark for legal reasoning
+
+
+## Judgement prediction
+Training a model to predict the outcome of a case from various case specific features. 
+- [European Court of Human Rights](https://archive.org/details/ECHR-ACL2019): 11.5k cases from ECHR's public database. [Paper](https://www.aclweb.org/anthology/P19-1424/).
+
+
+## Document/contract annotation
+Training a model to annotate sentences/clauses/sections in a contract (or other document) according to various criteria (e.g. unfairness, argument structure, etc).
+
+- [Detecting unfair clauses from online terms-of-service](http://155.185.228.137/claudette/ToS.zip): ~12k sentences from 50 terms-of-service agreements. [Paper](https://arxiv.org/pdf/1805.01217.pdf).
+- [Usable Privacy Project Data](https://usableprivacy.org/data): a collection of datasets for privacy policies, including OPP-115, APP-350, MAPS, and the ACL/COLING 2014 Dataset.
+- [Contract extraction dataset](http://nlp.cs.aueb.gr/software_and_datasets/CONTRACTS_ICAIL2017/index.html): 3,500 English contracts manually annotated with 11 different contract elements. [Paper](http://nlp.cs.aueb.gr/pubs/icail2017.pdf).
+- [EURLEX with EUROVOC annotations](http://nlp.cs.aueb.gr/software_and_datasets/EURLEX57K/index.html): 57k legilsative documents from the EU's public document database, annotated with concepts from EUROVOC. [Paper](https://www.aclweb.org/anthology/W19-2209/).
+- [Cornell eRulemaking Corpus](https://facultystaff.richmond.edu/~jpark/data/jpark_lrec18.zip): Collection of 731 user comments on the the Consumer Debt Collection Practices rule by the CFPB, with annotations containing information about argument structure. [Paper](https://facultystaff.richmond.edu/~jpark/papers/jpark_lrec18.pdf).
+- [German rental agreements (in English)](https://github.com/sebischair/Legal-Sentence-Classification-Datasets-and-Models): ~913 sentences from German rental agreements annotated by semantic type. [Paper](https://www.researchgate.net/publication/332171940_Classifying_Semantic_Types_of_Legal_Sentences_Portability_of_Machine_Learning_Models).
+- [Segmenting US court decision opinions into issue parts](https://github.com/jsavelka/us-dec-func-iss-sgm/blob/master/trade_secret_cases.json): 316 court decisions on cyber crime and trade secrets, manually segmented into 6 content based ""types"" (encompassing categories like ""Introduction"", ""Dissent"", or ""Background""). [Paper](http://ebooks.iospress.nl/volumearticle/50840)
+- [ContractNLI: A Dataset for Document-level Natural Language Inference for Contracts](https://arxiv.org/abs/2110.01799)
+- 
+
+
+## Summarization 
+Training a model to summarize complex contractual jargon or legal analysis.
+- [Summarizing contracts into plain english](https://github.com/lauramanor/legal_summarization): 446 contracts with parallel plain-text section-level English summaries. [Paper](https://www.aclweb.org/anthology/W19-2201/).
+- [Cookie policies from 151 companies](https://github.com/senjed/Summarization-of-Privacy-Policies): User agreements for 151 services with sections annotated by TOS;DR. [Paper](http://ceur-ws.org/Vol-2645/paper3.pdf).
+- [Australian case citation summarization](https://archive.ics.uci.edu/ml/datasets/Legal+Case+Reports): 4000 cases from the Federal Court of Australia with citation-based summaries. 
+- [Board of Veterans' Appeals Case Summarization](https://github.com/luimagroup/bva-summarization): Summarizing BVA cases concerning PTSD. [Paper](https://dl.acm.org/doi/10.1145/3322640.3326728).
+- [Multi-LexSum](https://openreview.net/forum?id=z1d8fUiS8Cr): Summarizing civil rights opinions at different granularities!
+
+## Linking / question answering
+Training a model to answer questions or to identify passages from a target document that are relevant to a specified query. 
+- [Linking Supreme Court Opinions to the US Constitution](https://github.com/mayhewsw/legal-linking): 36k paragraphs from USC opinions with 41k links to the US Constitution. [Paper](https://www.aclweb.org/anthology/W19-2205.pdf).
+- [StAtutory Reasoning Assessment (SARA)](https://nlp.jhu.edu/law/): Collection of rules extracted from US Internal Revenue Code and natural language questions requiring application of those rules. [Paper](http://ceur-ws.org/Vol-2645/paper5.pdf).
+- [PrivacyQA](https://github.com/AbhilashaRavichander/PrivacyQA_EMNLP): 1750 questions on mobile application privacy policies and 3500 relevant expert annotations. [Paper](https://arxiv.org/abs/1911.00841)
+- [CaseHOLD](https://github.com/reglab/casehold): 53,000+ MC questions that require identifying the correct holding for a case citation from the preceeding context. [Paper](https://arxiv.org/abs/2104.08671)
+- [LegalSupport](https://crfm.stanford.edu/helm/v1.0/?group=legal_support): inferring BlueBook support signals from legal texts
+
+## Document classification 
+Training a model to classify a (typically lengthy) legal filing or document. 
+- [EDGAR](https://www.sec.gov/edgar/searchedgar/accessing-edgar-data.htm): Online public database for US Securities and Exchange Commission. Filings can be classified by filing type. [Paper](https://arxiv.org/abs/1912.06905).
+
+
+## Misc
+Datasets which don't fit into the above categories:
+- [Segmenting sentences in US cases](https://github.com/jsavelka/sbd_adjudicatory_dec): ~26k sentences from 80 cases. [Paper](https://www.atala.org/sites/default/files/2-%20TAL-58-2-sbd-adjudicatory-decisions.pdf).
+
+
+
+
+ 
+",""
+"54","https://challenges.openlegallab.ch/project/54","entscheidsuche","37","Get","oleg","0","False","True","10","Eine Suche in allen publizierten Gerichtsurteilen von Schweizer Gerichten aller Instanzen.","","https://avatars.githubusercontent.com/u/46230066?v=4","https://github.com/entscheidsuche","https://entscheidsuche.ch/search?query=datenpublikation","https://github.com/entscheidsuche/NeueScraper","https://github.com/entscheidsuche/NeueScraper/releases","https://github.com/entscheidsuche/NeueScraper/issues","","","In this repository, you can find out how to write a scraper and contribute to improving the quality and reach of the project. To search the database and for more information, please visit https://entscheidsuche.ch/
+
+## Beta Feature
+
+Beliebige Entscheiden können herunterladen werden via https://beta.entscheidsuche.ch/ mit einem Download-Feature. Ein ZIP-Archive wird erstellt mit Daten und eine Übersichtsliste als CSV oder HTML. Mit Fragen bitte wendet euch an Jörn.
+
+![ Title ](https://bucke...","2022-03-23T06:42","2023-04-30T07:56","oleg","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 5, ""updates"": 4, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 809, ""sizetotal"": 1470}","Die Scraper basieren auf dem Scrapy-Framework und laufen auf ScrapingHub. Im Verzeichnis NeueScraper steht der Code der Scraper.
+Die Beschreibung der Scraper steht in einem Google Docs Excel Sheet und ist abrufbar unter:
+https://docs.google.com/spreadsheets/d/e/2PACX-1vR2sZY8Op7cLChL6Hu0aDZmbOrmX_UPtyxz86W-oeyuCemBs0poqxC-EU33i-JhH9PQ7SMqYOnIw5ou/pub?gid=1220663602&single=true&output=csv
+Diese Beschreibung wird von den Scrapern ausgelesen und berücksichtigt. Sie dient auch für die Übersicht unter
+http://entscheidsuche.ch.s3-eu-west-3.amazonaws.com/Spiderliste.xml
+
+","In this repository, you can find out how to write a scraper and contribute to improving the quality and reach of the project. To search the database and for more information, please visit https://entscheidsuche.ch/
+
+## Beta Feature
+
+Beliebige Entscheiden können herunterladen werden via https://beta.entscheidsuche.ch/ mit einem Download-Feature. Ein ZIP-Archive wird erstellt mit Daten und eine Übersichtsliste als CSV oder HTML. Mit Fragen bitte wendet euch an Jörn.
+
+![ Title ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/ZM8EDGRMN23ASUHOJ1AUI0ND/entscheidsuchebeta.jpg)
+
+Erweiterte Optionen:
+
+![ Title ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/P2CXYFLSOQVPQDGDNKGPAR30/Screenshot_from_20230430_093906.png)"
+"48","https://challenges.openlegallab.ch/project/48","Datenauskunft","36","Verify","","0","False","False","20","Ein neues online Tool durch die Digitale Gesellschaft zur Verfügung gestellt.","","https://avatars.githubusercontent.com/u/29210660?v=4","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren","https://www.digitale-gesellschaft.ch/auskunftsbegehren","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren/releases","https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren/issues","","","
+---
+
+# Datenauskunftsbegehren Generator
+![Generiere dein Datenauskunftsbegehren](https://www.digitale-gesellschaft.ch/auskunftsbegehren/datenauskunftsbegehren-og.png)
+
+This is the code behind: https://www.digitale-gesellschaft.ch/auskunftsbegehren
+
+## Contribute
+Please open issues here for anything you find not working correctly with the Application. If you miss any organisation or company in the data, feel free to open Pull Requests at the [Data Repository](https://github.com/Digitale...","2022-02-25T19:57","2023-04-24T13:28","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 3, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 1831}","
+---
+
+# Datenauskunftsbegehren Generator
+![Generiere dein Datenauskunftsbegehren](https://www.digitale-gesellschaft.ch/auskunftsbegehren/datenauskunftsbegehren-og.png)
+
+This is the code behind: https://www.digitale-gesellschaft.ch/auskunftsbegehren
+
+## Contribute
+Please open issues here for anything you find not working correctly with the Application. If you miss any organisation or company in the data, feel free to open Pull Requests at the [Data Repository](https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren-Data).
+
+## Develop
+### Setup local development environment
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
+Install the dependencies...
+
+```bash
+npm install
+```
+
+...then start [Rollup](https://rollupjs.org):
+
+```bash
+npm run dev
+```
+
+Navigate to [localhost:5000](http://localhost:5000). You should see the App runnning.
+
+If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+
+### Building and running in production mode
+
+To create an optimised version of the app:
+
+```bash
+npm run build
+```
+
+You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv).
+
+
+### Deployment
+
+#### Use Artifact from Github Action
+Go to https://github.com/DigitaleGesellschaft/Datenauskunftsbegehren/actions and download the Artifact named `Public` from the latest build. Put all the content into a folder server by a webserver.
+#### Build your own
+Generate production build:
+
+```bash
+npm run build
+```
+
+Copy everything in `/public` into a folder served by a Webserver.",""
+"87","https://challenges.openlegallab.ch/project/87","Legal Entity Recognition","33","Verify","","0","False","False","20","A Dataset of German Legal Documents for Named Entity Recognition","","https://avatars.githubusercontent.com/u/47367624?v=4","https://github.com/elenanereiss/Legal-Entity-Recognition","","https://github.com/elenanereiss/Legal-Entity-Recognition","https://github.com/elenanereiss/Legal-Entity-Recognition/releases","https://github.com/elenanereiss/Legal-Entity-Recognition/issues","","","# Legal-Entity-Recognition
+
+## German LER Dataset on :hugs: Hugging Face (Update 2022-10-19)
+Now available on Huggingface [https://huggingface.co/datasets/elenanereiss/german-ler](https://huggingface.co/datasets/elenanereiss/german-ler)
+
+## Fine-grained Named Entity Recognition in Legal Documents
+
+This work has been partially funded by the project Lynx, which has received funding from the EU's Horizon 2020 research and innovation programme under grant agreement no. 780602, see [http://www...","2023-04-29T21:46","2023-04-29T21:46","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 7352}","# Legal-Entity-Recognition
+
+## German LER Dataset on :hugs: Hugging Face (Update 2022-10-19)
+Now available on Huggingface [https://huggingface.co/datasets/elenanereiss/german-ler](https://huggingface.co/datasets/elenanereiss/german-ler)
+
+## Fine-grained Named Entity Recognition in Legal Documents
+
+This work has been partially funded by the project Lynx, which has received funding from the EU's Horizon 2020 research and innovation programme under grant agreement no. 780602, see [http://www.lynx-project.eu](http://lynx-project.eu/).
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Example.png)
+
+# Dataset of Legal Documents
+
+Court decisions from 2017 and 2018 were selected for the dataset, published online by the [Federal Ministry of Justice and Consumer Protection](http://www.rechtsprechung-im-internet.de). The documents originate from seven federal courts: Federal Labour Court (BAG), Federal Fiscal Court (BFH), Federal Court of Justice (BGH), Federal Patent Court (BPatG), Federal Social Court (BSG), Federal Constitutional Court (BVerfG) and Federal Administrative Court (BVerwG). 
+
+## [Annotation Guidelines](https://github.com/elenanereiss/Legal-Entity-Recognition/blob/master/docs/Annotationsrichtlinien.pdf) (German)
+
+## Size
+
+The dataset consists of 66,723 sentences with 2,157,048 tokens. The sizes of the seven court-specific datasets varies between 5,858 and 12,791 sentences, and 177,835 to 404,041 tokens. The distribution of annotations on a per-token basis corresponds to approx. 19-23 %.
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Size.png)
+
+## Distribution of Entities
+
+The dataset includes two different versions of annotations, one with a set of 19 fine-grained semantic classes and another one with a set of 7 coarse-grained classes. There are 53,632 annotated entities in total, the majority of which (74.34 %) are legal entities, the others are person, location and organization (25.66 %).
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Distribution.png)
+
+## Output Format
+
+The dataset is freely available under the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en). The output format is CoNLL-2002. Each line consists of two columns separated by a space. The first column contains a token and the second a tag in IOB2 format. The sentence boundary is marked with an empty line.
+
+| Token               | Tag   |
+|---------------------|-------|
+| Am                  | O     |
+| 7.                  | O     |
+| März                | O     |
+| 2006                | O     |
+| fand                | O     |
+| ein                 | O     |
+| Treffen             | O     |
+| der                 | O     |
+| saarländischen      | B-INN |
+| Landesregierung     | I-INN |
+| unter               | O     |
+| Vorsitz             | O     |
+| des                 | O     |
+| Ministerpräsidenten | O     |
+| Müller              | B-RR  |
+| mit                 | O     |
+| Vertretern          | O     |
+| der                 | O     |
+| Evangelischen       | B-ORG |
+| Kirche              | I-ORG |
+| im                  | I-ORG |
+| Rheinland           | I-ORG |
+| und                 | O     |
+| der                 | O     |
+| Evangelischen       | B-ORG |
+| Kirche              | I-ORG |
+| der                 | I-ORG |
+| Pfalz               | I-ORG |
+| statt               | O     |
+| .                   | O     |
+
+# CRF
+## Models
+
+- CRF-F with features `f`;
+- CRF-FG with features und gazetteers `fg`;
+- CRF-FGL with features, gazetteers and lookup table for word similarity `fgl`.
+
+## Training
+
+- install [sklearn-crfsuite](https://sklearn-crfsuite.readthedocs.io/en/latest/) and run (`modelName=f|fg|fgl`):
+```
+python crf.py modelName trainPath testPath
+```
+
+- Models are saved in `models/`.
+
+# BiLSTM
+## Models
+
+- BiLSTM-CRF `crf`;
+- BiLSTM-CRF with char embeddings from BiLSTM `blstm-crf`;
+- BiLSTM-CNN-CRF with char embeddings from CNN `cnn-crf`.
+
+## Training
+
+- install [BiLSTM-CNN-CRF](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf);
+- copy `blstm.py` to folder `emnlp2017-bilstm-cnn-crf/` choose a model (`modelName=crf|blstm-crf|cnn-crf`) and run:
+```
+python blstm.py modelName trainPath devPath testPath
+```
+- Models are saved in `models/`.
+
+# Requirements
+
+- [emnlp2017-bilstm-cnn-crf](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf)
+- [sklearn-crfsuite](https://sklearn-crfsuite.readthedocs.io/en/latest/)
+- [SoMaJo](https://github.com/tsproisl/SoMaJo)
+
+
+old version
+```
+absl-py==0.7.1
+astor==0.8.0
+bleach==3.1.0
+gast==0.2.2
+grpcio==1.23.0
+h5py==2.9.0
+html5lib==1.0.1
+keras==2.2.4
+keras-applications==1.0.8
+keras-preprocessing==1.1.0
+numpy==1.16.4
+protobuf==3.9.1
+pynif==0.1.4
+scipy==1.2.1
+six==1.12.0
+sklearn-crfsuite==0.3.6
+somajo==1.10.5
+tensorboard==1.14.0
+tensorflow==1.14.0
+termcolor==1.1.0
+werkzeug==0.15.4
+```
+
+#### References:
+
+Leitner, E. (2019). [*Eigennamen- und Zitaterkennung in Rechtstexten*](https://github.com/elenanereiss/Legal-Entity-Recognition/blob/master/docs/Leitner_LER_BA.pdf). Bachelor’s thesis, Universität Potsdam, Potsdam, 2.
+
+```
+@mastersthesis{mastersthesis,
+  author       = {Elena Leitner}, 
+  title        = {Eigennamen- und Zitaterkennung in Rechtstexten},
+  school       = {Universität Potsdam},
+  year         = 2019,
+  address      = {Potsdam},
+  month        = 2,}
+```
+
+Leitner, E., Rehm, G., and Moreno-Schneider, J. (2019). [Fine-grained Named Entity Recognition in Legal Documents](https://link.springer.com/content/pdf/10.1007%2F978-3-030-33220-4_20.pdf). In Maribel Acosta, et al., editors, *Semantic Systems. The Power of AI and Knowledge Graphs. Proceedings of the 15th International Conference (SEMANTiCS2019)*, number 11702 in Lecture Notes in Computer Science, pages 272–287, Karlsruhe, Germany, 9. Springer. 10/11 September 2019.
+
+```
+@inproceedings{leitner2019fine,
+  author = {Elena Leitner and Georg Rehm and Julian Moreno-Schneider},
+  title = {{Fine-grained Named Entity Recognition in Legal Documents}},
+  booktitle = {Semantic Systems. The Power of AI and Knowledge
+                  Graphs. Proceedings of the 15th International Conference
+                  (SEMANTiCS 2019)},
+  year = 2019,
+  editor = {Maribel Acosta and Philippe Cudré-Mauroux and Maria
+                  Maleshkova and Tassilo Pellegrini and Harald Sack and York
+                  Sure-Vetter},
+  keywords = {aip},
+  publisher = {Springer},
+  series = {Lecture Notes in Computer Science},
+  number = {11702},
+  address = {Karlsruhe, Germany},
+  month = 9,
+  note = {10/11 September 2019},
+  pages = {272--287},
+  pdf = {https://link.springer.com/content/pdf/10.1007%2F978-3-030-33220-4_20.pdf}}
+```
+
+<a rel=""license"" href=""http://creativecommons.org/licenses/by-nc-sa/4.0/""><img alt=""Creative Commons License"" style=""border-width:0"" src=""https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"" /></a><br />This work is licensed under a <a rel=""license"" href=""http://creativecommons.org/licenses/by-nc-sa/4.0/"">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+",""
+"58","https://challenges.openlegallab.ch/project/58","Empirical law","31","Verify","","0","False","False","20","","","","","","","","","","area-chart","https://twitter.com/HanjoHamann/status/1506175342100287489
+
+Resources:
+
+- [Legal Data for Empirical Legal Studies](https://libguides.princeton.edu/c.php?g=916665&p=6607543) (Princeton)
+- [Empirical Methods Workshop](https://lawecon.ethz.ch/teaching/empirical-methods-workshop.html) (ETHZ & Oxford)
+- [Empirical Methods for the Law](https://homepage.coll.mpg.de/pdf_dat/2017_07online.pdf), Engel 2017 (PDF)
+- [Empirical Legal Studies](https://liblawuw.libguides.com/c.php?g=1239278&p=9069364) (...","2022-03-24T00:07","2023-04-25T07:55","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 627, ""sizetotal"": 627}","","https://twitter.com/HanjoHamann/status/1506175342100287489
+
+Resources:
+
+- [Legal Data for Empirical Legal Studies](https://libguides.princeton.edu/c.php?g=916665&p=6607543) (Princeton)
+- [Empirical Methods Workshop](https://lawecon.ethz.ch/teaching/empirical-methods-workshop.html) (ETHZ & Oxford)
+- [Empirical Methods for the Law](https://homepage.coll.mpg.de/pdf_dat/2017_07online.pdf), Engel 2017 (PDF)
+- [Empirical Legal Studies](https://liblawuw.libguides.com/c.php?g=1239278&p=9069364) (Washington)
+
+_Not to be confused with [Empirical statistical laws](https://en.wikipedia.org/wiki/Empirical_statistical_laws)_"
+"83","https://challenges.openlegallab.ch/project/83","Swiss Federal Supreme Court Dataset","20","Get","","0","False","False","10","","","","https://zenodo.org/record/7793044","https://zenodo.org/record/7793044","","https://zenodo.org/record/7793044","","#b1dd8c","balance-scale","Seit Freitag ist das Swiss Federal Supreme Court Dataset online. Ihr findet es auf Zenodo (https://zenodo.org/record/7793044).","2023-04-24T08:25","2023-04-24T13:26","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 126, ""sizetotal"": 126}","","Seit Freitag ist das Swiss Federal Supreme Court Dataset online. Ihr findet es auf Zenodo (https://zenodo.org/record/7793044)."
+"60","https://challenges.openlegallab.ch/project/60","Data Tools","19","Find","","0","False","False","5","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/s/ZNSWMFKvG#","","https://md.coredump.ch/s/ZNSWMFKvG#","","","","","Get your instruments of data wrangling and broadcasting here.","2022-03-26T10:25","2023-04-24T13:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 61, ""sizetotal"": 1655}","<h1>Data Tools for Open Legal Labs</h1>
+
+<ul>
+<li>🚧 Links to awesome tools we plan to use together at the <a href=""https://openlegallab.ch"">Open Legal Lab</a>. </li>
+<li>🌳 We especially want to see here <a href=""https://ethical.net/minifest/"">ethical</a> and open source alternatives.</li>
+<li>🎺 Please ping us in the <a href=""https://openlegallab.slack.com/archives/C037G6A364S"">#00-tools</a> channel with any other suggestions. </li>
+<li>💛 Thank you to the <a href=""https://coredump.ch"">coredump</a> hackerspace for hosting this page.</li>
+</ul>
+
+<h1>Scraping</h1>
+
+<p>Tools and frameworks used to collect data from web sites.</p>
+
+<ul>
+<li><a href=""https://scrapy.org/"">Scrapy</a> </li>
+<li><a href=""https://tabula.technology/"">Tabula</a></li>
+</ul>
+
+<h1>Cleaning</h1>
+
+<p>Improving the quality and consistency of messy data.</p>
+
+<ul>
+<li><a href=""https://db.schoolofdata.ch/project/156"">OpenRefine</a></li>
+<li><a href=""https://github.com/CJWorkbench/cjworkbench/"">Workbench</a></li>
+</ul>
+
+<h1>Publication</h1>
+
+<p>Platforms where datasets are shared with the community.</p>
+
+<ul>
+<li><a href=""https://jkan.io"">JKAN</a></li>
+<li><a href=""https://food.schoolofdata.ch"">Datacentral</a></li>
+<li><a href=""https://opendata.swiss/"">Opendata.swiss</a> - based on <a href=""https://ckan.org"">CKAN</a></li>
+</ul>
+
+<h1>⭐ Further links</h1>
+
+<ul>
+<li><a href=""https://db.schoolofdata.ch/event/17/stages"">School of Data Toolbox - by Stage</a>.</li>
+<li><a href=""https://github.com/awesomedata/awesome-public-datasets"">Awesome Public Datasets</a></li>
+</ul>
+","Get your instruments of data wrangling and broadcasting here."
+"84","https://challenges.openlegallab.ch/project/84","Ressourcen Open Legal Lab 2023","18","Find","","0","False","True","5","","","","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/100/6K5HAC8MZUWUU0BPRKM8F1JH/Ressourcen_OLL.pdf","","","","","save","## Introduction to Legal Data Science
+
+Die Universität Zürich bietet ab dem Herbstsemester 2023 einen Onlinekurs «Introduction to Legal Data Science» an.
+Von Ende März bis Anfang Mai steht der Kurs für die Teilnehmer des Open Legal Labs als Beta-Version zum Testen zur Verfügung. Bei Interesse könnt
+ihr euch bei [Caroline Ruggli](mailto:caroline.ruggli@rwi.uzh.ch) für einen Testzugang anmelden.
+
+## Online Courses
+
+[Kaggle](https://www.kaggle.com/learn)
+
+- [Introduction to Programming](h...","2023-04-24T08:28","2023-04-24T12:59","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 1229, ""sizetotal"": 1229}","","## Introduction to Legal Data Science
+
+Die Universität Zürich bietet ab dem Herbstsemester 2023 einen Onlinekurs «Introduction to Legal Data Science» an.
+Von Ende März bis Anfang Mai steht der Kurs für die Teilnehmer des Open Legal Labs als Beta-Version zum Testen zur Verfügung. Bei Interesse könnt
+ihr euch bei [Caroline Ruggli](mailto:caroline.ruggli@rwi.uzh.ch) für einen Testzugang anmelden.
+
+## Online Courses
+
+[Kaggle](https://www.kaggle.com/learn)
+
+- [Introduction to Programming](https://www.kaggle.com/learn/intro-to-programming)
+- [Learn Kaggle with Python](https://www.kaggle.com/learn/python)
+
+[edX](https://www.edx.org/)
+
+- [Data Science: R Basics](https://www.edx.org/course/data-science-r-basics)
+- [CS50 for Lawyers](https://www.edx.org/course/cs50-for-lawyers)
+
+[Coursera](https://www.coursera.org/)
+
+- [Python specialization](https://www.coursera.org/specializations/python)
+- [The Data Scientist’s Toolbox](https://www.coursera.org/learn/data-scientists-tools?specialization=data-science-foundations-r)
+
+[Udemy](https://www.udemy.com/)
+
+- [R Basics](https://www.udemy.com/course/r-basics/)
+- [Introduction to Python Programming](https://www.udemy.com/course/pythonforbeginnersintro/)"
+"59","https://challenges.openlegallab.ch/project/59","Design Tools","0","Ask","","0","True","False","0","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/gCIQVh1tTYiE-4m1dLx2GQ#","","https://md.coredump.ch/s/TMHm5xBbD#","","","","","Add links to any awesome tools that you plan to use at the Open Legal Lab, or wish to recommend to others.","2022-03-26T10:23","2023-04-30T12:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 3, ""updates"": 3, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 106, ""sizetotal"": 1464}","<h1>Design Tools for Open Legal Labs</h1>
+
+<ul>
+<li>🚧 Links to awesome tools we plan to use together at the <a href=""https://openlegallab.ch"">Open Legal Lab</a>. </li>
+<li>🌳 We especially want to see here <a href=""https://ethical.net/minifest/"">ethical</a> and open source alternatives.</li>
+<li>🎺 Please ping us in the <a href=""https://openlegallab.slack.com/archives/C037G6A364S"">#00-tools</a> channel with any other suggestions. </li>
+<li>💛 Thank you to the <a href=""https://coredump.ch"">coredump</a> hackerspace for hosting this page.</li>
+</ul>
+
+<h1>Note-taking</h1>
+
+<p>From quick brainstorms to text drafts and longer notes, to knowledge graphs.</p>
+
+<ul>
+<li><a href=""https://md.coredump.ch/"">CodiMD</a> - the open-license, self-hostable version of <a href=""https://hackmd.io"">hackmd.io</a> that runs this page</li>
+<li><a href=""https://workflowy.com"">WorkFlowy</a></li>
+<li><a href=""https://tiddlywiki.com"">TiddlyWiki</a></li>
+</ul>
+
+<h1>Sketching</h1>
+
+<p>Quick and easy online sketching.</p>
+
+<ul>
+<li><a href=""https://openboard.ch/"">OpenBoard</a></li>
+<li><a href=""https://excalidraw.com/"">Excalidraw</a> </li>
+</ul>
+
+<h1>Planning</h1>
+
+<p>For working out a plan and creating a roadmap.</p>
+
+<ul>
+<li><a href=""https://kanboard.org"">Kanboard</a></li>
+</ul>
+
+# User interface
+
+- [Penpot](https://penpot.app/)
+","Add links to any awesome tools that you plan to use at the Open Legal Lab, or wish to recommend to others."
+sercontent.com/u/47367624?v=4","https://github.com/elenanereiss/Legal-Entity-Recognition","","https://github.com/elenanereiss/Legal-Entity-Recognition","https://github.com/elenanereiss/Legal-Entity-Recognition/releases","https://github.com/elenanereiss/Legal-Entity-Recognition/issues","","","# Legal-Entity-Recognition
+
+## German LER Dataset on :hugs: Hugging Face (Update 2022-10-19)
+Now available on Huggingface [https://huggingface.co/datasets/elenanereiss/german-ler](https://huggingface.co/datasets/elenanereiss/german-ler)
+
+## Fine-grained Named Entity Recognition in Legal Documents
+
+This work has been partially funded by the project Lynx, which has received funding from the EU's Horizon 2020 research and innovation programme under grant agreement no. 780602, see [http://www...","2023-04-29T21:46","2023-04-29T21:46","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 7352}","# Legal-Entity-Recognition
+
+## German LER Dataset on :hugs: Hugging Face (Update 2022-10-19)
+Now available on Huggingface [https://huggingface.co/datasets/elenanereiss/german-ler](https://huggingface.co/datasets/elenanereiss/german-ler)
+
+## Fine-grained Named Entity Recognition in Legal Documents
+
+This work has been partially funded by the project Lynx, which has received funding from the EU's Horizon 2020 research and innovation programme under grant agreement no. 780602, see [http://www.lynx-project.eu](http://lynx-project.eu/).
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Example.png)
+
+# Dataset of Legal Documents
+
+Court decisions from 2017 and 2018 were selected for the dataset, published online by the [Federal Ministry of Justice and Consumer Protection](http://www.rechtsprechung-im-internet.de). The documents originate from seven federal courts: Federal Labour Court (BAG), Federal Fiscal Court (BFH), Federal Court of Justice (BGH), Federal Patent Court (BPatG), Federal Social Court (BSG), Federal Constitutional Court (BVerfG) and Federal Administrative Court (BVerwG). 
+
+## [Annotation Guidelines](https://github.com/elenanereiss/Legal-Entity-Recognition/blob/master/docs/Annotationsrichtlinien.pdf) (German)
+
+## Size
+
+The dataset consists of 66,723 sentences with 2,157,048 tokens. The sizes of the seven court-specific datasets varies between 5,858 and 12,791 sentences, and 177,835 to 404,041 tokens. The distribution of annotations on a per-token basis corresponds to approx. 19-23 %.
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Size.png)
+
+## Distribution of Entities
+
+The dataset includes two different versions of annotations, one with a set of 19 fine-grained semantic classes and another one with a set of 7 coarse-grained classes. There are 53,632 annotated entities in total, the majority of which (74.34 %) are legal entities, the others are person, location and organization (25.66 %).
+
+![](https://raw.githubusercontent.com/elenanereiss/Legal-Entity-Recognition/master/docs/Distribution.png)
+
+## Output Format
+
+The dataset is freely available under the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/deed.en). The output format is CoNLL-2002. Each line consists of two columns separated by a space. The first column contains a token and the second a tag in IOB2 format. The sentence boundary is marked with an empty line.
+
+| Token               | Tag   |
+|---------------------|-------|
+| Am                  | O     |
+| 7.                  | O     |
+| März                | O     |
+| 2006                | O     |
+| fand                | O     |
+| ein                 | O     |
+| Treffen             | O     |
+| der                 | O     |
+| saarländischen      | B-INN |
+| Landesregierung     | I-INN |
+| unter               | O     |
+| Vorsitz             | O     |
+| des                 | O     |
+| Ministerpräsidenten | O     |
+| Müller              | B-RR  |
+| mit                 | O     |
+| Vertretern          | O     |
+| der                 | O     |
+| Evangelischen       | B-ORG |
+| Kirche              | I-ORG |
+| im                  | I-ORG |
+| Rheinland           | I-ORG |
+| und                 | O     |
+| der                 | O     |
+| Evangelischen       | B-ORG |
+| Kirche              | I-ORG |
+| der                 | I-ORG |
+| Pfalz               | I-ORG |
+| statt               | O     |
+| .                   | O     |
+
+# CRF
+## Models
+
+- CRF-F with features `f`;
+- CRF-FG with features und gazetteers `fg`;
+- CRF-FGL with features, gazetteers and lookup table for word similarity `fgl`.
+
+## Training
+
+- install [sklearn-crfsuite](https://sklearn-crfsuite.readthedocs.io/en/latest/) and run (`modelName=f|fg|fgl`):
+```
+python crf.py modelName trainPath testPath
+```
+
+- Models are saved in `models/`.
+
+# BiLSTM
+## Models
+
+- BiLSTM-CRF `crf`;
+- BiLSTM-CRF with char embeddings from BiLSTM `blstm-crf`;
+- BiLSTM-CNN-CRF with char embeddings from CNN `cnn-crf`.
+
+## Training
+
+- install [BiLSTM-CNN-CRF](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf);
+- copy `blstm.py` to folder `emnlp2017-bilstm-cnn-crf/` choose a model (`modelName=crf|blstm-crf|cnn-crf`) and run:
+```
+python blstm.py modelName trainPath devPath testPath
+```
+- Models are saved in `models/`.
+
+# Requirements
+
+- [emnlp2017-bilstm-cnn-crf](https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf)
+- [sklearn-crfsuite](https://sklearn-crfsuite.readthedocs.io/en/latest/)
+- [SoMaJo](https://github.com/tsproisl/SoMaJo)
+
+
+old version
+```
+absl-py==0.7.1
+astor==0.8.0
+bleach==3.1.0
+gast==0.2.2
+grpcio==1.23.0
+h5py==2.9.0
+html5lib==1.0.1
+keras==2.2.4
+keras-applications==1.0.8
+keras-preprocessing==1.1.0
+numpy==1.16.4
+protobuf==3.9.1
+pynif==0.1.4
+scipy==1.2.1
+six==1.12.0
+sklearn-crfsuite==0.3.6
+somajo==1.10.5
+tensorboard==1.14.0
+tensorflow==1.14.0
+termcolor==1.1.0
+werkzeug==0.15.4
+```
+
+#### References:
+
+Leitner, E. (2019). [*Eigennamen- und Zitaterkennung in Rechtstexten*](https://github.com/elenanereiss/Legal-Entity-Recognition/blob/master/docs/Leitner_LER_BA.pdf). Bachelor’s thesis, Universität Potsdam, Potsdam, 2.
+
+```
+@mastersthesis{mastersthesis,
+  author       = {Elena Leitner}, 
+  title        = {Eigennamen- und Zitaterkennung in Rechtstexten},
+  school       = {Universität Potsdam},
+  year         = 2019,
+  address      = {Potsdam},
+  month        = 2,}
+```
+
+Leitner, E., Rehm, G., and Moreno-Schneider, J. (2019). [Fine-grained Named Entity Recognition in Legal Documents](https://link.springer.com/content/pdf/10.1007%2F978-3-030-33220-4_20.pdf). In Maribel Acosta, et al., editors, *Semantic Systems. The Power of AI and Knowledge Graphs. Proceedings of the 15th International Conference (SEMANTiCS2019)*, number 11702 in Lecture Notes in Computer Science, pages 272–287, Karlsruhe, Germany, 9. Springer. 10/11 September 2019.
+
+```
+@inproceedings{leitner2019fine,
+  author = {Elena Leitner and Georg Rehm and Julian Moreno-Schneider},
+  title = {{Fine-grained Named Entity Recognition in Legal Documents}},
+  booktitle = {Semantic Systems. The Power of AI and Knowledge
+                  Graphs. Proceedings of the 15th International Conference
+                  (SEMANTiCS 2019)},
+  year = 2019,
+  editor = {Maribel Acosta and Philippe Cudré-Mauroux and Maria
+                  Maleshkova and Tassilo Pellegrini and Harald Sack and York
+                  Sure-Vetter},
+  keywords = {aip},
+  publisher = {Springer},
+  series = {Lecture Notes in Computer Science},
+  number = {11702},
+  address = {Karlsruhe, Germany},
+  month = 9,
+  note = {10/11 September 2019},
+  pages = {272--287},
+  pdf = {https://link.springer.com/content/pdf/10.1007%2F978-3-030-33220-4_20.pdf}}
+```
+
+<a rel=""license"" href=""http://creativecommons.org/licenses/by-nc-sa/4.0/""><img alt=""Creative Commons License"" style=""border-width:0"" src=""https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"" /></a><br />This work is licensed under a <a rel=""license"" href=""http://creativecommons.org/licenses/by-nc-sa/4.0/"">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+",""
+"58","","https://challenges.openlegallab.ch/project/58","Empirical law","31","Sketching","","0","False","False","20","","","","","","","","","","area-chart","https://twitter.com/HanjoHamann/status/1506175342100287489
+
+Resources:
+
+- [Legal Data for Empirical Legal Studies](https://libguides.princeton.edu/c.php?g=916665&p=6607543) (Princeton)
+- [Empirical Methods Workshop](https://lawecon.ethz.ch/teaching/empirical-methods-workshop.html) (ETHZ & Oxford)
+- [Empirical Methods for the Law](https://homepage.coll.mpg.de/pdf_dat/2017_07online.pdf), Engel 2017 (PDF)
+- [Empirical Legal Studies](https://liblawuw.libguides.com/c.php?g=1239278&p=9069364) (...","2022-03-24T00:07","2023-04-25T07:55","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 627, ""sizetotal"": 627}","","https://twitter.com/HanjoHamann/status/1506175342100287489
+
+Resources:
+
+- [Legal Data for Empirical Legal Studies](https://libguides.princeton.edu/c.php?g=916665&p=6607543) (Princeton)
+- [Empirical Methods Workshop](https://lawecon.ethz.ch/teaching/empirical-methods-workshop.html) (ETHZ & Oxford)
+- [Empirical Methods for the Law](https://homepage.coll.mpg.de/pdf_dat/2017_07online.pdf), Engel 2017 (PDF)
+- [Empirical Legal Studies](https://liblawuw.libguides.com/c.php?g=1239278&p=9069364) (Washington)
+
+_Not to be confused with [Empirical statistical laws](https://en.wikipedia.org/wiki/Empirical_statistical_laws)_"
+"109","","https://challenges.openlegallab.ch/project/109","Prompt engineering","21","Research","","0","False","False","10","Add any useful resources here for people using prompt engineering in the legal profession","","","","","","","","","scissors","* [Leitfaden zum Prompt-Engineering](https://www.promptingguide.ai/de) (promptingguide.ai)
+* [Awesome Prompt Engineering](https://natnew.github.io/Awesome-Prompt-Engineering/)
+* [Legal Prompt Engineering - Examples and Tips](https://law.mit.edu/pub/ideaflow15/release/4) (law.mit.edu)
+* [Prompts for Legal Research and more](https://www.learnprompt.org/chat-gpt-prompts-for-lawyers/) (learnprompt.org)
+* [Techniques for writing effective legal AI prompts](https://casetext.com/blog/writing-effect...","2024-03-25T13:02","2024-03-25T13:10","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 0, ""updates"": 0, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 537, ""sizetotal"": 626}","","* [Leitfaden zum Prompt-Engineering](https://www.promptingguide.ai/de) (promptingguide.ai)
+* [Awesome Prompt Engineering](https://natnew.github.io/Awesome-Prompt-Engineering/)
+* [Legal Prompt Engineering - Examples and Tips](https://law.mit.edu/pub/ideaflow15/release/4) (law.mit.edu)
+* [Prompts for Legal Research and more](https://www.learnprompt.org/chat-gpt-prompts-for-lawyers/) (learnprompt.org)
+* [Techniques for writing effective legal AI prompts](https://casetext.com/blog/writing-effective-legal-ai-prompts/) (casetext.com)
+"
+"83","","https://challenges.openlegallab.ch/project/83","Swiss Federal Supreme Court Dataset","20","Research","","0","False","False","10","","","","https://zenodo.org/record/7793044","https://zenodo.org/record/7793044","","https://zenodo.org/record/7793044","","#b1dd8c","balance-scale","Seit Freitag ist das Swiss Federal Supreme Court Dataset online. Ihr findet es auf Zenodo (https://zenodo.org/record/7793044).","2023-04-24T08:25","2023-04-24T13:26","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 126, ""sizetotal"": 126}","","Seit Freitag ist das Swiss Federal Supreme Court Dataset online. Ihr findet es auf Zenodo (https://zenodo.org/record/7793044)."
+"60","","https://challenges.openlegallab.ch/project/60","Data Tools","19","Project","","0","False","False","5","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/s/ZNSWMFKvG#","","https://md.coredump.ch/s/ZNSWMFKvG#","","","","","Get your instruments of data wrangling and broadcasting here.","2022-03-26T10:25","2023-04-24T13:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 61, ""sizetotal"": 1655}","<h1>Data Tools for Open Legal Labs</h1>
+
+<ul>
+<li>🚧 Links to awesome tools we plan to use together at the <a href=""https://openlegallab.ch"">Open Legal Lab</a>. </li>
+<li>🌳 We especially want to see here <a href=""https://ethical.net/minifest/"">ethical</a> and open source alternatives.</li>
+<li>🎺 Please ping us in the <a href=""https://openlegallab.slack.com/archives/C037G6A364S"">#00-tools</a> channel with any other suggestions. </li>
+<li>💛 Thank you to the <a href=""https://coredump.ch"">coredump</a> hackerspace for hosting this page.</li>
+</ul>
+
+<h1>Scraping</h1>
+
+<p>Tools and frameworks used to collect data from web sites.</p>
+
+<ul>
+<li><a href=""https://scrapy.org/"">Scrapy</a> </li>
+<li><a href=""https://tabula.technology/"">Tabula</a></li>
+</ul>
+
+<h1>Cleaning</h1>
+
+<p>Improving the quality and consistency of messy data.</p>
+
+<ul>
+<li><a href=""https://db.schoolofdata.ch/project/156"">OpenRefine</a></li>
+<li><a href=""https://github.com/CJWorkbench/cjworkbench/"">Workbench</a></li>
+</ul>
+
+<h1>Publication</h1>
+
+<p>Platforms where datasets are shared with the community.</p>
+
+<ul>
+<li><a href=""https://jkan.io"">JKAN</a></li>
+<li><a href=""https://food.schoolofdata.ch"">Datacentral</a></li>
+<li><a href=""https://opendata.swiss/"">Opendata.swiss</a> - based on <a href=""https://ckan.org"">CKAN</a></li>
+</ul>
+
+<h1>⭐ Further links</h1>
+
+<ul>
+<li><a href=""https://db.schoolofdata.ch/event/17/stages"">School of Data Toolbox - by Stage</a>.</li>
+<li><a href=""https://github.com/awesomedata/awesome-public-datasets"">Awesome Public Datasets</a></li>
+</ul>
+","Get your instruments of data wrangling and broadcasting here."
+"84","","https://challenges.openlegallab.ch/project/84","Kursen","18","Project","","0","False","False","5","","","","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/100/6K5HAC8MZUWUU0BPRKM8F1JH/Ressourcen_OLL.pdf","","","","","save","## Introduction to Legal Data Science
+
+Die Universität Zürich bietet ab dem Herbstsemester 2023 einen Onlinekurs «Introduction to Legal Data Science» an.
+Von Ende März bis Anfang Mai steht der Kurs für die Teilnehmer des Open Legal Labs als Beta-Version zum Testen zur Verfügung. Bei Interesse könnt
+ihr euch bei [Caroline Ruggli](mailto:caroline.ruggli@rwi.uzh.ch) für einen Testzugang anmelden.
+
+## Online Courses
+
+[Kaggle](https://www.kaggle.com/learn)
+
+- [Introduction to Programming](h...","2023-04-24T08:28","2024-03-28T09:04","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 2, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 1229, ""sizetotal"": 1229}","","## Introduction to Legal Data Science
+
+Die Universität Zürich bietet ab dem Herbstsemester 2023 einen Onlinekurs «Introduction to Legal Data Science» an.
+Von Ende März bis Anfang Mai steht der Kurs für die Teilnehmer des Open Legal Labs als Beta-Version zum Testen zur Verfügung. Bei Interesse könnt
+ihr euch bei [Caroline Ruggli](mailto:caroline.ruggli@rwi.uzh.ch) für einen Testzugang anmelden.
+
+## Online Courses
+
+[Kaggle](https://www.kaggle.com/learn)
+
+- [Introduction to Programming](https://www.kaggle.com/learn/intro-to-programming)
+- [Learn Kaggle with Python](https://www.kaggle.com/learn/python)
+
+[edX](https://www.edx.org/)
+
+- [Data Science: R Basics](https://www.edx.org/course/data-science-r-basics)
+- [CS50 for Lawyers](https://www.edx.org/course/cs50-for-lawyers)
+
+[Coursera](https://www.coursera.org/)
+
+- [Python specialization](https://www.coursera.org/specializations/python)
+- [The Data Scientist’s Toolbox](https://www.coursera.org/learn/data-scientists-tools?specialization=data-science-foundations-r)
+
+[Udemy](https://www.udemy.com/)
+
+- [R Basics](https://www.udemy.com/course/r-basics/)
+- [Introduction to Python Programming](https://www.udemy.com/course/pythonforbeginnersintro/)"
+"105","","https://challenges.openlegallab.ch/project/105","Hackathon Handbook","7","Project","","0","False","True","5","","","","","https://opendata.ch/handbook/","","","","","","","2024-03-24T14:29","2024-03-24T15:24","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 1, ""updates"": 0, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 0, ""sizetotal"": 0}","",""
+"59","","https://challenges.openlegallab.ch/project/59","Design Tools","0","Challenge","","0","True","False","0","","","https://challenges.openlegallab.ch/static/img/codimd.png","https://md.coredump.ch/gCIQVh1tTYiE-4m1dLx2GQ#","","https://md.coredump.ch/s/TMHm5xBbD#","","","","","Add links to any awesome tools that you plan to use at the Open Legal Lab, or wish to recommend to others.","2022-03-26T10:23","2023-04-30T12:00","","https://challenges.openlegallab.ch/event/2","Ressourcen","","","{""total"": 3, ""updates"": 3, ""commits"": 0, ""during"": 0, ""people"": 0, ""sizepitch"": 106, ""sizetotal"": 1464}","<h1>Design Tools for Open Legal Labs</h1>
+
+<ul>
+<li>🚧 Links to awesome tools we plan to use together at the <a href=""https://openlegallab.ch"">Open Legal Lab</a>. </li>
+<li>🌳 We especially want to see here <a href=""https://ethical.net/minifest/"">ethical</a> and open source alternatives.</li>
+<li>🎺 Please ping us in the <a href=""https://openlegallab.slack.com/archives/C037G6A364S"">#00-tools</a> channel with any other suggestions. </li>
+<li>💛 Thank you to the <a href=""https://coredump.ch"">coredump</a> hackerspace for hosting this page.</li>
+</ul>
+
+<h1>Note-taking</h1>
+
+<p>From quick brainstorms to text drafts and longer notes, to knowledge graphs.</p>
+
+<ul>
+<li><a href=""https://md.coredump.ch/"">CodiMD</a> - the open-license, self-hostable version of <a href=""https://hackmd.io"">hackmd.io</a> that runs this page</li>
+<li><a href=""https://workflowy.com"">WorkFlowy</a></li>
+<li><a href=""https://tiddlywiki.com"">TiddlyWiki</a></li>
+</ul>
+
+<h1>Sketching</h1>
+
+<p>Quick and easy online sketching.</p>
+
+<ul>
+<li><a href=""https://openboard.ch/"">OpenBoard</a></li>
+<li><a href=""https://excalidraw.com/"">Excalidraw</a> </li>
+</ul>
+
+<h1>Planning</h1>
+
+<p>For working out a plan and creating a roadmap.</p>
+
+<ul>
+<li><a href=""https://kanboard.org"">Kanboard</a></li>
+</ul>
+
+# User interface
+
+- [Penpot](https://penpot.app/)
+","Add links to any awesome tools that you plan to use at the Open Legal Lab, or wish to recommend to others."

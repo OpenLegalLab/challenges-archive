@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:28 GMT</pubDate>
+    <title>Dribs by Jörn</title>
+    <link>https://challenges.openlegallab.ch/user/Velofisch</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/Velofisch' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Deep Learning für Urteilen</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:34:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Velofisch/281</guid>
+    
+      <content:encoded><![CDATA[<p>Es gibt Mengenbeschränkungen beim Testinterface und es gibt Lizenzprobleme wenn man GPT3 auf grössere Datenbeständ anwenden möchte. Für sinnvolle Abstracts scheint es im Allgemeinen nicht zu reichen.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Deep Learning für Urteilen</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:30:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Velofisch/277</guid>
+    
+      <content:encoded><![CDATA[<p>It is a bit like a kid, who congested a lot of information without understanding it. The kid is reproducing amazing things and is not recognizing when some things make sense and other things don&#39;t. This is typical for AI.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Deep Learning für Urteilen</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 27 Mar 2022 14:30:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Velofisch/264</guid>
+    
+      <content:encoded><![CDATA[<p>GPT3 is sometimes giving amazing answers and the next answer might be complete nonsense: <a href="https://twitter.com/Velofisch/status/1508074724185808899">https://twitter.com/Velofisch/status/1508074724185808899</a>.</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

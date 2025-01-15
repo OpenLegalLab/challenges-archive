@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:34:54 GMT</pubDate>
+    <title>Dribs by Peter Suter</title>
+    <link>https://challenges.openlegallab.ch/user/petsuter</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/petsuter' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 15:48:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/petsuter/845</guid>
+    
+      <content:encoded><![CDATA[<p>Oleg erklärt uns das Posting</p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

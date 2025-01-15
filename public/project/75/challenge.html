@@ -1,0 +1,596 @@
+<!doctype html>
+<!--
+          M A Y   T H E   S O U R C E   B E   W I T H   Y O U   E X C E L L E N T   B E I N G !
+         .#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&##%@@@@@@@@@@@@@@@@@@@@@@@#   @@@@@@@@@@@@@@@@@@@@@@@@@@@@(
+    .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%######@@@@@@@@@@@@@@@@@@@/      *@@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+    #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#######@@@@@@@@@@@@@@@@@@@        (@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@########%@@@@@@@@@@@@@@@@@@@#         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
+  &@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#########@@@@@@@@@@@@@@@@@@@@@.         .@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+,@@@@@@@@@@@@@@@@@@@@@@@@@@@####################%@@@#                     @@@@@@@@@@@@@@@@@@@@@@@@@@%
+&@@@@@@@@@@@@#########%@@#########################@*                        &@@/        #@@@@@@@@@@@@
+@@@@@@@@@@@@@#########%@&#########################@*                         @@/        #@@@@@@@@@@@@,
+@@@@@@@@@@@@@#########&@%########################&@&                         @@/        #@@@@@@@@@@@@.
+(@@@@@@@@@@@@#########&@%########################@@@.                        @@/        #@@@@@@@@@@@&
+  @@@@@@@@@@@@#########&@%#######################%@@@%                        @@/        #@@@@@@@@@@@*
+  .@@@@@@@@@@@###&@&###&@%#######################@@@@@.                       @@/   @@%  #@@@@@@@@@@#
+  .@@@@@@@@@@%########@@%######################%@@@@@@                       @@/        #@@@@@@@@@(
+    &@@@@@@@@@&&&&&&@@@@@@%###################%@@@@@@@@                   .,#@@#********%@@@@@@@@.
+      .@@@@@@@@@@@@@@@@@@@@@@@@@@@@&%%#####%%@@@@@@@@@@@@@*.    .,,(%@@@@@@@@@@@@@@@@@@@@@@@@@@@/
+        &@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,
+          THIS EVENT WAS PRODUCED USING DRIBDAT.CC
+ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="generator" content="dribdat"/>
+
+  <title>Legal Instruct - A dataset to finetune large language models. - Open Legal Lab 2023</title>
+  
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://challenges.openlegallab.ch/project/75"/>
+  <meta property="og:title" content="Legal Instruct - A dataset to finetune large language models."/>
+  <meta property="og:image" content=""/>
+  <meta property="og:description" content="Lets unlock the potential of large language models in the legal industry: We propose creating an openly available Legal-Instruct Dataset."/>
+  <meta name="twitter:site" content="@opendatach"/>
+  <meta name="twitter:card" content="summary"/>
+  
+  <meta name="description" content="Lets unlock the potential of large language models in the legal industry: We propose creating an openly available Legal-Instruct Dataset."/>
+  <meta name="author" content="colin_carter"/>
+  <meta name="dribdat:project:id" content="75"/>
+
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/simplex/bootstrap.min.css" alt-href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/darkly/bootstrap.min.css" id="css-bootswatch"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css"/>
+  
+
+  
+    <link rel="stylesheet" href="/static/css/common.css?fd74b454"/>
+  
+  
+  <link rel="shortcut icon" href="/static/img/favicon.ico"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS: Latest dribs" href="/feeds/dribs.xml">
+
+</head>
+<body class="project-home" data-barba="wrapper">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-faded" role="navigation">
+
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/" title="GO HOME">
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(1, 1); -webkit-transform: scale(1, 1); -o-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1);" class="fa fa-lightbulb-o" aria-hidden="true"></i>
+      <i style="-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);" class="fa fa-thumbs-up" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-main-collapse">
+    <ul class="navbar-nav navbar-left mr-auto nav-fill">
+
+      
+
+      <li class="nav-item">
+        <a class="nav-link " 
+           title="Latest posts from the teams"
+           href="/dribs.html">
+          <i class="fa fa-comment bg-warning text-white" aria-hidden="true"></i>
+          Dribs
+        </a>
+      </li>
+
+      
+        <li class="nav-item">
+          <a class="nav-link nav-login" 
+             title="Sign in with your account"
+             href="/login/">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+          </a>
+        </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link" id="navSearchButton" 
+           title="Search this dribdat site"
+           href="/about/">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<!-- Popup global alerts -->
+<div id="global-notifications-alert" class="hidden">
+  <div class="alert alert-info">
+    <a class="close" title="Close" href="#">&times;</a>
+    <i class="fa fa-info-circle float-left" aria-hidden="true"></i>
+    <span id="notifications-status-text"></span>
+  </div>
+</div>
+
+<!-- Popup search results -->
+<div class="hidden container nav-search" id="navSearch" 
+     tabindex="-1" role="dialog" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="profile-projects container-fluid mb-3">
+    <div data-action="/api/project/search.json" id="search">
+      <div class="content input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" class="form-control" name="q" aria-label="Search projects" placeholder="Start typing ..."  style="width:20em">
+      </div>
+    </div>
+    <div class="row flex-row flex-nowrap pb-2" id="search-results"></div>
+    <div class="text-center mb-2" id="search-matches"></div>
+  </div>
+</div>
+
+
+  <div class="container event-header">
+  <div class="section section-centered section-header">
+    
+      <div class="section-header-logo">
+        <a href="/event/4">
+          <img id="event-logo" src="https://opendata.ch/wordpress/files/2022/12/LegalLab_2023_Web_021.jpg" alt="Logo" title="eJustice.CH Opendata.ch">
+        </a>
+      </div>
+    
+    <div class="section-header-content">
+      <a href="/event/4">
+        <h3 class="event-name">Open Legal Lab 2023</h3>
+      </a>
+      
+        <div class="event-hostname">
+          <i class="fa fa-bank"></i>
+          eJustice.CH Opendata.ch</div>
+      
+      
+        <div class="event-date">
+          <i class="fa fa-calendar"></i>
+          April 30 - May 1, 2023</div>
+      
+      
+        <div class="event-location">
+          <i class="fa fa-map"></i>
+          
+            Magglingen
+          
+        </div>
+      
+    </div>
+  </div>
+</div>
+  
+    <style id="custom_css" type="text/css">.honeycomb .hexagon.challenge { opacity: 1; }
+.honeycomb .hexagon.challenge.stage--1,
+.honeycomb .hexagon.challenge.stage--100 { opacity: 0.5; }
+
+.event-description.bg-body img { max-width: 100%; }</style>
+  
+
+
+
+<div class="container with-event">
+
+  <div role="main">
+    
+    
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div class="alert alert-message hidden">
+          <a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
+         <!-- You must be logged in to access this page. -->
+        </div><!-- end .alert -->
+        
+        <div class="alert alert-info">
+          <a class="close" title="Close" href="#" data-dismiss="alert">&times;</a>
+         This Challenge was posted 1 year ago
+        </div><!-- end .alert -->
+        
+      </div><!-- end col-md -->
+    </div><!-- end row -->
+    
+    
+
+    <main data-barba="container" data-barba-namespace="home">
+      
+
+
+
+<div class="btn-group project-edit-buttons" role="group" aria-label="Project tools">
+
+  
+
+  
+  
+
+  
+
+</div><br clear="all">
+
+
+  <div class="project-image-container"
+    style="background-image:url('https://www.colincarter.me/img/dalle.png'); "
+    data-href="https://www.colincarter.me/img/dalle.png">
+  </div>
+  
+
+
+<!-- Main project content container -->
+<div class="jumbotron project-page phase-Challenge" >
+
+  
+
+  
+    <div class="project-score">
+      <div class="preview-challenge">
+        Challenge
+        <i class="fa fa-map" aria-hidden="true"></i> 
+        <a title="Go back to the current version of this Project" 
+           href="/project/75">
+           Project</a>
+      </div>
+    </div>
+  
+
+  
+
+  <div class="project-headline">
+  
+      <i class="fa fa-balance-scale"></i>
+  
+    <h2 class="project-name">Legal Instruct - A dataset to finetune large language models.</h2>
+
+  
+    <p class="project-summary">
+      Lets unlock the potential of large language models in the legal industry: We propose creating an openly available Legal-Instruct Dataset.
+    </p>
+  
+
+  
+    <p class="project-hashtag">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        8
+      </a>
+    </p>
+  
+
+  </div><!-- /.project-name -->
+
+  
+    <div class="badges text-right">
+      
+      
+          <a class="btn" id="project-tab-md" href="#project-md"
+             title="Challenge pitch">
+            <i class="fa fa-book m-2" aria-hidden="true"></i>
+            Pitch</a>
+      
+      
+      
+        <a class="btn" id="readme-tab-md" href="#readme-md"
+           title="Readme content">
+          <i class="fa fa-book m-2" aria-hidden="true"></i>
+          Readme</a>
+      
+      
+    </div>
+  
+
+<div class="tab-content clear-both" id="project-content">
+
+  
+    <div class="project-webembed hidden resizable">
+      <iframe src="https://colin-r-carter.github.io/legal-instruct/"></iframe>
+      <div class="win-size-grip"></div>
+    </div>
+    <a href="#top" class="btn btn-small btn-default" 
+       data-toggle="modal" data-target="#webembedModal" 
+       aria-label="Full screen view" title="Press Esc to close">
+       &#x26F6;&nbsp;&nbsp;Fullscreen</a>
+    <a href="https://colin-r-carter.github.io/legal-instruct/" class="btn btn-small btn-default" 
+       target="_blank" rel="noopener noreferrer" title="Open source file">
+       &#x2193;&nbsp;&nbsp;Download</a>
+  
+
+  
+    <a href="https://github.com/colin-r-carter/legal-instruct/releases" target="_blank" rel="noopener noreferrer" 
+       class="btn btn-lg btn-light ml-2 font-bold" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+  
+
+  
+    <div id="project-md" aria-labelledby="project-tab-md">
+      
+
+      <div class="project-longtext">
+        <p>Im Rahmen dieser Challenge wird die Schaffung eines offen zugänglichen Legal-Instruct-Datensatzes vorgeschlagen, um grosse Sprachmodelle für den juristischen Bereich zu finetunen. Dieser Datensatz würde juristische Anweisungen in einem strukturierten und organisierten Format enthalten, das es LLMs ermöglicht, juristische Sprache und Aufgaben besser zu verstehen. Wir glauben, dass dieser Datensatz die Fähigkeit der Rechtsbranche, die Fähigkeiten von LLM zu nutzen, erheblich verbessern könnte, was letztlich zu besseren rechtlichen Ergebnissen für alle führen würde.</p>
+
+<hr>
+
+<p>This challenge proposes the creation of an openly available Legal-Instruct dataset to finetune large language models for the legal field. This dataset would contain legal instructions in a structured and organized format, allowing LLMs to better understand legal language and tasks. By doing so, we believe that this dataset could significantly improve the legal industry&#39;s ability to leverage LLM&#39;s capabilities, ultimately resulting in better legal outcomes for all.</p>
+
+      </div>
+    </div><!-- /project-md -->
+  
+
+
+  
+
+  
+    <div id="readme-md" aria-labelledby="readme-tab-md">
+      <div class="project-autotext scroll-after-500"><div class="cover"></div>
+        <h1>legal-instruct</h1>
+
+<p><em>💡 Idea behind the challenge</em>: </p>
+
+<p>Instruction finetuning large language models (LLMs) has shown huge potential (see InstructGPT by OpenAI[^1]) this has further been improved by synthetically generated instructions using the <a href="https://arxiv.org/abs/2212.10560">self instruct</a>[^2] method (see for example the <a href="https://crfm.stanford.edu/2023/03/13/alpaca.html">Stanford Alpaca model</a>. By instruction tuning smaller LLMs, those models are able to solve complex tasks. Most LLMs have some legal texts in their trainingdata, but will often mix different legal sources in their outputs (especially for Switzerland this is an issue, because German texts for the Swiss legal system will often be mixed with legal information from Austria and Germany, for French and Italian it&#39;s the same issue). Generating synthetic-only data is (apart from API usage limitations by for example OpenAI) therefore also not possible in the legal domain, as those <em>mixtures</em> would be present in the generated data as well. </p>
+
+<p>Creating a legal-instruct dataset based on Swiss data is essential for finetuning large language models (LLMs) that are used in the (swiss) legal industry. This dataset would contain legal instructions in a structured and organized format (following the alpaca format), if possible in German, French and Italian. It would allow LLMs to learn the language and nuances of our legal system and legal tasks. By having access to this comprehensive dataset, LLMs would be able to better understand legal language and improve their ability to accurately perform legal tasks.</p>
+
+<p>Moreover, it is important that this dataset is openly available and allows for commercial use (the example of Alpaca is intended only for academic research and commercial use is prohibited). By creating an openly available and usable dataset, it would allow for broad implementation of the dataset and ensure that every open-source LLM could benefit from its use. This would not only benefit legal professionals (as many models could use that trainingdata freely) but also companies developing LLMs for the legal industry. An openly available legal-instruct dataset would also encourage collaboration and innovation in the field, ultimately leading to better outcomes for all.</p>
+
+<h2>🎯 Goal of the challenge</h2>
+
+<ul>
+<li>Create and release a legal-instruct dataset to huggingface with an open license.</li>
+<li>Finetune a LLM with the created dataset.</li>
+</ul>
+
+<h2>Possible tasks:</h2>
+
+<ul>
+<li>Writing clauses and legal texts</li>
+<li>Legal CoT (Chain of Thought) prompting</li>
+<li>QnA (simple or retrieval augmented)</li>
+<li>Summarization</li>
+<li>...</li>
+</ul>
+
+<h2>Roadmap</h2>
+
+<p>This will have to be discussed at the hackathon. </p>
+
+<ul>
+<li>[x] Simple platform to collect data (already in progess).</li>
+<li>[ ] Datacollection (including possibilities of automatically creating instructions from existing data). </li>
+<li>[ ] Define a (very) simple benchmark to see what outputs would be considered as <em>good</em> or <em>bad</em>.</li>
+<li>[ ] Select suitable LLM to finetune (<a href="https://huggingface.co/Writer/camel-5b-hf">Camel 5B</a>, <a href="https://huggingface.co/databricks/dolly-v2-7b">Dolly 2.0</a>, <a href="https://huggingface.co/OpenAssistant">Open Assistant (Pythia base)</a>, <a href="https://huggingface.co/bigscience/T0pp">T0pp</a> or <a href="https://huggingface.co/google/flan-ul2">FLAN-ul2</a>) </li>
+<li>[ ] Finetuning an LLM (LoRA finetuning, as  this could probably be acheived in the limitted time of the hackathon and wouldn&#39;t need expensive hardware).</li>
+<li>[ ] Review of the model.</li>
+</ul>
+
+<h1>Available Data</h1>
+
+<h2>General (multilingual) Instruction Datasets:</h2>
+
+<p><a href="https://huggingface.co/datasets/argilla/databricks-dolly-15k-multilingual">Dataset for Dolly 2.0 from Databricks by Argila on Huggingface</a></p>
+
+<p><a href="https://huggingface.co/datasets/OpenAssistant/oasst1">OpenAssistant Conversations Dataset (OASST1) by Open Assistant on Huggingface</a></p>
+
+<hr>
+
+<h1>Citations</h1>
+
+<p>[^1]: Ouyang, Long, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll L. Wainwright, Pamela Mishkin, Chong Zhang, et al. <em>‘Training Language Models to Follow Instructions with Human Feedback’</em>. ArXiv [Cs.CL], 2022. arXiv. <a href="http://arxiv.org/abs/2203.02155">http://arxiv.org/abs/2203.02155</a>. And <a href="https://openai.com/research/instruction-following">OpenAI Blog (last visitted on Mon. 17th of April 2023)</a></p>
+
+<p>[^2]: Wang, Yizhong, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, and Hannaneh Hajishirzi. ‘Self-Instruct: Aligning Language Model with Self Generated Instructions’. ArXiv [Cs.CL], 2022. arXiv. <a href="http://arxiv.org/abs/2212.10560">http://arxiv.org/abs/2212.10560</a>.</p>
+
+      </div>
+
+      
+        <div class="alert alert-light text-center mb-1">
+          This content is a preview from an
+          <a href="https://github.com/colin-r-carter/legal-instruct/" target="_blank" rel="noopener noreferrer" title="Source link">
+            external site</a>.
+        </div>
+      
+
+      
+
+      <a href="#top" class="go-up" title="Scroll up!"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+    </div>
+  
+
+  <div class="project-buttons mb-5" role="group" aria-label="Project links">
+    
+      
+        <a href="https://github.com/colin-r-carter/legal-instruct/issues" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Contact the team"><span>&#x1f44b;</span> Contact</a>
+      
+    
+    
+      <a href="https://colin-r-carter.github.io/legal-instruct/" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Project web link"><span>&#x1f310;</span> Open</a>
+    
+    
+      <a href="https://github.com/colin-r-carter/legal-instruct/releases" target="_blank" rel="noopener noreferrer" class="btn btn-lg" title="Download link"><span>&#x1f4c2;</span> Demo</a>
+    
+    
+      <a href="https://github.com/colin-r-carter/legal-instruct" class="btn btn-lg" target="_blank" rel="noopener noreferrer" title="Source code"><span>&#x1f4bb;</span> Source</a>
+    
+  </div>
+
+
+  </div><!-- /project-content -->
+
+  
+
+
+  
+    <div class="widget started-at">
+      Contributed
+      <span title="2023-04-14 14:28:19.447407">1 year ago</span>
+      by
+      <a href="/user/%3CUser(&#39;colin_carter&#39;)%3E">
+        <b>colin_carter</b>
+      </a>
+      for
+      <a href="/event/4">
+        <b>Open Legal Lab 2023</b>
+      </a>
+    </div>
+  
+
+</div><!-- /.jumbotron .project-page -->
+
+<center class="project-footer-controls">
+
+<div role="group" aria-label="Project controls" class="btn-group project-controls">
+  
+  
+  
+</div><!-- / .project-controls -->
+
+
+
+
+
+</center><!-- /.project-footer-controls -->
+
+<div class="panel panel-default community-embed mt-5">
+  <div class="panel-body">
+    <div class="codeofconduct">Alle Teilnehmer*innen, Sponsor, Partner, Freiwilligen und Mitarbeiter*innen unseres Hackathons sind verpflichtet, dem <a href="https://hackcodeofconduct.org/" target="_blank">Hack Code of Conduct</a> zuzustimmen. Die Organisatoren werden diesen Kodex während der gesamten Veranstaltung durchsetzen. Wir erwarten die Zusammenarbeit aller Teilnehmer*innen, um eine sichere Umgebung für alle zu gewährleisten. Weitere Einzelheiten zum Ablauf der Veranstaltung finden Sie unter <a href="https://opendata.ch/guidelines/" target="_blank">Richtlinien</a> auf unsere Webseite.</div>
+
+<br><p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img align="left" style="margin-right:1em" alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>Die Inhalte dieser Website stehen, sofern nicht anders angegeben, unter einer <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International</a>.</p>
+
+<!-- translator widget -->
+<div class="translate" style="position: absolute; top: 8px; right: 9px; background: url(https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Translate_logo.svg) no-repeat 0% 50%; background-size: contain; padding-left: 30px;"><script>event_url = document.querySelector('meta[property=\'og:url\']').content; document.write('<a target="_top" href="https://translate.google.com/translate?sl=en&tl=de&u=' + event_url + '">Deutsch</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=fr&u=' + event_url + '">Français</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=it&u=' + event_url + '">Italiano</a>' + ' | <a target="_top" href="https://translate.google.com/translate?sl=de&tl=en&u=' + event_url + '">English</a>')</script></div>
+  </div>
+</div>
+
+
+
+<center class="mt-5 nav-project-helper">
+
+  <a class="nav-projects btn btn-light" href="/project/77/challenge" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Improving quality of lawmaking with AI</a>
+
+  <a class="nav-projects-abs-prev btn btn-secondary border-primary" href="/project/77/challenge" title="Previous project in queue">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+
+  <a class="btn btn-dark" href="/event/4"
+     title="Return to the event page">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    Open Legal Lab 2023</a>
+
+
+  <a class="nav-projects btn btn-light" href="/project/65/challenge" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    LegalTech im Gesetzgebungs-prozess </a>
+
+  <a class="nav-projects-abs-next btn btn-secondary border-primary" href="/project/65/challenge" title="Next project in queue">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</center>
+
+
+
+
+  <div class="modal fade modal-fullscreen" id="webembedModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header collapse">
+          <h5 class="modal-title">Legal Instruct - A dataset to finetune large language models. - Open Legal Lab 2023</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="width:100%;height:100%">
+          <iframe src="https://colin-r-carter.github.io/legal-instruct/"></iframe>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+
+
+
+
+
+    </main>
+  </div>
+
+</div><!-- end container -->
+
+<footer id="footer">
+  <a class="dribdat-logo" href="/about/">
+    <img src="/static/img/logo12.png">
+  </a>
+  <a href="/" title="GO HOME" class="ml-3">
+    <i class="fa fa-home" aria-hidden="true"></i>
+    Home
+  </a>
+  <a href="#top" id="notification-button" class="hidden ml-3">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    Alerts
+  </a>
+  <ul class="footer-nav">
+    
+      <li>
+        <a href="/login/">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login
+        </a>
+      </li>
+    
+    
+    <li>
+      <a href="https://app.usefathom.com/share/icbbcyor/challenges.openlegallab.ch">&#128200;&nbsp;Analytics</a>
+    </li>
+    
+
+    <li>
+      <a href="/about/">&#128214;&nbsp;About</a>
+    </li>
+
+    <li>
+      <a class="darkmode" href="#">&#127763;&nbsp;<span>Dark</span></a>
+    </li>
+  </ul>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-resizable-dom@0/dist/jquery-resizable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flipdown@0/dist/flipdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script type="text/javascript" src="/static/js/common.js?cb978ccf"></script>
+
+
+<script type="text/javascript" src="/static/css/rainbow/rainbow-custom.min.js"></script>
+
+
+
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" site="ICBBCYOR" async defer></script>
+
+
+
+
+
+
+
+<link href="/static/css/rainbow/zenburnesque.css" rel="stylesheet" type="text/css">
+
+  <a name="EOF"></a>
+</body>
+</html>

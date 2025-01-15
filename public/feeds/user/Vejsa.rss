@@ -1,0 +1,57 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:18 GMT</pubDate>
+    <title>Dribs by Vejsa</title>
+    <link>https://challenges.openlegallab.ch/user/Vejsa</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/Vejsa' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 12:31:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Vejsa/956</guid>
+    
+      <content:encoded><![CDATA[<p>Repo hyperledger/aries-bbssignatures-rs</p>
+
+<p><a href="https://github.com/hyperledger/aries-bbssignatures-rs">https://github.com/hyperledger/aries-bbssignatures-rs</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>review</description>
+      <pubDate>Mon, 25 Mar 2024 12:31:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Vejsa/955</guid>
+    
+      <content:encoded><![CDATA[<p>We explored a GitHub repo for BBS+ signatures (<a href="https://github.com/mattrglobal/bbs-signatures/tree/master">https://github.com/mattrglobal/bbs-signatures/tree/master</a>) to start our PoC. However, we found it lacks blind signing and commitment generation functions. 
+Switched to hyperledger/aries-bbssignatures-rs for complete functionalities.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 22:19:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/Vejsa/902</guid>
+    
+      <content:encoded><![CDATA[<p>Task afternoon:
+Crash Course on E-ID Ecosystem and Terminology 
+Read and understand the following articles:
+<a href="https://medium.com/coinmonks/zero-knowledge-proofs-um-what-a092f0ee9f28">https://medium.com/coinmonks/zero-knowledge-proofs-um-what-a092f0ee9f28</a>
+<a href="https://eprint.iacr.org/2023/275">https://eprint.iacr.org/2023/275</a>
+<a href="https://eprint.iacr.org/2023/275.pdf">https://eprint.iacr.org/2023/275.pdf</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Wed, 29 May 2024 09:28:27 GMT</pubDate>
+    <title>Dribs by Simon Weigold</title>
+    <link>https://challenges.openlegallab.ch/user/simonweigold</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/simonweigold' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>Legal Reasoning AI</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 17:30:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/user/simonweigold/874</guid>
+    
+      <content:encoded><![CDATA[<p>Install bun.js by Follow the instructions on <a href="https://bun.sh">https://bun.sh</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

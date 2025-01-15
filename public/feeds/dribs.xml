@@ -1,0 +1,290 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:30:43 GMT</pubDate>
+    <title>Latest dribs</title>
+    <link>https://challenges.openlegallab.ch/dribs</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/dribs.xml' rel='self' type='application/rss+xml' />
+	  
+    <item>
+      <title>🚧  Beispiel Challenge 🚧</title>
+    
+      <description>review</description>
+      <pubDate>Tue, 26 Mar 2024 15:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/1027</guid>
+    
+      <content:encoded><![CDATA[<p><a href="https://challenges.openlegallab.ch/dribs">https://challenges.openlegallab.ch/dribs</a>
+All of you who made the most of this platform with your <a href="/dribs.html">posts and projects</a> 😍 Thank you from the bottom of my Slacker heart. We have big plans for Dribdat - <a href="https://OpenCollective.com/dribdat/updates">stay tuned</a>!</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Repositorium.ch Boost 🚀</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 21:17:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/1026</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/47/2OS0J5GC9JRKAU0S2L7CYZFG/0d86e040150e4de5976a1e5c527092b6.jpeg" alt="  "> </p>
+
+<p>Dev‘s managed to link @BGE_ATF, just in time for the presentation with live demo. Thx Colin, Daniel, Martin, Michael, Ewelina, Magdalena, Jim, Thomas, Christian and Koray!</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>SCD – Exploring the Federal Supreme Court 🏛</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 12:49:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/998</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/101/UGFUL27NEYPY8L28YQCHTTUL/IMG_5822.jpg" alt="  "> </p>
+
+<p>Speed enforced by aircraft</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 12:31:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/956</guid>
+    
+      <content:encoded><![CDATA[<p>Repo hyperledger/aries-bbssignatures-rs</p>
+
+<p><a href="https://github.com/hyperledger/aries-bbssignatures-rs">https://github.com/hyperledger/aries-bbssignatures-rs</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>review</description>
+      <pubDate>Mon, 25 Mar 2024 12:31:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/955</guid>
+    
+      <content:encoded><![CDATA[<p>We explored a GitHub repo for BBS+ signatures (<a href="https://github.com/mattrglobal/bbs-signatures/tree/master">https://github.com/mattrglobal/bbs-signatures/tree/master</a>) to start our PoC. However, we found it lacks blind signing and commitment generation functions. 
+Switched to hyperledger/aries-bbssignatures-rs for complete functionalities.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 11:05:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/939</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/144/4BFJEQ47WB4SFSNFBNLO84D2/IMG_4365.jpeg" alt="  "> </p>
+
+<p>First results from testing prototypes</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Innocent until prompted guilty</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 10:39:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/938</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/1/BREY3RRXXV3HYNYSNJWKH6TJ/892045_A_lawyer_holding_an_SLR_photo_camera_on_a_white_ba_xl1024v10.jpg" alt="  "> 
+Remember to thank your team/challenge/data provider - and feel free to ask our man for a professional team photo as a keepsake!</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Legal Lens: Tailored Case Notification 🖥️🔍</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 10:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/937</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/113/IB7XMCDMA96CRHS8KYKDW1UD/20240325_104841.JPG" alt="  ">
+Getting the most out of our coffee - nearly done!</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Innocent until prompted guilty</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 09:55:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/936</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/1/L7GYB7V5UB4O1GTZOF4YT1FU/Screenshot_20240325092607.png" alt="">
+NYT on your <a href="https://www.cbsnews.com/news/nyt-copyright-takedown-wordle-clones-new-york-times/">copyright case</a>? Flex your brain with <a href="https://mikhad.github.io/wordle/">open src word games</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Repositorium.ch Boost 🚀</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 08:42:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/919</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/47/TO73S0Y036UFTNZZZJZK4MSE/IMG_1658.jpeg" alt="  "> </p>
+
+<p>Fresh minds (and coffee) pushing things forward. The projected launch of a productive Repositorium.ch is only a few hours ahead…</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>SCD – Exploring the Federal Supreme Court 🏛</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 08:30:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/918</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/101/INSPVJ6HTZKB82BAWZ5DR53V/IMG_5813.jpg" alt="  "> </p>
+
+<p>Getting there!</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Mon, 25 Mar 2024 08:10:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/908</guid>
+    
+      <content:encoded><![CDATA[<p>Morning Checkin:
+2 prototypes almost ready for testing for proof of concept:
+A) local running program, Python-based, tagword-based vs.
+B) OpenAI/LLM-based program</p>
+
+<p>TO DO:
+A) test run 2 prototypes to compare
+B) Check license agreements for Infinity
+C) Prepare Presentation </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Innocent until prompted guilty</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 23:39:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/906</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/1/5AGF2ZGA5P483RAJIC0F85PD/Screenshot_from_20240325_002316.png" alt="  ">
+A <a href="https://hf.co/chat/r/rpCGKqZ">HuggingChat conversation</a> about the terms of use of a Swiss website, with help from Prompts.law</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Innocent until prompted guilty</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 23:37:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/905</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/1/E2OT3HZYSISZZP540TZ1MA43/Screenshot_from_20240325_002129.png" alt="  "> 
+Added <a href="https://www.prompts.law/">prompts.law</a> and additional references for mad prompting skills</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 22:19:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/902</guid>
+    
+      <content:encoded><![CDATA[<p>Task afternoon:
+Crash Course on E-ID Ecosystem and Terminology 
+Read and understand the following articles:
+<a href="https://medium.com/coinmonks/zero-knowledge-proofs-um-what-a092f0ee9f28">https://medium.com/coinmonks/zero-knowledge-proofs-um-what-a092f0ee9f28</a>
+<a href="https://eprint.iacr.org/2023/275">https://eprint.iacr.org/2023/275</a>
+<a href="https://eprint.iacr.org/2023/275.pdf">https://eprint.iacr.org/2023/275.pdf</a></p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Unlinkability beim Vorweisen einer E-ID</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:28:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/900</guid>
+    
+      <content:encoded><![CDATA[<p>Start PoC einer Idee</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>SCD – Exploring the Federal Supreme Court 🏛</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:07:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/899</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/101/NFFBW6QA7VF2BQ57BVZSVWLQ/IMG_5794.jpg" alt="  "> </p>
+
+<p>120,000 units are ready, with a million more well on the way.</p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>SCD – Exploring the Federal Supreme Court 🏛</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:05:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/898</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/101/FNABGCEHSIOXDX6Z5BNHOHDP/IMG_5809.jpg" alt="  "> </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Innocent until prompted guilty</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:04:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/897</guid>
+    
+      <content:encoded><![CDATA[<p><img src="https://s3.dribdat.cc/oll/b/1/YDE3OJ8G8UZDKYGP9K18S7UF/435232_Two_hackers_at_a_Hackathon_on_the_background_of_a__xl1024v10.jpg" alt="  "> </p>
+]]></content:encoded>
+    
+    </item>
+	
+    <item>
+      <title>Know-how Management System</title>
+    
+      <description>update</description>
+      <pubDate>Sun, 24 Mar 2024 20:03:00 GMT</pubDate>
+      <guid>https://challenges.openlegallab.ch/feeds/dribs.xml/896</guid>
+    
+      <content:encoded><![CDATA[<ul>
+<li>getting introduction to LLM</li>
+<li>working on 2 alternative solution approaches (vector based, tag based)</li>
+</ul>
+]]></content:encoded>
+    
+    </item>
+	
+  </channel>
+</rss>

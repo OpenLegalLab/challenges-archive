@@ -1,0 +1,521 @@
+"id","ident","url","name","score","phase","team","team_count","is_challenge","is_webembed","progress","summary","hashtag","image_url","source_url","webpage_url","autotext_url","download_url","contact_url","logo_color","logo_icon","excerpt","created_at","updated_at","maintainer","event_url","event_name","category_id","category_name","stats","autotext","longtext"
+"81","","https://challenges.openlegallab.ch/project/81","FEDLEXplorer","101","Sketching","jeanlouis_morard, holger_keibel, cedricjoseph, ribose, Raphael_Jeannerat_BK, oleg, loc_pittet","7","False","True","20","The purpose of this challenge is to demonstrate how federal legislation data can be used in third-party products through the SPARQL endpoint","14","https://raw.githubusercontent.com/ribeaud/fedlexplorer/main/logo.png","https://github.com/ribeaud/fedlexplorer","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/104/CVIDIFSFN8JEPMTUKAAY8NBW/PräsentationOLL2023_Ergebnis.pdf","https://github.com/ribeaud/fedlexplorer","https://github.com/ribeaud/fedlexplorer/releases","https://openlegallab.slack.com/archives/C055LEE3TA7","","","We have combined forces with [Living Topics #11](https://challenges.openlegallab.ch/project/71)  to develop an app that combines data from multiple APIs and SPARQL queries. It is a Proof of Concept for a brand new FEDLEX experience! 
+
+Details of the implementation:
+
+- [API Docs](https://github.com/ribeaud/fedlexplorer/tree/main#api-doc)
+- [Frontend Readme](https://github.com/ribeaud/fedlexplorer/tree/main/frontend)
+- [Backend Readme](https://github.com/ribeaud/fedlexplorer/tree/main/backen...","2023-04-20T10:24","2023-05-02T20:53","jeanlouis_morard","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 74, ""updates"": 66, ""commits"": 38, ""during"": 47, ""people"": 7, ""sizepitch"": 4790, ""sizetotal"": 5318}","# FEDLEXplorer
+
+The purpose of this project is to demonstrate how Swiss federal legislation data can be used in third-party products through a SPARQL endpoint.
+
+We are developing the frontend and backend in the respective subfolders.
+In the `data` folder you can find a SPARQL query and some sample outputs.
+
+For more information see https://challenges.openlegallab.ch/project/81
+","We have combined forces with [Living Topics #11](https://challenges.openlegallab.ch/project/71)  to develop an app that combines data from multiple APIs and SPARQL queries. It is a Proof of Concept for a brand new FEDLEX experience! 
+
+Details of the implementation:
+
+- [API Docs](https://github.com/ribeaud/fedlexplorer/tree/main#api-doc)
+- [Frontend Readme](https://github.com/ribeaud/fedlexplorer/tree/main/frontend)
+- [Backend Readme](https://github.com/ribeaud/fedlexplorer/tree/main/backend)
+- **[Demo Android app](https://github.com/ribeaud/fedlexplorer/releases/tag/0.0.2)**
+
+### Screenshots
+
+![ 1 ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/7TBVZV5RV8AFJ8ZTKMEUAC4K/1.jpg) ![ 2 ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/6U1H5MZGEEAYM5DFD8LWBR6B/2.jpg) ![ 3 ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/8UF2FUI0NGSA9H3C8DC8PR3O/4.jpg)
+
+# CHALLENGE
+
+Ziel dieser Challenge ist es zu demonstrieren, wie die Daten des Bundesrechts über den SPARQL-Endpunkt der Bundesrechtsplattform in Produkten Dritter verwendet werden können. Die BK veröffentlicht auf [Fedlex ](https://www.fedlex.admin.ch/de/cc/in-force)die Liste der Rechtstexte, die an einem bestimmten Monat/Datum in Kraft treten. Über diese Website können die Nutzer sich informieren, wann was in Kraft tritt. Dies ist jedoch nicht ganz optimal, da sie die Fedlex-Website regelmäßig konsultieren müssen und keinen Filter setzen können. Die Liste der in Kraft tretenden Rechtstexte kann stattdessen über den SPARQL-Endpunkt der Bundesrechtsplattform abgerufen werden.
+
+---
+
+## Triple store, sparql endpoint and mobile app: explore new trends for fedlex!
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>The purpose of this
+Challenge is to demonstrate how federal legislation data can be used in
+third-party products through the SPARQL endpoint of the federal legislation platform.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Use case: the BK
+publishes on Fedlex the list of legal texts that come into force on a certain
+month / date:</span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><a
+href=""https://www.fedlex.admin.ch/de/cc/in-force""><span lang=EN-US>https://www.fedlex.admin.ch/de/cc/in-force</span></a></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Through this website,
+users of the platform can be informed when what comes into effect. However,
+this is not quite optimal, as they have to consult the Fedlex website regularly
+and cannot set a filter.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>The list of legal texts
+coming into force can be obtained from the SPARQL endpoint of the federal legislation
+platform: </span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt'><a
+href=""https://fedlex.data.admin.ch/de-CH/sparql""><span lang=EN-US>https://fedlex.data.admin.ch/de-CH/sparql</span></a></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 1: develop a
+mobile app that lists which legal texts come into effect on a given date / over
+a given period. Notice that support for building the SPARQL request is
+available! See also this tutorial: <a
+href=""https://bequrios.github.io/fedlex/lab?path=Tutorial.ipynb"" target=""_blank"">https://bequrios.github.io/fedlex/lab?path=Tutorial.ipynb</a></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 2: subscribe to
+specific topics of the classified compilation of federal legislation. In this
+case, only the legal texts belonging to these topics are listed. The topics can
+be obtained from the predefined SPARQL query &quot;Topics of the CC&quot; </span><a
+href=""https://fedlex.data.admin.ch/de-CH/sparql""><span lang=EN-US>(</span></a><span
+lang=EN-US style='color:black'><a
+href=""https://fedlex.data.admin.ch/en-CH/sparql"">https://fedlex.data.admin.ch/en-CH/sparql</a>).</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 3: Search results
+can be presented by date/topic or by topic/date.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>Objective 4: The app
+notifies as soon as a legal text in the selected topics enters into force.</span></p>
+
+<p class=MsoNormal><span lang=EN-US style='color:black'>A prototype should be
+developed that implements this functionality as far as possible. If no
+framework for the development of mobile apps is available, a web application
+can also be developed using the &quot;mobile first&quot; model.</span></p>
+
+<p class=MsoNormal><span lang=EN-US><b>Have fun! We are looking forward to your
+participation!</b></span></p>
+
+Contact: jean-louis.morard at bk.admin.ch"
+"86","","https://challenges.openlegallab.ch/project/86","Gateway to Legal Data","72","Research","Waldemar, Velofisch, michel_sabbatini, jan_nicklaus, danielbrugger","5","False","True","10","A unified search entry point into today's highly fragmented legal database landscape and a one-stop shop for legal data.","5","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/63/JQA58HC2YPAZ7KF53ZCXP5OA/scigateKlein.png","https://github.com/Velofisch/Crossrecherche-proxies","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/63/Q1PV5KAVK6LPM3BKGT9MIJMK/20230430ScigtaePitch.pdf","https://github.com/Velofisch/Crossrecherche-proxies","https://github.com/Velofisch/Crossrecherche-proxies/releases","https://github.com/Velofisch/Crossrecherche-proxies/issues","","","*I. The project*
+
+The project aims to create legal data showcase, in other words:
+
+* a unified search entry point into today's highly fragmented landscape of legal databases, and
+* at the same time a low-threshold, accessible one-stop-shop for legal data.
+
+Traditionally, libraries have been the gatekeepers for access to legal data, especially legal texts, but also legal data in the broadest sense. Libraries not only made this data spatially accessible, but also added metadata that made th...","2023-04-25T15:31","2023-05-01T20:31","Waldemar","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 40, ""updates"": 34, ""commits"": 5, ""during"": 12, ""people"": 5, ""sizepitch"": 3871, ""sizetotal"": 6187}","# Crossrecherche
+Crossrecherche nach juristischen Inhalten in akademischen Datebanken
+
+## Purpose and Requirements
+This is a prototype to have a combined search in different academic databases with a focus on legal content.
+The requirement can be found in ""Leistungsbeschrieb.pdf"" in this repository.
+A proposition of layouts can be found here: https://www.figma.com/proto/9ZuPfkKwlPOt3vIWMW1FVr/Sci-Gate?node-id=2%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=5%3A716
+The first layout implemented will be the tabs view (page 3). The layouts on page 2 (parallel view) and page 5 (mixed view) might be added at a later stage.
+
+## Architecture
+A serverless and web-application will access proxies for the different search engines. These proxies are availabe for Boris, Zora, Swisscovery and entscheidsuche.ch.
+
+## Proxy-API
+These procies have a JSON REST-API:
+
+### General usage
+- address: http://v2202109132150164038.luckysrv.de:8080/
+- Input JSON 
+   - type: search|hitlist
+   - engine: entscheidsuche|swisscovery|boris|zora
+- Output JSON
+   - status: ok|error
+   - error: Error message (only present if status=error
+
+### type=search
+(Only additional parameters described here)
+
+- Input JSON
+   - term: search term or search terms, no syntax translation is currently done for the search engines
+- Output JSON
+   - hits: number of hits for the search
+
+### type=hitlist
+(Only additional parameters described here)
+
+- Input JSON
+   - term: search term or search terms, no syntax translation is currently done for the search engines
+   - start: position in the hitlist to start (default=0) a position beyond the length of the hitlist will generate an error
+   - count: number of hits to fetch (default=10). There is no maxmimum
+- Output JSON
+   - start: offset where the list starts
+   - searchterm: searchterm used
+   - hitlist: list of hits every hit has the following attributes
+      - description: list of 3 strings describing the hit. As markup can be included <span>-Tags with the classes hl1 and hl2 for bold and italic.
+      - url: URL to the hit at the search engine. Can be opened without context and should be opened in a new tab
+","*I. The project*
+
+The project aims to create legal data showcase, in other words:
+
+* a unified search entry point into today's highly fragmented landscape of legal databases, and
+* at the same time a low-threshold, accessible one-stop-shop for legal data.
+
+Traditionally, libraries have been the gatekeepers for access to legal data, especially legal texts, but also legal data in the broadest sense. Libraries not only made this data spatially accessible, but also added metadata that made the data itself searchable and discoverable.
+This role of libraries has changed significantly in recent years. Today, legal data are often made available in databases by different actors, with different access and accessibility.The current fragmentation of access to legal data affects national and international research and its visibility. The project ""Gateway to Legal Data"" tries to create a counterbalance. Beyond the existing and desirable diversity of data sources, a unified search entry as well as a one-stop-shop for legal data shall be created. Its architecture can be described as follows:
+
+![ Title ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/63/SLW3JU9AT1MC7K5S8H9YQWE4/architecture.png)
+
+**II. The Challenge**
+
+A running prototype can be found here: [www.scigate.online](https://www.scigate.online). The system is in part modularized and should be further modularized. In particular, data sources should be extended, and data aggregation added while supporting more search functionality. The linchpin of scigate.online are so-called proxies, whose task is to address data sources, translate their response and homogenize as far as possible the data to allow a unified search and access via scigate.online.
+
+1. Part of the challenge will be to build more proxies to connect additional data sources, such as fedlex and other legal data sources, to the platform. This data will be harmonized as much as possible so that it can be made available via a uniformed API. In the future, this should minimize the need to write a new scraper for each legal data research project.
+2. Another part of the challenge will be to present the data as search results on the platform. The proxies currently collect three lines for each entry plus a link to display the entry. The selection of what should be displayed for each entry, how it could be displayed and what existing functionality of the source systems might be used to render the search as user-friendly as possible, could be optimized. The search could also be extended by including facets or auto completion.
+3. Finally, the retrieved hitlists and documents (until now only for entscheidsuche) could be used to provide additional functionality. They could be fed into AI to mark the most relevant passages, to have an automated summary or to answer a natural language query.
+
+https://challenges.openlegallab.ch/project/54
+
+**III. Resources**
+
+Running prototype: [scigate.online](http://v2202109132150164038.luckysrv.de/)
+
+The different code bases can be found here:
+
+* The common search interface: [https://github.com/Velofisch/crossrecherche-ui](https://github.com/Velofisch/crossrecherche-ui)
+* The proxies to connect the different search engines: [https://github.com/Velofisch/Crossrecherche-proxies](https://github.com/Velofisch/Crossrecherche-proxies)
+* The API to bulk download results: [https://github.com/Velofisch/Scigate-API](https://github.com/Velofisch/Scigate-API)
+* The UI of entscheidsuche: [https://github.com/entscheidsuche/entscheidsuche-vue](https://github.com/entscheidsuche/entscheidsuche-vue)
+
+Questions can be addressed at [joern@erbguth.net](joern@erbguth.net)
+
+📎 [Magglingen 2023.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/77/OUKM032X8X5A3HOQEJV1B3EB/Magglingen_2023.pdf)"
+"65","","https://challenges.openlegallab.ch/project/65","LegalTech im Gesetzgebungs-prozess ","62","Sketching","Timothy, NicolasZahn, Apollo, nico_figini","4","False","True","20","Weiterentwicklung eines Prototyps, um sicherzustellen, dass neue Gesetze eine kohärente und unmissverständliche Terminologie verwenden.","10","","https://docs.google.com/document/d/e/2PACX-1vSkeeKd1BsJpSewJ6S2MZudvG7nXnskSXQJFvxWynO_i6KPI1RxJJpJf9-GyZunFyzZ-J9D-8wmv-gr/pub","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/86/C3MB7D36J0T8COQBUIOR5MUS/pdfresizer.compdfresize1.pdf","https://docs.google.com/document/d/e/2PACX-1vSkeeKd1BsJpSewJ6S2MZudvG7nXnskSXQJFvxWynO_i6KPI1RxJJpJf9-GyZunFyzZ-J9D-8wmv-gr/pub","","https://openlegallab.slack.com/archives/C055Z7GCZHP","","","- [Screencast der Webapp](https://youtu.be/bumjotb5YLE)
+- 📎 [Presentation](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/86/OYWAIBBQY1OHDHQSF4H4MCS4/pdfresizer.compdfresize1.pdf)
+- 📎 [Jusletter - IT Legaltech im Gesetz](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/86/V34I0PMD3BQPQKFEBCOUH60B/JusletterIT_legaltechimgesetzg_c9adbf9316_de.pdf)
+
+https://youtu.be/bumjotb5YLE
+
+# Challenge
+
+Ziel unserer Challenge war...","2023-03-03T11:53","2023-05-01T20:32","Timothy","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 21, ""updates"": 17, ""commits"": 0, ""during"": 12, ""people"": 4, ""sizepitch"": 2601, ""sizetotal"": 4932}","<p>""Legaltech im Geseetzgebungsprozess"" </p><p>Challenge für das Open Legal Lab 2023</p><p>April 30 - May 1, 2023</p><p>Timothy Rabozzi </p><p></p><p>Für meine Masterarbeit ""Legaltech im Geseetzgebungsprozess"" haben wir ein Prototyp einer Python-Applikation entwickelt, die neue Gesetzesvorlagen mit der bestehenden Schweizer Rechtssammlung vergleicht. Durch den Vergleich der Terminologie in den neuen Entwürfen mit der bestehenden Gesetzgebung kann umfassend geprüft werden, ob ähnliche Begriffe bereits verwendet werden oder ob der Entwurf unübliche oder völlig neue Terminologie einführt. So fördert der Algorithmus die Verwendung einer klaren Sprache, vermeidet unbekannte Rechtsbegriffe und trägt zu einem besseren Verständnis der Texte bei, insbesondere für Menschen ohne juristisches Studium.   </p><p></p><p>Das Instrument könnte die Verständlichkeit der Rechtssprache in einem früheren Stadium des Gesetzgebungsverfahrens verbessern. Obwohl der derzeitige Prozess von hoher Qualität ist, wird die Einbeziehung von neuen Technologien immer relevanter. Innerhalb der Verwaltung laufen mehrere Projekte, um zu untersuchen, wie Rechtstexte besser in eine digitale Umgebung integriert werden können. </p><p></p><p>Die Applikation wurde grob getestet und erforscht, es gibt aber noch einige Arbeit: Der Algorithmus muss weiterentwickelt und erweitert werden, die Datenbank sollte aktualisiert und besser integriert werden, und neue Funktionen könnten mit Users getestet, entwickelt und hinzugefügt werden.   </p><p></p><p>Wir hatten die Gelegenheit, unsere Forschungsergebnisse in der Zeitschrift JUSLETTER-IT (<a class=""c10"" href=""https://www.google.com/url?q=https://jusletter-it.weblaw.ch/issues/2021/30-Juni-2021/legaltech-im-gesetzg_c9adbf9316.html__ONCE%26login%3Dfalse&amp;sa=D&amp;source=editors&amp;ust=1682949046534534&amp;usg=AOvVaw3rRUKTdgxMcdRVo69nOUH6"">https://jusletter-it.weblaw.ch/issues/2021/30-Juni-2021/legaltech-im-gesetzg_c9adbf9316.html__ONCE&amp;login=false</a>)  zu veröffentlichen, was zu einem Treffen mit Vertretern verschiedener Bundesämter führte, um mögliche Anwendungen und Mehrwertaspekte des Programms zu diskutieren. Ein weiteres Treffen ist in Planung.</p>","- [Screencast der Webapp](https://youtu.be/bumjotb5YLE)
+- 📎 [Presentation](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/86/OYWAIBBQY1OHDHQSF4H4MCS4/pdfresizer.compdfresize1.pdf)
+- 📎 [Jusletter - IT Legaltech im Gesetz](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/86/V34I0PMD3BQPQKFEBCOUH60B/JusletterIT_legaltechimgesetzg_c9adbf9316_de.pdf)
+
+https://youtu.be/bumjotb5YLE
+
+# Challenge
+
+Ziel unserer Challenge war es, ein Tool zu entwickeln, das eine klare und präzise Rechtssprache in Erlassen fördert, die kohärente Verwendung von Rechtsbegriffen sicherstellt und Eugen Huber stolz machen würde. Die Idee war, eine Anwendung zu entwickeln, die neue Gesetzesentwürfe automatisch mit bestehenden Rechtssammlungen vergleichen kann und dem:der Nutzer:in umgehend Rückmeldung über die Wahl der Begriffe und deren sprachliche und juristische Kohärenz gibt.
+Die umgesetzte Anwendung bietet verschiedene Funktionen, wie z.B.:
+
+    die Identifizierung neuartiger Begriffe, also solche, die bisher noch nicht in der SR verwendet werden;
+    die Hervorhebung relevanter Übereinstimmungen mit bestehenden Begriffen; und
+    die Bereitstellung von Kontextualisierungen, indem sie zeigt, wo und wie der Begriff in anderen Rechtsdokumenten verwendet wird.
+
+Dieses Tool hilft den Verfassern von Rechtsvorschriften, diese verständlicher zu gestalten und die Konsistenz der gesamten Rechtsordnung sicherstellen zu können. Dies fördert neben einer einheitlichen Nomenklatur auch die Rechtssicherheit.
+
+Als Ergebnis des Hackathons liegt nun eine entwickelte Web-App vor. Sie ermöglicht es den Benutzern, Entwürfe durch Kopieren und Einfügen von Text einzuspeisen, die gewünschten Funktionen auszuwählen und direkt ein visuelles Feedback zum Entwurf zu erhalten.
+
+Die App ermöglicht auch ein Abgleich von Begriffsdaten mit Termdat. Hierzu ist einzig ein Klick auf den zu überprüfenden Begriff nötig. Die App ist damit ein benutzerfreundliches Werkzeug, das den gesamten Prozess der Ausarbeitung und Bewertung neuer Rechtsvorschriften rationalisiert.
+
+Zusammenfassend lässt sich sagen, dass die Hackathon-Herausforderung zur Entwicklung einer innovativen Web-App führte, die die Klarheit und Kohärenz der Rechtssprache fördert. Durch den automatischen Vergleich von Gesetzesentwürfen mit bestehenden Rechtssammlungen trägt die App dazu bei, dass Rechtsbegriffe korrekt und einheitlich verwendet werden, was letztlich zu einer verständlicheren und leichter zugänglichen Gesetzgebung führt und die Rechtssicherheit fördert.
+"
+"75","","https://challenges.openlegallab.ch/project/75","Legal Instruct","59","Sketching","colin_carter, christopher_keibel, NicolasZahn, ewelina_mitrega, quadratecode, erhard_marro, thomas_avanzi, david_billeter","8","False","True","20","A dataset to finetune large language models","8","https://www.colincarter.me/img/dalle.png","https://github.com/colin-r-carter/legal-instruct","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/98/YF9W9MQ3ROSC1E78SKYG9KRV/OpenLegalLab23_Challenges812.pdf","https://github.com/colin-r-carter/legal-instruct/","https://github.com/colin-r-carter/legal-instruct/releases","https://github.com/colin-r-carter/legal-instruct/issues","","balance-scale","Im Rahmen dieser Challenge wird die Schaffung eines offen zugänglichen Legal-Instruct-Datensatzes vorgeschlagen, um grosse Sprachmodelle für den juristischen Bereich zu finetunen. Dieser Datensatz würde juristische Anweisungen in einem strukturierten und organisierten Format enthalten, das es LLMs ermöglicht, juristische Sprache und Aufgaben besser zu verstehen. Wir glauben, dass dieser Datensatz die Fähigkeit der Rechtsbranche, die Fähigkeiten von LLM zu nutzen, erheblich verbessern könnte, was...","2023-04-14T14:28","2023-05-01T20:35","colin_carter","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 16, ""updates"": 7, ""commits"": 4, ""during"": 10, ""people"": 8, ""sizepitch"": 1192, ""sizetotal"": 5792}","# legal-instruct
+
+*💡 Idea behind the challenge*: 
+
+Instruction finetuning large language models (LLMs) has shown huge potential (see InstructGPT by OpenAI[^1]) this has further been improved by synthetically generated instructions using the [self instruct](https://arxiv.org/abs/2212.10560)[^2] method (see for example the [Stanford Alpaca model](https://crfm.stanford.edu/2023/03/13/alpaca.html). By instruction tuning smaller LLMs, those models are able to solve complex tasks. Most LLMs have some legal texts in their trainingdata, but will often mix different legal sources in their outputs (especially for Switzerland this is an issue, because German texts for the Swiss legal system will often be mixed with legal information from Austria and Germany, for French and Italian it's the same issue). Generating synthetic-only data is (apart from API usage limitations by for example OpenAI) therefore also not possible in the legal domain, as those _mixtures_ would be present in the generated data as well. 
+
+Creating a legal-instruct dataset based on Swiss data is essential for finetuning large language models (LLMs) that are used in the (swiss) legal industry. This dataset would contain legal instructions in a structured and organized format (following the alpaca format), if possible in German, French and Italian. It would allow LLMs to learn the language and nuances of our legal system and legal tasks. By having access to this comprehensive dataset, LLMs would be able to better understand legal language and improve their ability to accurately perform legal tasks.
+
+Moreover, it is important that this dataset is openly available and allows for commercial use (the example of Alpaca is intended only for academic research and commercial use is prohibited). By creating an openly available and usable dataset, it would allow for broad implementation of the dataset and ensure that every open-source LLM could benefit from its use. This would not only benefit legal professionals (as many models could use that trainingdata freely) but also companies developing LLMs for the legal industry. An openly available legal-instruct dataset would also encourage collaboration and innovation in the field, ultimately leading to better outcomes for all.
+
+
+## 🎯 Goal of the challenge
+* Create and release a legal-instruct dataset to huggingface with an open license.
+* Finetune a LLM with the created dataset.
+
+## Possible tasks:
+* Writing clauses and legal texts
+* Legal CoT (Chain of Thought) prompting
+* QnA (simple or retrieval augmented)
+* Summarization
+* ...
+
+## Roadmap
+
+This will have to be discussed at the hackathon. 
+
+- [x] Simple platform to collect data (already in progess).
+- [ ] Datacollection (including possibilities of automatically creating instructions from existing data). 
+- [ ] Define a (very) simple benchmark to see what outputs would be considered as _good_ or _bad_.
+- [ ] Select suitable LLM to finetune ([Camel 5B](https://huggingface.co/Writer/camel-5b-hf), [Dolly 2.0](https://huggingface.co/databricks/dolly-v2-7b), [Open Assistant (Pythia base)](https://huggingface.co/OpenAssistant), [T0pp](https://huggingface.co/bigscience/T0pp) or [FLAN-ul2](https://huggingface.co/google/flan-ul2)) 
+- [ ] Finetuning an LLM ([LoRA finetuning](https://replicate.com/blog/fine-tune-alpaca-with-lora), as  this could probably be achieved in the limitted time of the hackathon and wouldn't need expensive hardware).
+- [ ] Review of the model.
+
+# Available Data
+
+## General (multilingual) Instruction Datasets:
+[Dataset for Dolly 2.0 from Databricks by Argila on Huggingface](https://huggingface.co/datasets/argilla/databricks-dolly-15k-multilingual)
+
+[OpenAssistant Conversations Dataset (OASST1) by Open Assistant on Huggingface](https://huggingface.co/datasets/OpenAssistant/oasst1)
+
+---
+
+# Citations
+[^1]: Ouyang, Long, Jeff Wu, Xu Jiang, Diogo Almeida, Carroll L. Wainwright, Pamela Mishkin, Chong Zhang, et al. *‘Training Language Models to Follow Instructions with Human Feedback’*. ArXiv [Cs.CL], 2022. arXiv. [http://arxiv.org/abs/2203.02155](http://arxiv.org/abs/2203.02155). And [OpenAI Blog (last visitted on Mon. 17th of April 2023)](https://openai.com/research/instruction-following)
+
+[^2]: Wang, Yizhong, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, and Hannaneh Hajishirzi. ‘Self-Instruct: Aligning Language Model with Self Generated Instructions’. ArXiv [Cs.CL], 2022. arXiv. [http://arxiv.org/abs/2212.10560](http://arxiv.org/abs/2212.10560).
+","Im Rahmen dieser Challenge wird die Schaffung eines offen zugänglichen Legal-Instruct-Datensatzes vorgeschlagen, um grosse Sprachmodelle für den juristischen Bereich zu finetunen. Dieser Datensatz würde juristische Anweisungen in einem strukturierten und organisierten Format enthalten, das es LLMs ermöglicht, juristische Sprache und Aufgaben besser zu verstehen. Wir glauben, dass dieser Datensatz die Fähigkeit der Rechtsbranche, die Fähigkeiten von LLM zu nutzen, erheblich verbessern könnte, was letztlich zu besseren rechtlichen Ergebnissen für alle führen würde.
+
+---
+
+## Lets unlock the potential of large language models in the legal industry: We propose creating an openly available Legal-Instruct Dataset.
+
+This challenge proposes the creation of an openly available Legal-Instruct dataset to finetune large language models for the legal field. This dataset would contain legal instructions in a structured and organized format, allowing LLMs to better understand legal language and tasks. By doing so, we believe that this dataset could significantly improve the legal industry's ability to leverage LLM's capabilities, ultimately resulting in better legal outcomes for all."
+"72","","https://challenges.openlegallab.ch/project/72","Textbausteine 2.0","44","Sketching","caroline, NicolasZahn, andreasjoerger, beni_buergi","4","False","True","20","Automatisch Textbausteine in Urteilen markieren ","13","","https://github.com/ilyaskurikhin/OpenLegal","https://docs.google.com/presentation/d/e/2PACX-1vRwIKKw0Mqhz-HEtZTthj6aORMd0aKoEFiYrUcE9cNMlmVMWl9Mozp7sVIYAO3IEJc3Knqzy85GN2wI/embed?start=false&loop=false","","https://github.com/ilyaskurikhin/OpenLegal/blob/main/LegalHackathon.ipynb","https://github.com/ilyaskurikhin/OpenLegal/issues","","","<a href=""https://www.omnius.ch/files/textbau/landing_search.html"" target=""_blank"" class=""btn btn-lg btn-success"">Demo link</a>
+
+Source: https://github.com/ilyaskurikhin/OpenLegal
+
+# Challenge
+
+Um schnell zu erkennen, was in einem Urteil neu ist, sollen immer wieder verwendete Textbausteine eingefärbt werden.
+
+In jedem Urteil finden sich Textbausteine, die zuvor schon in zahlreichen anderen Urteilen zu lesen waren. Diese Challenge soll ein Tool hervorbringen, das zeigt, welche Textelement...","2023-04-13T15:48","2023-05-01T20:45","","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 12, ""updates"": 7, ""commits"": 0, ""during"": 6, ""people"": 4, ""sizepitch"": 1220, ""sizetotal"": 1267}","","<a href=""https://www.omnius.ch/files/textbau/landing_search.html"" target=""_blank"" class=""btn btn-lg btn-success"">Demo link</a>
+
+Source: https://github.com/ilyaskurikhin/OpenLegal
+
+# Challenge
+
+Um schnell zu erkennen, was in einem Urteil neu ist, sollen immer wieder verwendete Textbausteine eingefärbt werden.
+
+In jedem Urteil finden sich Textbausteine, die zuvor schon in zahlreichen anderen Urteilen zu lesen waren. Diese Challenge soll ein Tool hervorbringen, das zeigt, welche Textelemente in einem Urteil tatsächlich neu sind und welche schon in vielen anderen Urteilen enthalten waren. Dies kann durch Einfärbung oder Ausblenden oder Einklapp- bzw. Ausklapp-Funktion ermöglicht werden.
+
+An der Challenge wurde letztes Jahr bereits gearbeitet. Im letzten Jahr gab es jedoch sehr grossen Fortschritt im Natural Language Processing (NLP) Bereich. Aus diesem Grund soll diese Challenge dieses Jahr noch einmal angegangen werden.
+
+- 📎 [Challenge slides](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/92/FDHFDF0YTIT2HIAXX3DAPIO9/OLL_Challenge13.pdf)
+- Fortsetzung von [Textbausteine Challenge](https://challenges.openlegallab.ch/project/41) an der Open Legal Lab 2022.
+"
+"82","","https://challenges.openlegallab.ch/project/82","Federal Supreme Court Data Viewer","44","Project","flo, caroline, timur_acemoglu, luka_nenadic","4","False","True","5","Let's build a Shiny app for anyone to analyse data on Swiss Federal Supreme Court judgments! 📊 ","4","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/101/X6ILQWV3FZ10G840FSN3SX1G/bgerinside2_copy.jpg","https://gitlab.uzh.ch/florian.geering/scd-viewer","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/92/G1UEX1S17CPX2U000HQ522L7/SDC.pdf","https://gitlab.uzh.ch/florian.geering/scd-viewer","","","#8ec4e6","","You can find the shiny app here: [https://data-viewer-app.shinyapps.io/scd-viewer/](https://data-viewer-app.shinyapps.io/scd-viewer/)
+
+📎 [SDC.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/92/G1UEX1S17CPX2U000HQ522L7/SDC.pdf)","2023-04-21T20:48","2023-05-01T13:23","flo","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 20, ""updates"": 14, ""commits"": 0, ""during"": 10, ""people"": 4, ""sizepitch"": 270, ""sizetotal"": 3119}","# scd-viewer
+
+The [Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793044) is the largest open-access dataset on Swiss judgments, with 30 variables documenting all 113'367 Federal Supreme Court judgments since 2007.
+
+With this challenge, we want to enable anyone to make their own quantitative analysis of this rich data, even if they have zero prior programming knowledge: We will build a [Shiny app](https://shiny.rstudio.com/) that lets users interact with the data on Swiss Federal Supreme Court judgments and run simple analyses themselves.
+
+## 💡 Idea behind the challenge
+
+The freshly released Swiss Federal Supreme Court Dataset includes all Swiss Federal Supreme Court judgments since 2007. It documents them with 30 variables, which contain case information, the area of law, information about the appealed judgment, the parties, the case outcome, or about citations and publication status.
+
+The SCD enables high-quality quantitative insights into the jurisprudence of the highest Swiss court (see, for example, [Merane 2021](https://www.sjz.ch/de/artikel/2504-0650-2021-0169/computergestutzte-ermittlung-der-geschlechterverteilung-im) or [Geering 2021](https://doi.org/10.38023/3cebc384-e303-4e19-b5bb-a8497f448ad1)). However, using and analysing the dataset generally requires some knowledge of data science methods. The lack of quantitative methods in the current curricula of most Swiss law schools means that many lawyers, judges and jurists, as well as interested laypersons, currently can't use this data themselves.
+
+Shiny apps such as the gorgeous [CRAN Explorer](https://shiny.rstudio.com/gallery/cran-explorer.html), the highly functional [ExPanD](https://shiny.rstudio.com/gallery/explore-panel-data.html) data explorer, or the highly intuitive [Bolivia Life of Labor](https://rosemarysu.shinyapps.io/bolivia_unpaid_labor/) app inspire us. At the [Open Legal Lab 2023](https://opendata.ch/de/events/open-legal-lab-2023/), we want to create a Shiny app that enables anyone to create their own simple analysis of the Federal Supreme Court dataset, without needing programming knowledge or Excel tricks.
+
+## 🎯 Goal of the challenge
+
+> *Create and release a Shiny app that enables simple quantitative analyses of the Federal Supreme Court jurisprudence documented in the SCD without any programming knowledge.*
+
+## 🚀 Roadmap
+
+This will have to be discussed at the hackathon.
+
+-   [x] Collect data
+-   [ ] Define main analysis types as use cases
+-   [ ] Create Shiny app
+-   [ ] Prepare presentation
+-   [ ] Deploy Shiny app
+-   [ ] ✨ Extra: Automatically integrate most recent judgments through SCD updates
+-   [ ] ✨ Extra: Translate user interface to German, French, Italian, Rumantsch
+","You can find the shiny app here: [https://data-viewer-app.shinyapps.io/scd-viewer/](https://data-viewer-app.shinyapps.io/scd-viewer/)
+
+📎 [SDC.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/92/G1UEX1S17CPX2U000HQ522L7/SDC.pdf)"
+"61","","https://challenges.openlegallab.ch/project/61","Vollmacht und Delegation im Kontext des E-ID Ökosystem","34","Research","dominic_moser, ibrahim_kuray, kampfcaspar","3","False","True","10","","16","","https://github.com/KampfCaspar/eidschemas","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/100/JSWOZZMRRJNQXWX215XH6XH6/Open_Legal_Challenge_16_Vollmach_EID_Resulat2_compressed.pdf","https://github.com/KampfCaspar/eidschemas","https://github.com/KampfCaspar/eidschemas/blob/main/schemas/001-residence_certificate.schema.md","https://github.com/KampfCaspar/eidschemas/issues","","","Links 
+
+- https://www.bj.admin.ch/bj/de/home/staat/gesetzgebung/staatliche-e-id.html
+- https://github.com/e-id-admin/general/blob/main/meetings/20230420_Einf%C3%BChrung_zur_E-ID.pdf
+- https://sovrin.org/wp-content/uploads/Guardianship-Whitepaper.pdf
+- Figma-Datei eines Wallet werden zur Verfügung gestellt","2023-04-12T11:57","2023-05-02T08:25","dominic_moser","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 14, ""updates"": 11, ""commits"": 3, ""during"": 8, ""people"": 3, ""sizepitch"": 311, ""sizetotal"": 482}","# eidschemas
+
+HIer werden gesammelt:
+
+- Typendefinitionen für gängige Attribute
+- Kollektionen für gängige Attributkombinationen
+- Schemas für Verified Credentials
+","Links 
+
+- https://www.bj.admin.ch/bj/de/home/staat/gesetzgebung/staatliche-e-id.html
+- https://github.com/e-id-admin/general/blob/main/meetings/20230420_Einf%C3%BChrung_zur_E-ID.pdf
+- https://sovrin.org/wp-content/uploads/Guardianship-Whitepaper.pdf
+- Figma-Datei eines Wallet werden zur Verfügung gestellt"
+"76","","https://challenges.openlegallab.ch/project/76","Futuristic Contract For Love Relationships","30","Project","dominique_calcò_labbruzzo, Tuni, ilya_skurikhin, sofiane_alloun","4","False","False","5","Wellbeing and Mental Health Matters ","19","","","","https://www.linkedin.com/pulse/holistic-approach-legal-commitment-unmarried-couples-calc%C3%B2-labbruzzo","","https://www.linkedin.com/in/dominique-calcò-labbruzzo-15597629/?locale=en_US","","","## Developing an app for couples to have a legal commitment which entitles to compensation for mental and emotional pain
+
+- The language of love can be expressed in many different ways, every partner must say to which percentages words of affirmation, acts of service, physical touch, quality time, gift-giving are relevant
+- The app should check what kind of relationship the two partners wish: for example monogamous or polyamorous relationship. If the both agree on it or they wish also casual ...","2023-04-15T08:02","2023-05-01T20:28","dominique_calcò_labbruzzo","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 15, ""updates"": 10, ""commits"": 0, ""during"": 6, ""people"": 4, ""sizepitch"": 668, ""sizetotal"": 703}","","## Developing an app for couples to have a legal commitment which entitles to compensation for mental and emotional pain
+
+- The language of love can be expressed in many different ways, every partner must say to which percentages words of affirmation, acts of service, physical touch, quality time, gift-giving are relevant
+- The app should check what kind of relationship the two partners wish: for example monogamous or polyamorous relationship. If the both agree on it or they wish also casual sex relationships or on something else.
+- The partners agree that lying and betraying entitles the other person to compensation for healing costs and emotional damages
+"
+"71","","https://challenges.openlegallab.ch/project/71","Living Topics","26","Research","oleg, loc_pittet, Raphael_Jeannerat_BK","3","False","False","10","Connecting words, phrases, and terms in a legal context, in use for effective government","11","","","","","","https://github.com/OpenLegalLab/living-topics/discussions/1","","","We have added TERMDAT capabilities to the concept, and worked together on the [FEDLEXplorer](https://challenges.openlegallab.ch/project/81) project at Open Legal Lab 2023. Please use the [GitHub Discussion](https://github.com/OpenLegalLab/living-topics/discussions/1) if you have any further ideas or feedback on this challenge.
+
+https://challenges.openlegallab.ch/project/81
+
+# Challenge
+
+Unsere Challenge besteht darin, den Puls der Schweizer Regierung zu fühlen, indem wir aktuelle Terminolo...","2023-04-13T14:05","2024-03-24T10:39","oleg","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 7, ""updates"": 3, ""commits"": 0, ""during"": 1, ""people"": 3, ""sizepitch"": 6226, ""sizetotal"": 6314}","","We have added TERMDAT capabilities to the concept, and worked together on the [FEDLEXplorer](https://challenges.openlegallab.ch/project/81) project at Open Legal Lab 2023. Please use the [GitHub Discussion](https://github.com/OpenLegalLab/living-topics/discussions/1) if you have any further ideas or feedback on this challenge.
+
+https://challenges.openlegallab.ch/project/81
+
+# Challenge
+
+Unsere Challenge besteht darin, den Puls der Schweizer Regierung zu fühlen, indem wir aktuelle Terminologiedatenbanken mit Daten und Publikationen der Verwaltungen kombinieren. Wörter, Phrasen und Begriffe im Behördenkontext haben eine Besonderheit: Sie beziehen sich oft auf juristische Konzepte und sind Grundlage für weitreichende Entscheidungen. Standardbegriffe (in der Informatik auch ""benannte Entitäten"" genannt) müssen gut definiert sein, oft mit einer rechtlichen Grundlage. Um mit diesen domänenspezifischen Vokabularen arbeiten zu können, werden sie in Terminologiedatenbanken organisiert - wie z.B. TERMDAT, ein Dienst des Bundeskanzleramtes.
+
+---
+
+## Our challenge is to take the pulse of the Swiss Government by combining up-to-date terminology databases with data and publications of the administrations. 
+
+Words, phrases, and terms in a governmental context have a special feature: they often relate to legal concepts, and are basis of far-reaching decisions. Standard terms (also called “named entities” in computer science) need to be well defined, often with a legal basis. To be able to work with this domain-specific vocabularies, they are organized in terminology databases - such as TERMDAT, a service of the Federal Chancellery.  
+
+![](https://i.imgur.com/gL2oTbL.jpg)
+
+_Screenshot of [TERMDAT](https://www.termdat.ch/search)_
+
+The goal of this challenge - which continues the work started at the recent [GovTech Hackathon](https://hack.opendata.ch/project/946) - is to harness the expressivity of terminologies provided by TERMDAT and related databases, to create a high-quality and up-to-date map of current topics being addressed in the open publications of government.
+
+> ""The Swiss Confederation currently has almost 40k employees (~36k full time equivalents). It is not only difficult for the citizens of Switzerland to grasp the breadth and depth of which topics are worked on, the same is valid for the employees within the Swiss Confederation. Therefore, it is important to have a good high-quality overview of the ongoing work and the change of focus in regard of ongoing themes globally. Conversely, the specialists working on the terminology database are not able to read all new texts being published every day and would welcome a tool which would allow them to harvest newly coined terms or terms being used in a new context or with a different translation. Finally, end-users of texts might want to be able to click on a given (technical) word and receive a definition of that word.""
+
+_(From original [Living Topics](https://hack.opendata.ch/project/946) challenge by BK Federal Chancellery)_
+
+![](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/public/163/QCEKJ08Q6O3VHDOT2IZYP46V/Screenshot_from_20230324_142849.jpg)
+
+_Screenshot of API docs, Jupyter notebook, search results._
+
+## Resources
+
+https://github.com/OpenLegalLab/living-topics
+
+- Access [TERMDAT APIs](https://api.termdat.ch/swagger/index.html) from a ML environment (✅ [Notebook started at GovTech'23](https://github.com/OpenLegalLab/living-topics/blob/main/termdat%20scraper.ipynb))
+- Access FEDLEX via SPARQL endpoint (see [docs on i14y](https://www.i14y.admin.ch/en/catalog/dataservices/fbd63775-8ece-4d6a-a040-c54c49232234), as well as [bequrios/fedlex](https://github.com/bequrios/fedlex) and alternative APIs like [droid-f/fedlex](https://github.com/droid-f/fedlex) (⭐⭐⭐) 
+- Access Wikidata via SPARQL in a way that we can compare metadata on a term-by-term basis https://query.wikidata.org/
+- Find out if there is any relevant LINDAS resource https://lindas.admin.ch/datasets/
+- Use LINDAS documentation as resource https://lindas.admin.ch/documentation/applications/ and https://ld.admin.ch/governance/core-concepts/
+- Access PR APIs for current affairs at [admin.ch/gov/..communiques](https://www.admin.ch/gov/fr/accueil/documentation/communiques.html?dyn_startDate=01.07.2021&dyn_organization=1)
+- Leverage 200GB of WebArchive in JSON format from public web pages of *.admin.ch
+- ""Big Data Machine"" available for your Jupyter Notebooks with 1.5TB RAM
+
+![](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/T7UFGNCD9YHJ2MJAHC3T9GGU/Screenshot_from_20230430_100926.png)
+
+## Possible outputs
+
+- Simple list or feed (e.g. RSS...)
+- Directed graph dataset (Jena, Neo4J, ...) 
+- Visualisation of topics (Vega, D3, ...)
+- Update Wikipedia for main concept
+- Propose a method to update Wikidata
+
+## Further ideas & related projects
+
+https://challenges.openlegallab.ch/project/52
+
+- Open Legal Lab 22 - [Project using BK data & RDF](https://challenges.openlegallab.ch/project/52)
+- GovTech - [Parliamentary Data Project](https://hack.opendata.ch/project/934)
+- Connect Parliament API Data : https://ws-old.parlament.ch/ 
+- Invite the wikimedia.ch / GLAM community to help with Semantic Web, e.g. https://tutorials.openglam.ch/
+- There is currently no sort order on termdata.ch - but via API you could see the latest edited or created topics
+- Are all terms referencing laws, or do some reflect documens from current activites of an administration? Some (e.g. [medecin-conseil in English](https://www.termdat.ch/search/entry/37421?s=medical%20examiner&sl=2,6,7,8,3&tl=2,6,7,8,3) references an external site)
+- Whose job is it to keep track of the activities of various administrations? General secretary of the department. BK connects the general sectretaries. At the top is the Spokesman (André Simonazzi). How is quality controlled across languages and departments e.g. [GovTech PR](https://www.admin.ch/gov/fr/accueil/documentation/communiques.msg-id-93963.html)
+- Make it easier to compare the legal basis and structure of Swiss government with other nations, e.g. https://data.legilux.public.lu/metadata
+
+
+"
+"63","","https://challenges.openlegallab.ch/project/63","Betreibungen qualifiziert, digital zustellen","1","Challenge","yveskoenig","1","True","True","0","Wie kann die ""qualifiziert, digitale Zustellung"" von Betreibungsurkunden auf nationaler Ebene institutionalisiert werden? ","1","","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/90/N6DLD5P75LKBC64I0YGGIXKL/BU_Future__2._Open_Legal_Lab__Pitch.pdf","","","mailto:yves.koenig@post.ch","","","<b>Ausgangslage</b><br>
+Im Jahr 2021 wurden insgesamt 2.7 Mio. Betreibungsurkunden (Zahlungsbefehle) durch Betreibungs- und Konkursämtern Schweiz weit ausgestellt. Mit rund 2% nimmt die Zahl an Betreibungen jährlich konstant zu. Die Grundlage für die Ausfertigung, Zustellung und weitere Handhabe von Betreibungsurkunden bildet das Bundesgesetz über Schuldbetreibung und Konkurs (SchKG). Dieses definiert unteranderem, wer (Qualifikation gemäss SchKG Art. 72) eine Betreibungsurkunde wo beziehungswe...","2023-04-12T07:40","2023-04-28T08:04","yveskoenig","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 7, ""updates"": 6, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 4892, ""sizetotal"": 5013}","","<b>Ausgangslage</b><br>
+Im Jahr 2021 wurden insgesamt 2.7 Mio. Betreibungsurkunden (Zahlungsbefehle) durch Betreibungs- und Konkursämtern Schweiz weit ausgestellt. Mit rund 2% nimmt die Zahl an Betreibungen jährlich konstant zu. Die Grundlage für die Ausfertigung, Zustellung und weitere Handhabe von Betreibungsurkunden bildet das Bundesgesetz über Schuldbetreibung und Konkurs (SchKG). Dieses definiert unteranderem, wer (Qualifikation gemäss SchKG Art. 72) eine Betreibungsurkunde wo beziehungsweise wie (SchKG Art. 64) zustellen darf.
+
+Das Bedürfnis nach Digitalisierung steigt mitunter auch im Betreibungsprozess und wurde im Zuge der Pandemie nochmals verstärkt. Wo die Anmeldung einer Schuld durch den Gläubiger beim zuständigen Betreibungsamt dank eSchKG-Standard bereits heute die Regel ist, erfolgt die Zustellung der Betreibungsurkunden gegenüber dem Schuldner weiter ausschliesslich physisch.
+Im Laufe der Pandemie konnten nun erste Versuche zur elektronischen Zustellung der Zahlungsbefehle durchgeführt werden. Das Fazit viel grundsätzlich positiv aus wobei der Prozess der Form und dem damit verbunden ""onboarding"" für die Schuldner immer wieder als gross Hürde herausgestellt hat.
+
+<b>Problem</b><br>
+Die ersten Versuche haben gezeigt, dass die elektronische Zustellung von Betreibungsurkunden sowohl dem Schuldner wie auch dem Amt einen Mehrwert bieten, was sich wiederum positiv für den Gläubiger auswirkt. Die (Informations-)Wege werden kürzer und somit die Bearbeitung eines Betreibungsanliegens beschleunigt.
+
+![ Kundenbeziehung Betreibungsurkunden ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/90/ZV2CLPC175V76WYODU1DQ9BF/BU_Future__Beziehungen.JPG)
+
+In den bisherigen Pilot-Projekten erfolgte die elektronische Zustellung von Betreibungsurkunden auf freiwilliger Basis, nach erfolgter Voranmeldung durch den Schuldner auf einem durch das Amt zur Verfügung gestellten Portal. Schlüsselproblem gemäss den bisherigen Erkenntnissen ist die Tatsachen, dass die Hürde einer proaktiven Registration durch Schuldner ""zum qualifizierten Empfang eines Dokumentes, dass sie im Grundsatz nicht wollen"" zu hoch ist.
+
+<b>Design Challenge</b><br>
+Wie kann die ""qualifiziert, digitale Zustellung"" von Betreibungsurkunden auf nationaler Ebene institutionalisiert werden? Dies unter der Annahme, dass die regulatorischen Rahmenbedingungen in den kommenden 3-5 Jahren unverändert bleiben sowie auch in ferner Zukunft die Möglichkeit einer persönlichen Aufklärung bei der Übergabe einer Betreibungsurkunde für den Schuldner gewährt werden muss.
+
+Entsprechend ist ein Lösung zu skizzieren, welche auf nationaler Ebene eine qualifizierte Zustellung von Betreibungsurkunden nach SchKG Art.72 \* sowohl in physischer wie elektronischer Form für jede natürliche Person gewährt.
+
+![ BU Future - Vision 2030 ](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/90/07OXWBO58DV7KLPTI6Q4B9F8/BU_Future__Vision.JPG)
+
+Leitfragen:<br>
+Wie kann sichergestellt werden, dass jede natürliche Person mit Wohnsitz in der Schweiz
+Zugang zu einer elektronischen Betreibung (ohne vorgängige Registration) hat,
+über ihre Rechte & Pflichten aufgeklärt wird und
+die Möglichkeit hat, im Falle einer Betreibung einen Rechtsvorschlag zu erheben?
+
+* Wie erfolgt die Kommunikation sowie der Informationsfluss zwischen Betreibungsamt und Schuldner?<br>
+    Davon ausgehend, dass die Betreibungsämter auch in absehbarer Zukunft unterschiedliche Software zur Administration von Betreibungsbegehren im Einsatz haben
+* Werden die Informationen zu einer Betreibung zentral beziehungsweise dezentral in welcher Form bewirtschaftet?<br>
+    Davon ausgehend, dass die Betreibungsämter auch in absehbarer Zukunft unterschiedliche Software zur Administration von Betreibungsbegehren im Einsatz haben
+* Aufgrund welcher Basis erfolgt die Triage für eine qualifiziert, digitale beziehungsweise physische Zustellung?
+    Davon ausgehend, dass<br>
+    -> auch in ferner Zukunft auf Wunsch des Schuldners eine physische Zustellung möglich sein muss (Alternative zur digitalen Zustellung wahren<br>
+    -> eine Betreibungsurkunde unabhängig der Art und weise der Zustellung durch das Betreibungsamt ausgelöst werden kann (Zustellorganisation stellt die Triage sicher)
+
+Rahmenbedingungen:
+
+* Einhaltung der eSchKG-Standards
+* Qualifizierte Zustellung in physisch wie elektronischer Form zu wahren (gemäss SchKG Art. 72 \*)
+
+\*SchKG - Form der Zustellung
+Art. 72
+1 Die Zustellung geschieht durch den Betreibungsbeamten, einen Angestellten des Amtes oder durch die Post.138
+2 Bei der Abgabe hat der Überbringer auf beiden Ausfertigungen zu bescheinigen, an welchem Tage und an wen die Zustellung erfolgt ist.
+138 Fassung gemäss Ziff. I des BG vom 16. Dez. 1994, in Kraft seit 1. Jan. 1997 (AS 1995 1227; BBl 1991 III 1)."
+"80","","https://challenges.openlegallab.ch/project/80","Citation Analysis","1","Challenge","flo","1","True","True","0","Explore the network of citations in Federal Supreme Court judgments! 📚 With ready-to-use data, just add your ideas and shake!","2","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/101/9LCKP7547XNL2OAK7FT99U0D/citations2.jpg","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/1/P3STYOGRIARYG8PKEL379DVN/OLL_CLDS_Challenges.pdf","","","","#6074ba","","# Introduction
+The judgments of the Swiss Federal Supreme Court (Bundesgericht/Tribunal fédéral/Tribunale federale/Tribunal federal) contain a vast universe of citations. These citations have a lot of unused potential: Citation analysis can make it easier to find appropriate precedents, trace the development of lines of jurisprudence or discover changes in case law. 
+
+The [Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793044) contains ready-to-use data for this analysi...","2023-04-19T19:31","2023-04-30T07:43","flo","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 9, ""updates"": 7, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 2745, ""sizetotal"": 2870}","","# Introduction
+The judgments of the Swiss Federal Supreme Court (Bundesgericht/Tribunal fédéral/Tribunale federale/Tribunal federal) contain a vast universe of citations. These citations have a lot of unused potential: Citation analysis can make it easier to find appropriate precedents, trace the development of lines of jurisprudence or discover changes in case law. 
+
+The [Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793044) contains ready-to-use data for this analysis. You should be able to rely on available citation graph tools to build a usable proof of concept in reasonable time.
+
+# Examples
+An example for this is the *""zitiert in [...]""* function of [bger.li](https://bger.li/143-I-336), which shows the incoming citations (limited to the judgments that were officially published as BGE). Going beyond just text and links, citation graphs can visualise entire citation networks and enable users to interact with them, zoom in, and go forward or backward: The [Obsidian](https://help.obsidian.md/Plugins/Graph+view) note-taking tool is well-known for its stunning [graph view](https://twitter.com/obsdmd/status/1310993743957417991). Another example is the [Connected Papers](https://www.connectedpapers.com/main/65c28bed7eda1c98f589a1fc457a0273da8862ea/Judicial-Influence%3A-A-Citation-Analysis-of-Federal-Courts-of-Appeals-Judges/graph) tool for scientific articles.
+
+# Data
+The [Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793044) documents the outgoing citations of all judgments since 2007 in its `cited_bge` and `cited_bger` variables (incoming citations can be derived from outgoing citations). The data is readily available in CSV format.
+
+*Note that citations were directly extracted from the judgment texts using regular expressions (regex): The citations therefore most likely include references to judgments that do not exist due to typos in the references. Additionally, BGE citations may not always point to the first page of judgments (e.g. citing BGE 143 I 341, E. 4.3 for p. 341 of BGE 143 I 336). For greater accuracy, it might be useful to resolve these BGE citations so that they always point to the first page. However, fixing these points is not necessary for a proof of concept.*
+
+# Resources
+There are tools available to visualise citation networks locally, such as the open source [graph-tool](https://git.skewed.de/count0/graph-tool). If you implement a local application, we recommend that you create detailed instructions on how to set up your citation viewer so that your tool can be used by others. Alternatively, you may choose to implement an online tool, which requires a hosting solution, but is more easily accessible for other users. "
+"64","","https://challenges.openlegallab.ch/project/64","StartAML","0","Challenge","david_billeter","1","True","True","0","Make answering legal questions related to the Swiss Anti-Money Laundering Regulation more efficient.","12","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/98/DVUJ9Q7HFQGZ0QYFM231S94I/arrangementwithmoneygavelcalculatorcontract.jpg","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/98/SDOFJHS0CPOSY9PXA60LDFAP/230428_StartAML_OpenLegalLab23.pdf","","","","#ffff00","","📎 [230428_StartAML_OpenLegalLab23.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/98/SDOFJHS0CPOSY9PXA60LDFAP/230428_StartAML_OpenLegalLab23.pdf)
+
+Die Herausforderung besteht darin, über Möglichkeiten zur Verbesserung der aktuellen Situation nachzudenken und ein Werkzeug/System zu entwickeln, mit dem die Beantwortung einfacher rechtlicher Fragen im Zusammenhang mit dem GwG effektiver und effizienter gestaltet werden kann. Dies könnte vom Aufbau eines g...","2023-04-13T10:01","2023-04-30T08:57","","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 8, ""updates"": 7, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 3863, ""sizetotal"": 3963}","","📎 [230428_StartAML_OpenLegalLab23.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/98/SDOFJHS0CPOSY9PXA60LDFAP/230428_StartAML_OpenLegalLab23.pdf)
+
+Die Herausforderung besteht darin, über Möglichkeiten zur Verbesserung der aktuellen Situation nachzudenken und ein Werkzeug/System zu entwickeln, mit dem die Beantwortung einfacher rechtlicher Fragen im Zusammenhang mit dem GwG effektiver und effizienter gestaltet werden kann. Dies könnte vom Aufbau eines gemeinsamen Wissensspeichers, in dem die Finanzmarktteilnehmer ihre Informationen und Antworten auf spezifische rechtliche Fragen austauschen können, bis hin zum Aufbau eines Chatbots reichen, der automatisch Unterstützung leistet, wenn er bestimmte Fragen zu diesem Bereich der Regulierung erhält. Weitere Ideen sind mehr als willkommen. Die wichtigste Voraussetzung ist, dass die Daten aller Personen, die das Tool/System nutzen, geschützt sind und keine persönlichen Daten veröffentlicht werden.
+
+---
+
+Most financial market participants (e.g. banks, securities dealers and financial intermediaries) are subject to to the Swiss Anti-Money Laundering Act (AMLA) and the corresponding ordinances and guidelines. The AML-Regulation is a fast changing area of law and many FinTech startups have already brought a certain level of automation to it (e.g. KYC-providers that automatically identify customers through online-platforms).
+
+Nevertheless, there is still room for improvement. Most financial market players engage in-house or external counsel to provide support in answering at least partially  redundant questions concerning the application of the AMLA. According to the Money Laundering Reporting Office Switzerland (MROS) the Ordinance on measures related to the situation in Ukraine that entered into force in 2022 led to over 8'000 requests by financial market participants to MROS asking for clarifications. This despite the fact that an FAQ was published alongside the ordinance. Most of these requests were answered by hand which understandably led to a material backlog and week long waiting times for answers. It can only be assumed how many more questions with regards to said ordinance have been asked by financial market participants to their in-house and external counsels.
+
+Questions with regards to the AMLA are often asked by front office employees. The following examples could be used: ""Am I allowed to onboard a Russian national having dual citizenship (Russia/Switzerland)"", ""Which documents do I need to check when onboarding a foundation"", ""Do I need to report situation XYZ to the AML-Officer and/or MROS"", etc. 
+
+For the purpose of this challenge it is assumed that the questions are redundant and their answer can be found in the public legal documentation of the Swiss AML-Regulation (in particular the Anti-Money Laundering Act, the Anti-Money Laundering Ordinance, the Anti-Money Laundering Ordinance-FINMA, FINMA Circular 2011/1 on Financial Intermediation, the Swiss Bankers Association CDB 20: revised code of conduct in the area of the fight against money laundering, the VQF SRO-Regulation).
+
+The challenge is to think about ways to improve the current situation and build a tool/system with which the answering of simple legal questions related to the AMLA can be made more effective and efficient. This could range from building a common knowledge repository where financial market participants can share their information and answers to specific legal questions and/or building a chatbot that can automatically support in case it receives certain questions within this area of regulation. Further ideas are more than welcome. The main condition is that the data of all persons using the tool/system is protected and no personal data will be made public.
+
+📧 [David Billeter](mailto:david.billeter@getright.ch)"
+"77","","https://challenges.openlegallab.ch/project/77","Improving quality of lawmaking with AI","0","Challenge","NicolasZahn","1","True","True","0","Analysing dependencies & contradictions","6","","","https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/100/52FXBBGSKPQZW1XIZ3WP5PEW/OpenLegalLabImproving_quality.pdf","","","","","","I want to build a ""legal compiler"" that analyses a new law and identifies where it impacts existing laws to improve the overall quality
+
+Similar Challenges:
+https://challenges.openlegallab.ch/project/72
+https://challenges.openlegallab.ch/project/75
+https://challenges.openlegallab.ch/project/65
+
+Building on advances in NLP and machine learning the idea is to create a solution for policymakers that identifies dependencies to other laws or contradictions to existing laws before a new law is ...","2023-04-15T13:52","2023-05-01T20:30","NicolasZahn","https://challenges.openlegallab.ch/event/4","Open Legal Lab 2023","","","{""total"": 4, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 1054, ""sizetotal"": 1093}","","I want to build a ""legal compiler"" that analyses a new law and identifies where it impacts existing laws to improve the overall quality
+
+Similar Challenges:
+https://challenges.openlegallab.ch/project/72
+https://challenges.openlegallab.ch/project/75
+https://challenges.openlegallab.ch/project/65
+
+Building on advances in NLP and machine learning the idea is to create a solution for policymakers that identifies dependencies to other laws or contradictions to existing laws before a new law is being passed. Similar to checks that are run when software is being updated (e.g. package management) I'd like to create a prototype or rather the needed components in order to make such a project work.
+
+Presentation: see attached
+
+Potential resources:
+https://www.fedlex.admin.ch/de/cc?news_period=last_year&news_pageNb=1&news_order=desc&news_itemsPerPage=10
+
+📎 [OpenLegalLab-Improving quality.pdf](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/52/AGZI4QCVS5MWZJRA295U1JE7/OpenLegalLabImproving_quality.pdf)"

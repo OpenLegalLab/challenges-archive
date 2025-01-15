@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<rss version='2.0'
+	xmlns:atom='http://www.w3.org/2005/Atom'
+	xmlns:content='http://purl.org/rss/1.0/modules/content/'>
+  <channel>
+    <pubDate>Thu, 02 May 2024 16:35:25 GMT</pubDate>
+    <title>Dribs by Jan Nicklaus</title>
+    <link>https://challenges.openlegallab.ch/user/jan_nicklaus</link>
+    <description>Latest updates from Dribdat</description>
+	  <atom:link href='https://challenges.openlegallab.ch/feeds/user/jan_nicklaus' rel='self' type='application/rss+xml' />
+	  
+  </channel>
+</rss>

@@ -1,0 +1,357 @@
+"id","ident","url","name","score","phase","team","team_count","is_challenge","is_webembed","progress","summary","hashtag","image_url","source_url","webpage_url","autotext_url","download_url","contact_url","logo_color","logo_icon","excerpt","created_at","updated_at","maintainer","event_url","event_name","category_id","category_name","stats","autotext","longtext"
+"101","01","https://challenges.openlegallab.ch/project/101","Know-how Management System","94","Prototype","david_schwaninger, evsuter, timur_acemoglu, petsuter, simon_julian_fritsch, selina, mauruswollensak, firas_kharrat","7","False","True","30","","","https://avatars.githubusercontent.com/u/19728866?v=4","https://github.com/SimonEff/Know-how-Management-OLL","https://s3.dribdat.cc/oll/b/147/VNC7W8JH9SR1VAZWFCCJ5QFE/Open_Legal_Lab_Challeneg__Knowhow_Managment_System_2.0r.pdf","https://github.com/SimonEff/Know-how-Management-OLL","https://github.com/SimonEff/Know-how-Management-OLL/releases","https://github.com/SimonEff/Know-how-Management-OLL/issues","","","# Projekt 1: Know-how Management System","2024-03-16T13:19","2024-03-25T13:53","david_schwaninger","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 64, ""updates"": 55, ""commits"": 42, ""during"": 63, ""people"": 7, ""sizepitch"": 0, ""sizetotal"": 39}","# Projekt 1: Know-how Management System",""
+"103","09","https://challenges.openlegallab.ch/project/103","SCD – Exploring the Federal Supreme Court 🏛","78","Launch","flo, martin_gajdos, gaston_wey, jonas","4","False","True","40","Let's find new ways for anyone to analyse data on judgments by the Swiss Federal Supreme Court! 📊","","https://s3.dribdat.cc/oll/b/101/4STC89LJPEL3WWMBC8YX8HL8/Screenshot_20240322_at_13.13.29.png","https://github.com/fgeeri/scd-bubbles","https://s3.dribdat.cc/oll/b/172/IKMJZISS9VECHXZUG862E2WC/slide_scd_bubbles_with_hyperlink.pdf","","","","","","https://bubbles.legaldata.ch/
+
+**The Data:** The **[Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793043)** is the largest open-access dataset on Swiss judgments, with 31 variables documenting all 120,368 Federal Supreme Court judgments between 2007 and 2023.
+🔥 It is available in its **fifth edition** already, and now also includes the raw text of all judgments.
+
+With this challenge, we want to **explore new ways to enable anyone to interact with this rich data**, ev...","2024-03-17T23:06","2024-03-25T14:53","flo","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 25, ""updates"": 20, ""commits"": 0, ""during"": 13, ""people"": 4, ""sizepitch"": 1622, ""sizetotal"": 1719}","","https://bubbles.legaldata.ch/
+
+**The Data:** The **[Swiss Federal Supreme Court Dataset (SCD)](https://zenodo.org/record/7793043)** is the largest open-access dataset on Swiss judgments, with 31 variables documenting all 120,368 Federal Supreme Court judgments between 2007 and 2023.
+🔥 It is available in its **fifth edition** already, and now also includes the raw text of all judgments.
+
+With this challenge, we want to **explore new ways to enable anyone to interact with this rich data**, even if they have zero prior programming knowledge.
+
+**At [last year's](https://challenges.openlegallab.ch/project/82) Open Legal Lab**, we designed and released the [SCD Viewer](https://scdv.legaldata.ch/), a [Shiny](https://shiny.posit.co/) webapp which lets users interact with the data on Swiss Federal Supreme Court judgments and run simple analyses themselves.
+
+**Can we go further this year?** What new and exciting ways to interact with this data will we come up with?
+
+* ✨ Automatic monthly recap of the latest jurisprudence?
+* ⚡️ Dashboard that highlights interesting new trends in the data?
+* 💫 Upgrade the SCD Viewer to be 10x better and 100x faster?
+* 🌟 Something else entirely? It's up to you!
+
+##### 🎯 Goal of the challenge
+
+> ***Enable new ways to interact with the Federal Supreme Court jurisprudence documented in the SCD.***
+
+##### 🚀 Roadmap
+
+* [x] Collect data
+* [x] Define user journey
+* [x] Create and deploy product
+* [x] Prepare presentation
+
+##### 🏁 Final presentation
+
+📎 [slide scd bubbles.pdf](https://s3.dribdat.cc/oll/b/171/7004BTGM18I7EEL7E4NJWK1W/slide_scd_bubbles.pdf)"
+"98","03","https://challenges.openlegallab.ch/project/98","Legal Prompt Builder","71","Research","jan_nicklaus, juliefrei, isa, michelimi, liliane_obrecht, nina_laukenmann, marc_feldmann","7","False","True","10","Lasst uns Juristen dabei helfen, die bestmöglichen Prompts zu erstellen, um durch gute Antworten von LLMs ihre Produktivität zu steigern.","","https://avatars.githubusercontent.com/u/140799997?v=4","https://github.com/jan-nicklaus/LegalPrompts-CH","https://s3.dribdat.cc/oll/b/164/0DW0CK2RJ3OHA3QJKRPPG62Q/Legal_Prompt_Builder_nn.pdf","https://github.com/jan-nicklaus/LegalPrompts-CH","https://bgpg.raxal.io","https://linkedin.com/in/jan-nicklaus","","","# LegalPrompts - Prompt Builder für Juristinnen und Juristen
+
+## Was ist das Problem?
+
+Grosse Sprachmodelle wie ChatGPT erobern die Arbeitswelt. Es gibt inzwischen zahlreiche Modelle mit unterschiedlichen Vor- und Nachteilen. Dazu gehören:
+
+* Kann das Modell im Internet nach aktuellen Daten suchen oder ist es auf seine Trainingsdaten beschränkt?
+* Kontextlänge: Wie viele Wörter kann ich in die Anfrage eingeben?
+* Sprachfähigkeiten: Wie gut performt das Modell in anderen Sprachen als Engl...","2024-02-16T08:17","2024-03-25T13:52","jan_nicklaus","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 39, ""updates"": 32, ""commits"": 23, ""during"": 35, ""people"": 7, ""sizepitch"": 2451, ""sizetotal"": 3868}","# LegalPrompts
+Gerade im nicht englischsprachigen Rechtsbereich liefern Large Language Models (LLMs) oft unzuverlässige Ergebnisse. Dennoch erlauben generative Sprachmodelle für Juristinnen und Juristen aller Fachrichtungen Produktivitätsgewinne, wenn sie die richtigen Anweisungen enthalten. Dieses «Prompt Engineering» ist inzwischen eine eigene Fachrichtung. Ein einfaches Tool kann Schweizer Juristinnen und Juristen helfen, den bestmöglichen Prompt zu erstellen und dabei häufige Probleme zu vermeiden.
+
+## Mögliche Roadmap
++ Fragebogen zu wichtigen Prompt-Bestandteilen
++ Texterkennung aus Dateien und URLs und Einbindung in Prompt
++ Token Counting für gängige LLMs
++ Automatische Übersetzung mit DeepL
++ Datenbank für Prompt-Bestandteile
++ Automatische Einbindung von Gerichtsentscheiden (z.B. BGEs anhand der Nummer)
++ Optionale Einbindung z.B. des OpenAI API für sofortige Ausführung des Prompts
++ etc. etc.
+
+## Umsetzung
+Die Umsetzung soll im Rahmen des Open Legal Lab 2024 (https://opendata.ch/de/events/open-legal-lab-2024/) erfolgen. Die Challenge richtet sich an alle Teilnehmenden, damit wir ein für möglichst viele Personen möglichst nützliches Tool umsetzen können.
+
+## Kontakt
+Ich freue mich über jeden Input hier oder unter https://linkedin.com/in/jan-nicklaus
+","# LegalPrompts - Prompt Builder für Juristinnen und Juristen
+
+## Was ist das Problem?
+
+Grosse Sprachmodelle wie ChatGPT erobern die Arbeitswelt. Es gibt inzwischen zahlreiche Modelle mit unterschiedlichen Vor- und Nachteilen. Dazu gehören:
+
+* Kann das Modell im Internet nach aktuellen Daten suchen oder ist es auf seine Trainingsdaten beschränkt?
+* Kontextlänge: Wie viele Wörter kann ich in die Anfrage eingeben?
+* Sprachfähigkeiten: Wie gut performt das Modell in anderen Sprachen als Englisch?
+
+Es ist schwierig, hier den Überblick zu behalten und die Anfragen dem jeweiligen Modell anzupassen. Aber auch ganz generell helfen Sprachmodelle bei einfachen Anfragen wie «Fasse mir BGE 149 V 57 zusammen» kaum weiter, weil die Antworten oft nicht die relevanten Aspekte aufgreifen oder sogar Erwägungen und Sachverhalte erfinden (sog. Halluzinationen).
+
+## Wie hilft ein Prompt Builder?
+
+Zu der Frage, wie man eine Anfrage an ein Sprachmodell formuliert, um eine bestmögliche Antwort zu erhalten, gibt es bereits viele Leitfäden, wissenschaftliche Dossiers und Seminare. Für Juristinnen und Juristen wäre es jedoch ein erheblicher Aufwand, sich die Kunst des «Prompt Engineering» von Grund auf anzueignen. Hinzu kommt, dass der Prompt in jedem Einzelfall formuliert werden und zusammengesetzt, ggf. auch Dokumente in den Prompt kopiert werden müsste. Diese Arbeit kann stark vereinfacht werden durch einen Prompt Builder, also ein Tool, das den User an die Hand nimmt, anhand von Fragen wichtige Bestandteile des Prompts ermittelt und einen Prompt zusammensetzt. Ausserdem kann der Prompt Builder den Prompt auf die Anforderungen einzelner Sprachmodelle zuschneiden, beispielsweise darauf hinweisen, dass das frei verfügbare ChatGPT 3.5 keinen Links folgen kann. Mit Quality of Life Features wie der automatischen Einbindung von Entscheiden kann ein auf das Schweizer Recht zugeschnittener Prompt Builder viel Zeit sparen und erlaubt es Juristinnen und Juristen, sich auf ihre eigentliche Arbeit zu konzentrieren.
+
+## Wer kann bei der Challenge mitwirken?
+
+Alle Teilnehmenden sind herzlich eingeladen. Gerade Juristinnen und Juristen können hier sehr weiterhelfen, weil das Tool die in der Praxis tatsächlich anfallenden Aufgaben lösen soll. Die technische Umsetzung soll in JavaScript und ggf. Python erfolgen.
+
+## Weitere Informationen
+
+https://github.com/jan-nicklaus/LegalPrompts-CH
+Nachfragen gern auf GitHub oder LinkedIn!"
+"96","11","https://challenges.openlegallab.ch/project/96","Unlinkability beim Vorweisen einer E-ID","61","Sketching","JonasNiestroj, nicolin_dora, Vejsa","3","False","True","20","Wenn eine E-ID vorgewiesen wird, soll es keine Möglichkeit geben diese E-ID auf Basis von technischen Parametern zu identifizieren","Guest","https://s3.dribdat.cc/oll/b/145/5UPFT16BKW810HDIKO7HETYL/eid.png","https://github.com/devobern/eid-rust-poc","https://s3.dribdat.cc/oll/b/145/KARUA6UUKPCJZ7JPK2R40B2C/Unlinkability_beim_Vorweisen_einer_EID.pdf","https://github.com/devobern/eid-rust-poc","https://github.com/devobern/eid-rust-poc/releases","https://github.com/devobern/eid-rust-poc/issues","","","# BBS Rust Library PoC for Open Legal Lab 2024
+
+## Overview
+
+This repository hosts a Proof of Concept (PoC) developed during the Open Legal Lab 2024 Hackathon. This PoC was created by participants to better understand the practical aspects of the BBS library in a learning environment.
+
+## Disclaimer
+
+This code is a demonstration meant for learning and understanding the functionalities of the BBS library in Rust. It has not been designed with production-level security or efficiency considerations...","2024-03-11T06:44","2024-03-25T13:28","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 29, ""updates"": 25, ""commits"": 11, ""during"": 24, ""people"": 3, ""sizepitch"": 0, ""sizetotal"": 2108}","# BBS Rust Library PoC for Open Legal Lab 2024
+
+## Overview
+
+This repository hosts a Proof of Concept (PoC) developed during the Open Legal Lab 2024 Hackathon. This PoC was created by participants to better understand the practical aspects of the BBS library in a learning environment.
+
+## Disclaimer
+
+This code is a demonstration meant for learning and understanding the functionalities of the BBS library in Rust. It has not been designed with production-level security or efficiency considerations and thus should not be used in such environments.
+
+## Prerequisites
+
+- Rust Programming Language
+- BBS Library for Rust
+- SHA-256 Hashing (`sha2` crate)
+
+## Installation
+
+To get started with this PoC:
+
+1. Install Rust on your system.
+2. Clone the repository.
+3. Navigate to the project directory.
+4. Use Cargo to build and run the project:
+
+```shell
+cargo build
+cargo run
+```
+
+## Project Structure
+
+- `main.rs`: Contains the main logic showcasing key generation, message signing, and verification processes.
+- `create_keys`: Generates a public and secret key pair for signing messages.
+- `json_to_messages`: Transforms a JSON document into a vector of signature messages.
+- `blind_sign_messages`: Produces a blind signature for a set of messages.
+- `create_commitment`: Creates a cryptographic commitment using a blinding factor.
+- `unblind_signature`: Converts a blind signature into a standard signature.
+- `create_proof_request`: Sets up a proof request for a cryptographic proof.
+- `create_proof_of_knowledge`: Creates a proof of knowledge for a subset of the signed messages.
+- `check_signature_pok`: Checks the validity of a proof of knowledge.
+
+## Features
+
+The PoC demonstrates:
+- Key generation compatible with the BBS signature scheme.
+- Conversion of eID attributes into a format suitable for BBS signatures.
+- Creation and handling of blind signatures and commitments.
+- Generation and verification of proofs of knowledge to simulate the eID verification workflow.
+",""
+"102","02","https://challenges.openlegallab.ch/project/102","Legal Lens: Tailored Case Notification 🖥️🔍","58","Research","Timothy, AmitMY, quadratecode, Hartmut, gschafflutzel, emilevl, simonmeia, Ulrich, sylvain_salgat, MoerJ","10","False","True","10","""Legal Lens"" provides a customized online service where lawyers can sign up to get updates about new court decisions that are relevant to their specific areas of interest.","","","","https://s3.dribdat.cc/oll/b/86/UFM64GPVWRO0CFQRUJK8D02B/OLL2024_Result_LegalLens_copy_3min.pdf","","","","#0000a0","","### **Challenge Description**
+
+Keeping up to date with the latest court rulings is an important task for lawyers who specialise in various fields. ""Legal Lens"" aims to simplify this process through an innovative online platform. This platform allows lawyers to register their specific topics of interest and receive customised updates on new court rulings that match their topics. By utilising semantic and keyword search technologies, the platform will ensure that lawyers have the insights they n...","2024-03-16T19:43","2024-03-25T14:09","Timothy","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 37, ""updates"": 25, ""commits"": 0, ""during"": 19, ""people"": 10, ""sizepitch"": 2280, ""sizetotal"": 2451}","","### **Challenge Description**
+
+Keeping up to date with the latest court rulings is an important task for lawyers who specialise in various fields. ""Legal Lens"" aims to simplify this process through an innovative online platform. This platform allows lawyers to register their specific topics of interest and receive customised updates on new court rulings that match their topics. By utilising semantic and keyword search technologies, the platform will ensure that lawyers have the insights they need at their fingertips to be better prepared for the changing legal landscape.
+
+Our goal is to create a proof of concept (PoC) that tests the viability of this idea, uncovers potential technical challenges and demonstrates the clear benefits for lawyers.
+
+***
+
+#### **Goals**🎯🛠️
+
+**Moonshot 🌚**We want to build a platform that automatically indexes new court cases, allows lawyers to register their interests and matches these interests with new judgements using semantic and keyword analyses. The result? Personalised email updates for lawyers, making it easier for them to stay up to date and respond to relevant legal changes.Realistic goal:
+
+**Realistic 👽** We focus on developing a simple customer journey, testing the reliablitly of matching interests with court judgements, clarifying initial privacy issues, highlighting the benefits of the platform and designing an email notification system.
+
+***
+
+#### **User story 👨🏻‍💻**👩🏽‍💻
+
+Alessandra, a civil rights lawyer specialising in immigration and asylum cases, used to rely on reading quarterly magazines to keep up to date. After signing up for Legal Lens and selecting her interests, particularly asylum for women activists from Southeast Asia, she now receives instant email alerts about new judgements. This means she is always informed in real time and can improve her strategy and efficiency. Alessandra no longer has to trawl through magazines and can now respond more quickly to her clients.
+
+***
+
+##### **Organization** 🚀👨‍⚖️
+
+Our challenge is all about team and exploration! We are calling on everyone - from legal professionals (students, lawyers or judges 😉) to technical whizzes in the fields of data science, UX/UI and devs. to heroes from public administration and court staff.
+
+<br>
+"
+"108","00","https://challenges.openlegallab.ch/project/108","Innocent until prompted guilty","47","Research","oleg, Morteza","2","False","True","10","Drop the mic on your best prompts for litigation and legal work","","https://s3.dribdat.cc/oll/b/1/YDE3OJ8G8UZDKYGP9K18S7UF/435232_Two_hackers_at_a_Hackathon_on_the_background_of_a__xl1024v10.jpg","https://pad.okfn.de/p/r.96761dac5391f085b8e59da0aeb5298d","https://hackmd.io/@oleg/BJW8Xxy1A","https://pad.okfn.de/p/generative-ai-copyright-guide","https://pad.okfn.de/p/innocentuntilpromptedguilty","","","","There were several challenges at Open Legal Lab 2024 that were directly related to LLM, GPT and other A.I. techniques, and we believe all the teams used prompts in some ways during the hackathon. We created this page to discuss the general question of **how do you learn to prompt?** Also known as [prompt engineering](https://de.wikipedia.org/wiki/Prompt_Engineering), this is an emerging technical field that is being noticed by the legal community. We put this page up to collect prompt ideas from...","2024-03-24T20:01","2024-03-26T09:30","oleg","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 15, ""updates"": 12, ""commits"": 0, ""during"": 15, ""people"": 2, ""sizepitch"": 4599, ""sizetotal"": 9086}","§ Generative A.I. Copyright Guide
+
+A collaborative document (CC0 license) created at Open Legal Lab 2024 (openlegallab.ch) 
+Initial version made with assistance from Nous Research (Nous-Hermes-2-Mixtral-8x7B-DPO)
+
+ >> FEEL FREE TO EDIT! https://pad.okfn.de/p/generative-ai-copyright-guide <<
+
+Copyright in the context of A.I. generated images is a complex and evolving area of law. As A.I. technology advances, the legal landscape is adapting to address the unique challenges posed by generative art. We are interested in the perspective of participants of legal hackathons, who bring a diverse mix of technical and jurisprudencial views on this hot topic.
+
+Intellectual property ramifications
+    
+	1. Authorship and ownership: the question of who owns the copyright in an A.I.-generated image is not entirely clear. In some cases, the person who created the A.I. system may be considered the author, while in other cases, the person who provided the input data or trained the model may have a claim to authorship.
+	2. Fair use: A.I. systems may create images that are strikingly similar to existing copyrighted works. Whether such use constitutes fair use or infringement depends on various factors, such as the purpose and character of the use, the nature of the copyrighted work, the amount and substantiality of the portion used, and the effect of the use on the potential market for the original work.
+	3. Derivative works: A.I. systems can create new images based on existing copyrighted works. The creation and distribution of such derivative works may require permission from the original copyright holder.
+
+Establishing authorship of the model
+
+1. Document the creative process: Look for detailed records of the development of the A.I. system, the input data, and the training process. This should be made public for transparency, and to help establish authorship and ownership claims.
+2. Include attribution: Clearly indicate the authorship of the A.I. system itself, the sources and legal conditions of the input data used to generate content. Make this clearly visible in your publication, along side your own claims, to help establish provenance and prevent unauthorized use.
+3. Register copyright: If you are the author of the A.I. system or the input data, consider registering your copyright with the appropriate government agency. This can provide additional legal protections and make it easier to enforce your rights. Not all jurisdictions, however, will respond to requests for protecting A.I.-enhanced creations.
+
+How to check the image copyright
+
+1. Run a reverse image search: Upload an image to a reverse image search tool (see list below) to find similar images and their sources.
+2. Check for watermarks and metadata: Look for identifying information, such as watermarks or metadata, that may indicate the source and ownership of the image.
+3. Verify permissions: If you find an image that you would like to use, verify that you have the necessary permissions from the copyright holder before using it.
+
+Reverse image search engines
+
+	* TinEye https://tineye.com/
+	* LibAI Lab https://www.immerse.zone
+	* Google Image Search https://images.google.com
+	* Copyseeker https://copyseeker.net/
+
+Submitting complaints
+
+1. Contact the copyright holder: If you believe your copyright has been infringed, reach out to the person or entity using the images on a publication to request that they remove or properly attribute the image.
+2. Send a DMCA takedown notice: If the infringement persists, consider sending a Digital Millennium Copyright Act (DMCA) takedown notice to the website or platform hosting the infringing content. This can result in the removal of the content in question.
+3. Consult a lawyer: If the issue is not resolved through these steps, consult a lawyer with experience in intellectual property law to explore your legal options.
+
+To prevent unauthorized use in generative AI models
+
+1. Watermark your images: Add a visible or invisible watermark to your images to deter unauthorized use and make it easier to identify the source of the image.
+2. Limit access to your images: Only share your images with trusted individuals or platforms that respect your copyright.
+3. Monitor the use of your images: Regularly perform reverse image searches to identify instances of unauthorized use and take appropriate action to protect your rights.
+
+","There were several challenges at Open Legal Lab 2024 that were directly related to LLM, GPT and other A.I. techniques, and we believe all the teams used prompts in some ways during the hackathon. We created this page to discuss the general question of **how do you learn to prompt?** Also known as [prompt engineering](https://de.wikipedia.org/wiki/Prompt_Engineering), this is an emerging technical field that is being noticed by the legal community. We put this page up to collect prompt ideas from our participants, and if inspiration strikes you, there is an ☝️ [Etherpad here](https://pad.okfn.de/p/innocentuntilpromptedguilty) into which you are welcome to drop your token burners.
+
+<img src=""https://s3.dribdat.cc/oll/b/1/E2OT3HZYSISZZP540TZ1MA43/Screenshot_from_20240325_002129.png"" width=""500"" style=""border:2px solid black"">
+
+Then we discovered [prompts.law](https://www.prompts.law/) - a website of ""Prompts Written by the Legal Community"" launched last November by a company in London. On their introductory [blog post](https://www.prompts.law/blog/post/21/) you can read a few thoughts about this new playing field - and how they want to address it by crowdsourcing and ranking prompts useful for lawyers trying to use conversational agents in their work (we hope, while keeping their and their customers data safe!) We are collecting further links in our new guide for [prompting at Open Legal Labs](https://challenges.openlegallab.ch/project/109):
+
+https://challenges.openlegallab.ch/project/109
+
+# Prompts and Copyright
+
+As we run our hackathon, government juristictions (e.g. [Tennessee](https://www.reuters.com/legal/tennessee-becomes-first-us-state-with-law-protecting-musicians-ai-2024-03-21/)) around the world are activating new legal measures in response to continued pressure from the creative and legal community.
+
+We started working on a guide created at Open Legal Lab 2024 (openlegallab.ch) with assistance from                                         NousResearch (Nous-Hermes-2-Mixtral-8x7B-DPO). In it we discuss copyright in the context of A.I. generated images is a complex and evolving area of law. 
+
+See also:
+
+- [Awesome Generative AI](https://github.com/filipecalegario/awesome-generative-ai?tab=readme-ov-file#ethics-philosophical-questions-and-discussions-about-generative-ai) (Filipe Calegario - GitHub)
+- [Generative AI and Copyright: A Dynamic Perspective](https://arxiv.org/abs/2402.17801) - Yang et al 2024
+- [ Generative AI and copyright: principles, priorities and practicalities](https://academic.oup.com/jiplp/article/18/12/841/7331468?login=false) - Lim 2023
+- [Generative Artificial Intelligence: When Copyright, Innovation, and Equity Collide](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4686751) - Wu 2024
+- [WEF - Will copyright law enable or inhibit generative AI?](https://www.weforum.org/agenda/2024/01/cracking-the-code-generative-ai-and-intellectual-property/) (Jan 13, 2024)
+
+# Prompt Battle
+
+As a late hour special, we took advantage of the dual-projector setup in Magglingen to run an (inofficial and very impromptu) [Prompt Battle](https://promptbattle.com/) at Open Legal Lab 2024. This is a format of participative training in prompt writing with an entertaining / sports-like setup.
+
+Two participants (""prompt artists"") at a time competed for the attention and appreciation of the others using a prompt-based generative art process based on different models. The audience is asked to shout out three words: 1) a subject, 2) an action, 3) a consequence. The resulting models are voted on by the audience holding up a card (green and pink, in our case) after 3 minutes. The one with less votes after 3 rounds was asked to leave the stage, and be replaced with another participant.
+
+The photos/videos (CC BY-NC-SA 4.0 Oleg) and result generations are **[available here as gallery](https://proxeus.glarner.cloud/apps/photos/public/8c1BAz91s8nBeh3YGSD7w7Dp6O2Boo5l)**.
+
+[![IMG 20240324 215326.jpg](https://s3.dribdat.cc/oll/b/1/Z8NPBOJDV9ECSTHKLV2E9JMB/IMG_20240324_215326.jpg)](https://proxeus.glarner.cloud/apps/photos/public/8c1BAz91s8nBeh3YGSD7w7Dp6O2Boo5l)
+[![Screenshot from 20240325 000440.jpg](https://s3.dribdat.cc/oll/b/1/0HS3TQDMDE0Z3ZH4GGW6HRGT/Screenshot_from_20240325_000440.jpg)](https://proxeus.glarner.cloud/apps/photos/public/8c1BAz91s8nBeh3YGSD7w7Dp6O2Boo5l)
+
+*Thanks to everyone for supporting our A.I. experiment/late-night experience! Check out [Prompt Battle Bern](https://promptbattlebern.ch/) and [HeK in Basel](https://hek.ch/programm/veranstaltungen/prompt-battle-2) ...*"
+"104","04","https://challenges.openlegallab.ch/project/104","Legal Reasoning AI","42","Research","droegier, Aneta, LucaGrand, laura, Kerry, simonweigold","6","False","True","10","The mission of this project is to develop an AI agent capable of performing legal reasoning within the Swiss private law ecosystem. Imagine an interface where legal experts can pose questions and, in return, receive step-by-step explanations of the process leading to a legally correct answer. The first step will highlight relevant legal sources identified by a semantic search algorithm that sifts through curated law articles, while the following process will involve LLM queries that synthesize these sources into a concise response. The advantage of such a system lies in its ability to automate legal reasoning, offering legal professionals full transparency to verify the legal basis of the answers. To achieve this, we utilize the existing RAG (Retrieval-Augmented Generation) solution from the Law Bot open-source software project, which provides a robust technical foundation that can be further developed. Contributors to the Law Bot project will provide guidance on enhancing this existing solution. This challenge represents an opportunity to blend AI with legal expertise, ensuring both accuracy and transparency in resolving use cases in the area of Swiss private law. We invite you to join us in pushing the boundaries of legal technology, making legal reasoning both automated and verifiable.","","https://s3.dribdat.cc/oll/b/129/G5SPV3MFHBTM7WF8Y07KITLK/Group_1_1.jpg","https://github.com/access2justice/law-bot","https://s3.dribdat.cc/oll/b/137/0Z13XW01PSKSJYCGWI11UJZN/Presentation_Legal_Tech_Forumkomprimiert2.pdf","https://github.com/access2justice/law-bot","https://github.com/access2justice/law-bot/releases","Aneta Králová, David Roeigers","#1dad00","","[Open Legal Lab  Legal Reasoning AI Challenge.pdf](https://s3.dribdat.cc/oll/b/129/0QM5GIW54U5K2XUMAO73Y93Z/Open_Legal_Lab__Legal_Reasoning_AI_Challenge.pdf)","2024-03-19T09:00","2024-03-25T13:51","droegier","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 19, ""updates"": 12, ""commits"": 0, ""during"": 5, ""people"": 6, ""sizepitch"": 157, ""sizetotal"": 1739}","# Law Bot
+
+## Backend
+
+The Backend is based on Python / FastAPI and described in more detail in the backend folder.
+
+## Frontend
+
+The Frontend is based on Next.js and described in more detail in the frontend folder.
+
+## Data
+
+Test data can be found inside the data folder.
+","[Open Legal Lab  Legal Reasoning AI Challenge.pdf](https://s3.dribdat.cc/oll/b/129/0QM5GIW54U5K2XUMAO73Y93Z/Open_Legal_Lab__Legal_Reasoning_AI_Challenge.pdf)"
+"100","08","https://challenges.openlegallab.ch/project/100","Repositorium.ch Boost 🚀","39","Research","colin_carter, Apollo, koray_soguksu, ewelina_mitrega, jim_rogantini, thomas_avanzi, McAfee123, danielbrugger","8","False","True","10","Vor genau zwei Jahren startete das Repositorium.ch Projekt am Open Legal Lab 2022. Nun sind wir so gut wie fertig. Es fehlen noch ein paar letzte Anpassungen und vor allem muss die Plattform nochmals im Detail getestet werden. Wir möchten in dieser Challenge die Plattform von A-Z durchtesten, Bugs beheben, Features entwickeln und hoffentlich den ersten Release durchführen. ","","","","https://s3.dribdat.cc/oll/b/58/N72FNTRTS5VRSHXU62X5FLHL/Repositorium_OLL_2024.pdf","","","","","","Vor zwei Jahren startete das Projekt Repositorium.ch am OpenLegalLab 2022 (zur damaligen Challenge: https://challenges.openlegallab.ch/project/57).
+
+Nach einer kompletten Überarbeitung der Software ist die Plattform nun so gut wie fertig. Es fehlen noch ein paar letzte Anpassungen und vor allem muss die Plattform noch einmal gründlich durchgetestet werden. Und dafür brauchen wir dich!
+
+Weitere Informationen rund um Repositorium.ch findest Du auf der Webseite https://repositorium.ch/
+
+## Di...","2024-03-14T19:11","2024-03-25T21:17","colin_carter","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 19, ""updates"": 9, ""commits"": 0, ""during"": 13, ""people"": 8, ""sizepitch"": 1747, ""sizetotal"": 2122}","","Vor zwei Jahren startete das Projekt Repositorium.ch am OpenLegalLab 2022 (zur damaligen Challenge: https://challenges.openlegallab.ch/project/57).
+
+Nach einer kompletten Überarbeitung der Software ist die Plattform nun so gut wie fertig. Es fehlen noch ein paar letzte Anpassungen und vor allem muss die Plattform noch einmal gründlich durchgetestet werden. Und dafür brauchen wir dich!
+
+Weitere Informationen rund um Repositorium.ch findest Du auf der Webseite https://repositorium.ch/
+
+## Die Grundidee: Gemacht für einen freien juristischen Diskurs
+
+Der rechtliche Diskurs wird neben der Rechtswissenschaft zu einem grossen Teil durch Praktiker\*innen geprägt, die oftmals keinen direkten Zugriff auf die bestehenden Repositorien der Hochschulen haben. Sie veröffentlichen ihre Beiträge daher oft über Verlage, welche die Beiträge hinter paywalls abschotten, bauen eine eigene Infrastruktur auf (Kanzlei-Newsletter, Blogs) oder nutzen die sozialen Medien oder weitere Plattformen. Zugleich zeichnet sich die bestehende Repositorienlandschaft durch eine starke Zersplitterung aus: Jede Universität und Fachhochschule verfügt über ein eigenes institutionelles Repositorium, das Zugriff auf die Forschungsergebnisse der jeweiligen Institution gewährt, ohne aber auf die spezifischen Bedürfnisse der Jurist\*innen einzugehen.
+
+Viele Texte zum Schweizer Recht sind damit zwar irgendwo im Internet frei zugänglich, man findet sie aber (innert nützlicher Frist) nicht. Denn es fehlt an einer zentralen (d.h. schweizweiten und institutionsübergreifenden), fachspezifischen, frei und kostenlos zugänglichen Datenbank, um das brachliegende Potential der frei verfügbaren juristischen Texte zu nutzen. Das Repositorium.ch schliesst diese Lücke."
+"89","10","https://challenges.openlegallab.ch/project/89","scigate","35","Research","walter_boente, oleg, Morteza, damaris_jeker, magdalena_gneist, ChristopheK","6","False","True","10","An unified search entry point into today's highly fragmented legal database landscape and a one-stop shop for legal data.","","","","https://s3.dribdat.cc/oll/b/141/AP6E4LYQBNFKP5M7D2ZS45HH/Scigate.pdf","http://www.scigate.online/","","walter.boente@ius.uzh.ch","","","*![scigate2.png](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/public/2095/LD7RI3TAI3JB87STZWSSL99O/scigate2.png)I. The project*
+The project aims to further develop a project that was started in the Open Legal Lab 2023 and to create legal data showcase, in other words:
+
+* a unified search entry point into today's highly fragmented landscape of legal databases, and
+* at the same time a low-threshold, accessible one-stop-shop for legal data.
+
+Traditionally, librarie...","2024-02-19T19:23","2024-03-25T13:55","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 15, ""updates"": 9, ""commits"": 0, ""during"": 13, ""people"": 6, ""sizepitch"": 3653, ""sizetotal"": 3774}","","*![scigate2.png](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/public/2095/LD7RI3TAI3JB87STZWSSL99O/scigate2.png)I. The project*
+The project aims to further develop a project that was started in the Open Legal Lab 2023 and to create legal data showcase, in other words:
+
+* a unified search entry point into today's highly fragmented landscape of legal databases, and
+* at the same time a low-threshold, accessible one-stop-shop for legal data.
+
+Traditionally, libraries have been the gatekeepers for access to legal data, especially legal texts, but also legal data in the broadest sense. Libraries not only made this data spatially accessible, but also added metadata that made the data itself searchable and discoverable. This role of libraries has changed significantly in recent years. Today, legal data are often made available in databases by different actors, with different access and accessibility.The current fragmentation of access to legal data affects national and international research and its visibility. The project ""Gateway to Legal Data"" tries to create a counterbalance. Beyond the existing and desirable diversity of data sources, a unified search entry as well as a one-stop-shop for legal data shall be created. Its architecture can be described as follows:
+![Title](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openlegallab/63/SLW3JU9AT1MC7K5S8H9YQWE4/architecture.png)
+**II. The Challenge**
+A running prototype can be found here: [www.scigate.online](http://www.scigate.online/). The system is in part modularized and should be further modularized. In particular, data sources should be extended, and data aggregation added while supporting more search functionality. The linchpin of scigate.online are so-called proxies, whose task is to address data sources, translate their response and homogenize as far as possible the data to allow a unified search and access via scigate.online.
+
+1. Part of the challenge will be to build more proxies to connect additional data sources, such as https://onlinekommentar.ch/ and other legal data sources, to the platform. This data will be harmonized as much as possible so that it can be made available via a uniformed API. In the future, this should minimize the need to write a new scraper for each legal data research project.
+2. Another part of the challenge will be to present the data as search results on the platform. The proxies currently collect three lines for each entry plus a link to display the entry. The selection of what should be displayed for each entry, how it could be displayed and what existing functionality of the source systems might be used to render the search as user-friendly as possible, could be optimized. The search could also be extended by including more facets or auto completion.
+3. Finally, the retrieved hitlists and documents could be used to provide additional functionality. They could be fed into AI to mark the most relevant passages, to have an automated summary or to answer a natural language query.
+
+**III. Resources**
+Running prototype: [www.scigate.online](http://www.scigate.online/)
+The different code bases can be found here:
+
+* The common search interface: [https://github.com/lehrstuhl-boente/scigate-ui-new](https://github.com/lehrstuhl-boente/scigate-ui-new)
+* The proxies to connect the different search engines: [https://github.com/lehrstuhl-boente/scigate-proxies](https://github.com/lehrstuhl-boente/scigate-proxies)
+* The API to bulk download results: [https://github.com/lehrstuhl-boente/scigate-api](https://github.com/lehrstuhl-boente/scigate-api)"
+"94","12","https://challenges.openlegallab.ch/project/94","Verlinkung von Entscheiden. Register für Rückverlinkung","19","Project","Velofisch","1","False","True","5","Verlinkung von Online-Kommentar auf Entscheidsuche und Zurück","","","","https://s3.dribdat.cc/oll/b/77/9E280HTMAFV0D03D5F4ZVZ6N/Verlinkungsregister2.pdf","https://docs.google.com/document/d/10E5EHEfMw5FPAUpkwPYzYr6p6ZJq0LwsPRs2S2u47no/edit?usp=sharing","","joern@erbguth.net (nicht vom 11.3.-21.3)","","","Hier wird demonstriert, wie sich die gegenseitige Verlinkung auswirkt:
+
+Im OnlineKommentar zu Art 25 DSG ist in den Fussnote 40 ein Entscheid des Bundesgerichts zitiert. Die Verlinkung des Entscheides zeigt bereits Titelinformationen des Entscheides an. Beim Klick auf den Link wird der Entscheid auf entscheidsuche.ch aufgerufen. Dort ist aufgeführt, in welchen Dokumenten Links auf diesen Entscheid gefunden wurden.
+
+https://entscheidsuche.ch/OLL2024.mp4
+
+<br>
+","2024-03-05T09:53","2024-03-25T13:32","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 9, ""updates"": 8, ""commits"": 0, ""during"": 3, ""people"": 1, ""sizepitch"": 468, ""sizetotal"": 529}","","Hier wird demonstriert, wie sich die gegenseitige Verlinkung auswirkt:
+
+Im OnlineKommentar zu Art 25 DSG ist in den Fussnote 40 ein Entscheid des Bundesgerichts zitiert. Die Verlinkung des Entscheides zeigt bereits Titelinformationen des Entscheides an. Beim Klick auf den Link wird der Entscheid auf entscheidsuche.ch aufgerufen. Dort ist aufgeführt, in welchen Dokumenten Links auf diesen Entscheid gefunden wurden.
+
+https://entscheidsuche.ch/OLL2024.mp4
+
+<br>
+"
+"107","14","https://challenges.openlegallab.ch/project/107","E-ID für juristische Personen","14","Project","Raveetha, michel_sahli","2","False","True","5","Digitale Nachweise wurde in ein neues Themengebiet eingeführt. ","","","","https://s3.dribdat.cc/oll/b/160/7OOD1QOZCXRLOFP1XDAX2IV8/EID_für_eine_juristische_Person.pdf","","","","","","","2024-03-24T15:56","2024-03-25T12:28","Raveetha","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 9, ""updates"": 6, ""commits"": 0, ""during"": 9, ""people"": 2, ""sizepitch"": 0, ""sizetotal"": 62}","",""
+"93","13","https://challenges.openlegallab.ch/project/93","Digitale Nachweise","2","Challenge","michel_sahli, Giedre","2","True","True","0","Welche digitalen Nachweise könnte es im Schweizer Rechtssystem geben?","","","","https://raw.githubusercontent.com/bj-ms/presentation/main/openlegal.pdf","","","","","","Die Idee ist, herauszufinden, welche Prozesse von digitalen Nachweisen profitieren und modernisiert werden könnten.
+
+Weiterentwickelt in:
+
+https://challenges.openlegallab.ch/project/107","2024-03-07T07:01","2024-03-26T12:39","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 6, ""updates"": 4, ""commits"": 0, ""during"": 0, ""people"": 2, ""sizepitch"": 189, ""sizetotal"": 258}","","Die Idee ist, herauszufinden, welche Prozesse von digitalen Nachweisen profitieren und modernisiert werden könnten.
+
+Weiterentwickelt in:
+
+https://challenges.openlegallab.ch/project/107"
+"88","07","https://challenges.openlegallab.ch/project/88","Register für wirtschaftlich Berechtigte BOR","1","Challenge","damaris_jeker","1","True","True","0","Was ist möglich mit OGD und BODS?","","","","https://s3.dribdat.cc/oll/b/136/IEC7BRN9EKZIOEHZ74B4CPXO/Transparency_by_BOR_and_OGD__Open_Legal_Lab.pdf","","","","","","Die Schweiz ist einer der wichtigsten Finanzplätze der Welt und nimmt insbesondere bei der grenzüberschreitenden Vermögensverwaltung den ersten Platz ein. Geldwäsche und Terrorismusfinanzierung stellen jedoch eine ernsthafte Bedrohung für die Integrität des Finanzplatzes und die Stabilität des Finanzsystems dar; sie gefährden die Sicherheit und die Wirtschaft des Landes.
+
+Der Bundesrat hat die Verwaltung mit der Erarbeitung einer Gesetzesvorlage zur erhöhten Transparenz und erleichterten Ident...","2024-02-20T11:16","2024-03-26T12:40","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 2, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 3501, ""sizetotal"": 3534}","","Die Schweiz ist einer der wichtigsten Finanzplätze der Welt und nimmt insbesondere bei der grenzüberschreitenden Vermögensverwaltung den ersten Platz ein. Geldwäsche und Terrorismusfinanzierung stellen jedoch eine ernsthafte Bedrohung für die Integrität des Finanzplatzes und die Stabilität des Finanzsystems dar; sie gefährden die Sicherheit und die Wirtschaft des Landes.
+
+Der Bundesrat hat die Verwaltung mit der Erarbeitung einer Gesetzesvorlage zur erhöhten Transparenz und erleichterten Identifikation der wirtschaftlich Berechtigten von juristischen Personen beauftragt. Er will so die Prävention und die Strafverfolgung im Bereich der Finanzkriminalität und damit die Integrität und Reputation des Finanzplatzes und Wirtschaftsstandorts stärken.
+
+Der schnelle und effiziente Zugang zu diesen Informationen ist von entscheidender Bedeutung, sei es bei der Bekämpfung der Geldwäsche, der Finanzkriminalität oder im Zusammenhang mit der Durchsetzung von Sanktionen. Zu diesem Zweck soll ein eidgenössisches Register der wirtschaftlich Berechtigten von juristischen Personen geschaffen werden. Im Register werden Informationen über die wirtschaftlichen Berechtigte von juristischen Personen bzw. Schweizer Unternehmen sowie von bestimmten Kategorien ausländischer Unternehmen, gesammelt.
+
+[Open Ownership](https://www.openownership.org/de/) bietet einen Datenstandard zur Erfassung von wirtschaftlich Berechtigten und Unternehmen an und stellt auf diesem basierend auch ein öffentliches Beneficial Owner Register [BOR](https://register.openownership.org/) mit weltweiten Daten zur Verfügung. In dieser Challenge möchten wir testen, ob und welche aufschlussreichen Analysen und Strukturen sich mit diesem Datenmodell und den Daten machen lassen und ob wir dieses Modell auch für CH-Verhältnisse nutzen können.
+
+Der [Beneficial Ownership Data Standard](https://standard.openownership.org/en/0.3.0/index.html) BODS gibt, mit Identifikatoren und Details zu natürlichen und juristischen Personen, Arten und Ebenen der Beteiligung an Unternehmen, Informationen zur Provenienz, Historisierung und Platzhaltern, wenn Informationen unlesbar gemacht werden sollen sowie einer Liste von technischen Anforderungen für den Registerbau. Der Datastandard ist auf Github unter der [Apache Licence Version](https://www.apache.org/licenses/LICENSE-2.0) 2.0 publiziert: [GitHub - openownership/data-standard: An open standard for representing beneficial ownership and control, developed by Open Ownership in partnership with Open Data Services.](https://github.com/openownership/data-standard/)
+
+Der Beneficial Ownership Data Standard (BODS) bietet ein strukturiertes Datenformat sowie Leitlinien für die Erhebung, den Austausch und die Nutzung von Daten über wirtschaftliches Eigentum. Dabei beschreibt das Datenschema auch wie und welche Daten ausgetauscht werden sollten. Das [Beneficial Ownership Visualisation System BOVS](https://www.openownership.org/en/publications/beneficial-ownership-visualisation-system/) soll Besitzstrukturen so klar wie möglich visualisieren.
+BODS wird von [Open Ownership](https://www.openownership.org/de/), einer gemeinnützigen Organisation, die sich für die Transparenz des wirtschaftlichen Eigentums einsetzt, in Zusammenarbeit mit [Open Data Services](https://opendataservices.coop/) entwickelt und von einer [Arbeitsgruppe für offene Datenstandards](https://standard.openownership.org/en/latest/about/governance.html#membership-term-and-role) zusätzlich unterstützt."
+"91","05","https://challenges.openlegallab.ch/project/91","Normen-Checker","1","Challenge","peter_nejkov","1","True","True","0","Prüft auf Abweichungen zwischen Gesetzestext und Wiedergabe im Urteil","","","","https://s3.dribdat.cc/oll/b/135/SWJLNT6MW1UYUD104WPGWUW9/240324_OLL_24_Challenge_5__NormenChecker_v09.pdf","","","","","","[240321 Hackathon Challenge  NormenChecker.pdf](https://s3.dribdat.cc/oll/b/135/9X6Q5YKI0SZ0X59TTS26UKN0/240321_Hackathon_Challenge__NormenChecker.pdf)","2024-02-22T11:59","2024-03-26T12:37","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 3, ""updates"": 2, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 151, ""sizetotal"": 220}","","[240321 Hackathon Challenge  NormenChecker.pdf](https://s3.dribdat.cc/oll/b/135/9X6Q5YKI0SZ0X59TTS26UKN0/240321_Hackathon_Challenge__NormenChecker.pdf)"
+"97","06","https://challenges.openlegallab.ch/project/97","Plyply - the Smart Compliance-Tool","1","Challenge","markD","1","True","True","0","Aufbau eines Compliance-tools, das als Copilot organisationsintern verwendet kann (und auf die Bedürfnisse der Orga. abgestimmt werden kann.","","","","https://s3.dribdat.cc/oll/b/132/2PL1CVK0CNICT6R2H9GGRCCN/Complex_Compliance.pdf","","","","","","The idea of ai as a co-pilot is gaining ground, and so the questino is: can we design a co-pilot that helps us through the compliance-jungle?
+Ideally, the challenge would find a very specific compliance theme to find out more about what the requirements for such a compliance bot would be.","2024-03-04T21:11","2024-03-26T12:39","","https://challenges.openlegallab.ch/event/6","Open Legal Lab 2024","","","{""total"": 2, ""updates"": 1, ""commits"": 0, ""during"": 0, ""people"": 1, ""sizepitch"": 290, ""sizetotal"": 430}","","The idea of ai as a co-pilot is gaining ground, and so the questino is: can we design a co-pilot that helps us through the compliance-jungle?
+Ideally, the challenge would find a very specific compliance theme to find out more about what the requirements for such a compliance bot would be."
